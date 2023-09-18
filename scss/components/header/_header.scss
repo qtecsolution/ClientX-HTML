@@ -1,0 +1,11 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.header {
+  @include border-single(bottom, solid, 1, $headerborder);
+  height: size(64);
+
+  @include breakpoint(tab992) {
+    height: size(100);
+  }
+}

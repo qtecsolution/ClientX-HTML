@@ -1,0 +1,38 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  @include transparent-button;
+  cursor: pointer;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  @include transitionsall;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-hamburger {
+  // @include setBgColor($white, $bodytext);
+  // @include border(solid, 1, $headerborder);
+  @include radius(4);
+  @include square(48);
+  @include flex-center;
+  overflow: hidden;
+
+  i {
+    color: inherit;
+    font-size: size(24);
+  }
+
+  @include hover {
+    // @include setBgColor($white, $primary);
+    // border-color: $primary;
+  }
+}
