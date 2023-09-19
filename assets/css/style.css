@@ -349,6 +349,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: hsl(201, 63%, 12%);
   margin: 0;
   font-family: inherit;
 }
@@ -408,6 +409,7 @@ iframe {
 .display-4,
 .display-5,
 .display-6 {
+  color: hsl(201, 63%, 12%);
   font-family: inherit;
 }
 
@@ -445,6 +447,24 @@ button:focus,
 }
 .btn-hamburger:not([disabled]):hover i {
   color: hsl(28, 91%, 54%);
+}
+
+.btn-started {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-started:not([disabled]):hover {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
 }
 
 .header {
@@ -750,6 +770,15 @@ input[type=search]::-webkit-search-results-decoration:focus {
   }
 }
 
+.main {
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .main {
+    padding-bottom: 10rem;
+  }
+}
+
 table tr {
   vertical-align: middle;
 }
@@ -927,6 +956,52 @@ table tr td {
 .footerlist-link:not([disabled]):hover {
   color: hsl(28, 91%, 54%);
   text-decoration: underline;
+}
+
+.potential-content {
+  background-color: hsl(220, 100%, 73%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.potential-info {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.potential .leftinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .potential .leftinfo {
+    padding: 2.5rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .potential .leftinfo {
+    padding: 3.75rem 1.25rem;
+  }
+}
+.potential .leftinfo .display-6 {
+  font-weight: 700;
+}
+.potential .leftinfo .info .text {
+  color: hsl(201, 63%, 12%);
+}
+.potential .leftinfo .started {
+  max-width: 12.5rem;
+}
+.potential .potential-thumbnail {
+  background-color: hsl(220, 100%, 73%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .shipcontainer {

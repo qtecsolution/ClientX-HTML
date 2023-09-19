@@ -135,6 +135,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: $headingtext;
   margin: 0;
   font-family: inherit;
   // text-wrap: balance;
@@ -184,5 +185,6 @@ iframe {
 .display-4,
 .display-5,
 .display-6 {
+  color: $headingtext;
   font-family: inherit;
 }
