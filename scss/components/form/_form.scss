@@ -1,2 +1,35 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+.subscribeform {
+  @include flex-center-vert;
+  gap: size(12);
+  @include w100;
+
+  .textfield {
+    @include setBgColor($inputbg, $black);
+    @include border(solid, 1, rgba($headingtext, 0.10));
+    @include radius(4);
+    font-size: size(15);
+    padding: size(9) size(16);
+    width: calc(100% - size(56));
+    @include transitionsall;
+
+    &::placeholder {
+      color: $headingtext;
+    }
+
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+
+  .btn-subscribe {
+    background: $primary;
+    @include square(44);
+    @include radius(4);
+    @include flex-center;
+    overflow: hidden;
+    padding: size(12);
+  }
+}

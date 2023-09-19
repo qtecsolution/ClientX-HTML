@@ -3,14 +3,14 @@
 
 .tooltip {
   &-inner {
-    // background: $blacktext;
+    background: $headingtext;
     font-size: size(12);
   }
 
   &.bs-tooltip-auto[data-popper-placement^='top'] {
     .tooltip-arrow {
       &::before {
-        // border-top-color: $blacktext;
+        border-top-color: $headingtext;
       }
     }
   }
@@ -18,7 +18,7 @@
   &.bs-tooltip-auto[data-popper-placement^='bottom'] {
     .tooltip-arrow {
       &::before {
-        // border-bottom-color: $blacktext;
+        border-bottom-color: $headingtext;
       }
     }
   }
@@ -26,7 +26,7 @@
   &.bs-tooltip-auto[data-popper-placement^='left'] {
     .tooltip-arrow {
       &::before {
-        // border-left-color: $blacktext;
+        border-left-color: $headingtext;
       }
     }
   }
@@ -34,7 +34,7 @@
   &.bs-tooltip-auto[data-popper-placement^='right'] {
     .tooltip-arrow {
       &::before {
-        // border-right-color: $blacktext;
+        border-right-color: $headingtext;
       }
     }
   }

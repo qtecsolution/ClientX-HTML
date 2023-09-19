@@ -448,6 +448,7 @@ button:focus,
 }
 
 .header {
+  background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   display: flex;
   align-items: center;
@@ -641,8 +642,83 @@ input[type=search]::-webkit-search-results-decoration:focus {
   transform: rotate(90deg);
 }
 .tooltip-inner {
+  background: hsl(201, 63%, 12%);
   font-size: 0.75rem;
 }
+.tooltip.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+  border-top-color: hsl(201, 63%, 12%);
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+  border-bottom-color: hsl(201, 63%, 12%);
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: hsl(201, 63%, 12%);
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: hsl(201, 63%, 12%);
+}
+
+.footer {
+  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+  padding-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.footer-info .infotext {
+  opacity: 0.88;
+  margin-bottom: 1.25rem;
+}
+.footer-info .getintouch {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer-info .getintouch .title {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+.footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.footer-details .title {
+  color: hsl(201, 63%, 12%);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.footer-details .addrss {
+  color: hsl(0, 0%, 34%);
+}
+.footer-details .textinfo {
+  color: hsl(0, 0%, 34%);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.footer .textcopyright,
+.footer .footerlink {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.875rem;
+}
+.footer .footerlink {
+  transition: color 350ms ease-in-out;
+}
+.footer .footerlink:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+
 .preloader {
   display: flex;
   align-items: center;
@@ -680,6 +756,43 @@ table tr {
 table tr th,
 table tr td {
   vertical-align: middle;
+}
+
+.subscribeform {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+.subscribeform .textfield {
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 0%);
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-radius: 0.25rem;
+  font-size: 0.9375rem;
+  padding: 0.5625rem 1rem;
+  width: calc(100% - 3.5rem);
+  transition: all 350ms ease-in-out;
+}
+.subscribeform .textfield::-moz-placeholder {
+  color: hsl(201, 63%, 12%);
+}
+.subscribeform .textfield::placeholder {
+  color: hsl(201, 63%, 12%);
+}
+.subscribeform .textfield:focus {
+  border-color: hsl(196, 82%, 51%);
+}
+.subscribeform .btn-subscribe {
+  background: hsl(28, 91%, 54%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
 }
 
 .desktoplist {
@@ -765,6 +878,55 @@ table tr td {
 }
 .mobilelist-link.active {
   color: hsl(28, 91%, 54%);
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.social-list-link {
+  background: hsl(0, 0%, 100%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+.social-list-link:not([disabled]):hover {
+  background: hsl(201, 63%, 12%);
+}
+.social-list-link:not([disabled]):hover svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.social-list-link:not([disabled]):hover svg .pathtop {
+  fill: hsl(0, 0%, 100%);
+}
+.social-list-link:not([disabled]):hover svg .pathdown {
+  fill: hsl(201, 63%, 12%);
+}
+
+.footerlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.footerlist-link {
+  color: hsl(0, 0%, 34%);
+}
+.footerlist-link:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+  text-decoration: underline;
 }
 
 .shipcontainer {

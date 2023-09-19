@@ -77,3 +77,50 @@
     }
   }
 }
+
+.social-list {
+  @include list-horizontal;
+  gap: size(20);
+
+  &-link {
+    background: $white;
+    @include square(40);
+    @include border(solid, 1, $headingtext);
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+    padding: size(8);
+
+    @include hover {
+      background: $headingtext;
+
+      svg {
+        path {
+          fill: $white;
+        }
+
+        .pathtop {
+          fill: $white;
+        }
+
+        .pathdown {
+          fill: $headingtext;
+        }
+      }
+    }
+  }
+}
+
+.footerlist {
+  @include list-vertical;
+  gap: size(14);
+
+  &-link {
+    color: $primarytext;
+
+    @include hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}
