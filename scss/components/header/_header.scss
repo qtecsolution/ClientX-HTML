@@ -3,9 +3,49 @@
 
 .header {
   @include border-single(bottom, solid, 1, $headerborder);
+  @include flex-center-vert;
   height: size(64);
 
   @include breakpoint(tab992) {
     height: size(100);
+  }
+
+  &-nav {
+    @include flex-center-between;
+    @include w100;
+
+    .language-auth {
+      @include flex-center-vert;
+      gap: size(12);
+      
+      @include breakpoint(desktop1400) {
+        gap: size(20);
+      }
+
+      .languagedropdown {
+        @include flex-center-vert;
+        gap: size(4);
+
+        .icon {
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+        }
+
+        .langselect {
+          appearance: none;
+          @include setBgColor(transparent, $headingtext);
+          cursor: pointer;
+          font: inherit;
+          font-weight: 500;
+        }
+      }
+
+      .divider {
+        width: size(1);
+        height: size(32);
+        background: $headerborder;
+      }
+    }
   }
 }

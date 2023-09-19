@@ -1,2 +1,79 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+.desktoplist {
+  @include list-horizontal;
+  gap: size(16);
+  
+  @include breakpoint(desktop1400) {
+    gap: size(36);
+  }
+
+  &-link {
+    color: $headingtext;
+    font-weight: 500;
+    @include transitionsall;
+
+    &:hover:not(.active) {
+      color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+    }
+  }
+}
+
+.authlist {
+  @include list-horizontal;
+  gap: size(12);
+  
+  @include breakpoint(desktop1400) {
+    gap: size(20);
+  }
+  
+  .login-link {
+    color: $headingtext;
+    font-weight: 500;
+    @include transitionsall;
+
+    @include hover {
+      color: $secondary;
+    }
+  }
+
+  .register-link {
+    @include setBgColor($white, $primary);
+    @include border(solid, 1, $headerborder);
+    @include radius(4);
+    @include flex-center;
+    padding: size(11) size(20);
+    font-weight: 700;
+    text-align: center;
+    @include transitionsall;
+
+    @include hover {
+      @include setBgColor($primary, $white);
+      border-color: $primary;
+    }
+  }
+}
+
+.mobilelist {
+  @include list-vertical;
+  gap: size(12);
+
+  &-link {
+    color: $headingtext;
+    font-weight: 500;
+    @include transitionsall;
+
+    &:hover:not(.active) {
+      color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+    }
+  }
+}

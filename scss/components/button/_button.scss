@@ -19,20 +19,18 @@ button,
 }
 
 .btn-hamburger {
-  // @include setBgColor($white, $bodytext);
-  // @include border(solid, 1, $headerborder);
-  @include radius(4);
-  @include square(48);
+  @include square(40);
   @include flex-center;
   overflow: hidden;
 
   i {
-    color: inherit;
+    color: $sectionbg-4;
     font-size: size(24);
   }
 
   @include hover {
-    // @include setBgColor($white, $primary);
-    // border-color: $primary;
+    i {
+      color: $primary;
+    }
   }
 }

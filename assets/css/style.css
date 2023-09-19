@@ -324,8 +324,8 @@ body {
   background: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 34%);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
@@ -334,7 +334,7 @@ body {
 }
 @media screen and (min-width: 87.5rem) {
   body {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 62rem) {
@@ -432,26 +432,75 @@ button:focus,
 }
 
 .btn-hamburger {
-  border-radius: 0.25rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 .btn-hamburger i {
-  color: inherit;
+  color: hsl(220, 100%, 73%);
   font-size: 1.5rem;
 }
+.btn-hamburger:not([disabled]):hover i {
+  color: hsl(28, 91%, 54%);
+}
+
 .header {
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+  display: flex;
+  align-items: center;
   height: 4rem;
 }
 @media screen and (min-width: 62rem) {
   .header {
     height: 6.25rem;
   }
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header-nav .language-auth {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .header-nav .language-auth {
+    gap: 1.25rem;
+  }
+}
+.header-nav .language-auth .languagedropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.header-nav .language-auth .languagedropdown .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.header-nav .language-auth .languagedropdown .langselect {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+}
+.header-nav .language-auth .divider {
+  width: 0.0625rem;
+  height: 2rem;
+  background: hsl(0, 0%, 85%);
 }
 
 input,
@@ -550,11 +599,15 @@ input[type=search]::-webkit-search-results-decoration:focus {
   transition: all 350ms ease-in-out;
 }
 .offcanvas-header .btn-close i {
+  color: hsl(28, 91%, 54%);
   font-size: 1.5rem;
 }
 .offcanvas-header .btn-close:not([disabled]):hover {
   opacity: 1;
   transform: rotate(180deg);
+}
+.offcanvas-header .btn-close:not([disabled]):hover i {
+  color: hsl(354, 70%, 54%);
 }
 .offcanvas-body::-webkit-scrollbar {
   background: transparent;
@@ -627,6 +680,91 @@ table tr {
 table tr th,
 table tr td {
   vertical-align: middle;
+}
+
+.desktoplist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .desktoplist {
+    gap: 2.25rem;
+  }
+}
+.desktoplist-link {
+  color: hsl(201, 63%, 12%);
+  font-weight: 500;
+  transition: all 350ms ease-in-out;
+}
+.desktoplist-link:hover:not(.active) {
+  color: hsl(28, 91%, 54%);
+}
+.desktoplist-link.active {
+  color: hsl(28, 91%, 54%);
+}
+
+.authlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .authlist {
+    gap: 1.25rem;
+  }
+}
+.authlist .login-link {
+  color: hsl(201, 63%, 12%);
+  font-weight: 500;
+  transition: all 350ms ease-in-out;
+}
+.authlist .login-link:not([disabled]):hover {
+  color: hsl(196, 82%, 51%);
+}
+.authlist .register-link {
+  background: hsl(0, 0%, 100%);
+  color: hsl(28, 91%, 54%);
+  border: solid 0.0625rem hsl(0, 0%, 85%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6875rem 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.authlist .register-link:not([disabled]):hover {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(28, 91%, 54%);
+}
+
+.mobilelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.mobilelist-link {
+  color: hsl(201, 63%, 12%);
+  font-weight: 500;
+  transition: all 350ms ease-in-out;
+}
+.mobilelist-link:hover:not(.active) {
+  color: hsl(28, 91%, 54%);
+}
+.mobilelist-link.active {
+  color: hsl(28, 91%, 54%);
 }
 
 .shipcontainer {

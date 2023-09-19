@@ -28,6 +28,7 @@
       @include transitionsall;
 
       i {
+        color: $primary;
         font-size: size(24);
       }
 
@@ -36,7 +37,7 @@
         @include rotate(180);
 
         i {
-          // color: $danger;
+          color: $danger;
         }
       }
     }

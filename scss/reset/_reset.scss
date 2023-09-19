@@ -112,8 +112,8 @@ video {
 body {
   @include setBgColor($white, $primarytext);
   font-family: $primaryFont;
-  font-size: size(14);
-  font-weight: 300;
+  font-size: size(16);
+  font-weight: 400;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
@@ -121,7 +121,7 @@ body {
   margin: size(64) 0 0;
 
   @include breakpoint(desktop1400) {
-    font-size: size(16);
+    font-size: size(18);
   }
 
   @include breakpoint(tab992) {
