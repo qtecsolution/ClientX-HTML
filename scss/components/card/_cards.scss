@@ -1,6 +1,27 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardindustry {
+  @include flex-center-column;
+  gap: size(32);
+  text-align: center;
+
+  .industryicon {
+    @include square(48);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: size(18);
+    font-weight: 400;
+    
+    @include breakpoint(desktop1400) {
+      font-size: size(20);
+    }
+  }
+}
+
 .cardwebsite {
   @include flex-column;
   gap: size(32);

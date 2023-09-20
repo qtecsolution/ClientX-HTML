@@ -1,6 +1,14 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.marked {
+  color: $primary;
+}
+
+.headingmarked {
+  color: $secondary;
+}
+
 .shipcontainer {
   min-width: 100%;
   max-width: 100%;

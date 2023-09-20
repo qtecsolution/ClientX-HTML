@@ -1,6 +1,77 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.allindustries {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    padding-bottom: size(48);
+  
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+}
+
+.servicesection {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    background: $sectionbg-2;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    overflow: hidden;
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      padding: size(48);
+    }
+
+    @include breakpoint(desktop1400) {
+      padding: size(80);
+    }
+  }
+
+  .servicedetails {
+    @include flex-column;
+    gap: size(48);
+    
+    .info {
+      @include flex-column;
+      gap: size(32);
+    }
+  }
+
+  .actions {
+    @include flex-center-vert;
+    gap: size(14);
+  }
+
+  .service-thumbnail {
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+  }
+}
+
 .buildingwebsite {
   padding: size(48) size(20);
 

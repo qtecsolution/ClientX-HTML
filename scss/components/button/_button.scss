@@ -79,3 +79,18 @@ button,
     @include setBgColor($headingtext, $white);
   }
 }
+
+.btn-building {
+  @include setBgColor(transparent, $primary);
+  @include border(solid, 1, $primary);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 700;
+  padding: size(12) size(16);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primary, $white);
+  }
+}

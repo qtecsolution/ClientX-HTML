@@ -503,6 +503,50 @@ button:focus,
   color: hsl(0, 0%, 100%);
 }
 
+.btn-building {
+  background: transparent;
+  color: hsl(28, 91%, 54%);
+  border: solid 0.0625rem hsl(28, 91%, 54%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-building:not([disabled]):hover {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.cardindustry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.cardindustry .industryicon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardindustry .title {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardindustry .title {
+    font-size: 1.25rem;
+  }
+}
+
 .cardwebsite {
   display: flex;
   flex-direction: column;
@@ -1251,6 +1295,85 @@ table tr td {
   text-decoration: underline;
 }
 
+.allindustries {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .allindustries {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .allindustries {
+    padding: 6rem 1.25rem;
+  }
+}
+.allindustries-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .allindustries-content {
+    gap: 6rem;
+  }
+}
+
+.servicesection {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicesection {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicesection {
+    padding: 6rem 1.25rem;
+  }
+}
+.servicesection-content {
+  background: hsl(180, 100%, 98%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .servicesection-content {
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .servicesection-content {
+    padding: 5rem;
+  }
+}
+.servicesection .servicedetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.servicesection .servicedetails .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.servicesection .actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.servicesection .service-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .buildingwebsite {
   padding: 3rem 1.25rem;
 }
@@ -1560,6 +1683,14 @@ table tr td {
 }
 .faqs .faqinfo .accordion-body .faqtext {
   color: hsl(0, 0%, 44%);
+}
+
+.marked {
+  color: hsl(28, 91%, 54%);
+}
+
+.headingmarked {
+  color: hsl(196, 82%, 51%);
 }
 
 .shipcontainer {
