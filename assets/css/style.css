@@ -485,6 +485,57 @@ button:focus,
   color: hsl(201, 63%, 12%);
 }
 
+.btn-started {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 2.25rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-started:not([disabled]):hover {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
+}
+
+.cardlifecycle {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 0.9375rem;
+  box-shadow: -0.4656rem 0.4655rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.25rem 1.5rem 2.5rem;
+  height: 100%;
+}
+.cardlifecycle-header .thumbnail {
+  width: 6rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardlifecycle-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.cardlifecycle-body .title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.cardlifecycle-body .text {
+  color: hsl(240, 3%, 15%);
+  font-size: 0.875rem;
+}
+
 .cardtestimonial {
   background: hsl(0, 0%, 100%);
   border: solid 0.125rem hsl(201, 63%, 12%);
@@ -1153,6 +1204,44 @@ table tr td {
 .footerlist-link:not([disabled]):hover {
   color: hsl(28, 91%, 54%);
   text-decoration: underline;
+}
+
+.lifecycle {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .lifecycle {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .lifecycle {
+    padding: 6rem 1.25rem;
+  }
+}
+.lifecycle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background: url(../images/home/lifecycle-bg.png);
+  background-color: hsl(21, 81%, 96%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .lifecycle-content {
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .lifecycle-content {
+    padding: 5rem;
+  }
 }
 
 .testimonial {

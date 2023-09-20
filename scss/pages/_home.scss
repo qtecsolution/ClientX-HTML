@@ -1,6 +1,41 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.lifecycle {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    background: url(../images/home/lifecycle-bg.png);
+    background-color: $sectionbg-3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    overflow: hidden;
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      padding: size(48);
+    }
+
+    @include breakpoint(desktop1400) {
+      padding: size(80);
+    }
+  }
+
+}
+
 .testimonial {
   padding: size(48) size(20);
 
@@ -57,14 +92,6 @@
         height: 0;
         display: none;
       }
-    }
-
-    &-button-next {
-
-    }
-
-    &-button-prev {
-
     }
 
     &-button-disabled {

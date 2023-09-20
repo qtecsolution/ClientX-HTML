@@ -1,6 +1,41 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardlifecycle {
+  background: $white;
+  @include border(solid, 2, $headingtext);
+  @include radius(15);
+  box-shadow: $cardshadow;
+  @include flex-column;
+  gap: size(32);
+  padding: size(36) size(24) size(40);
+  @include h100;
+
+  &-header {
+    .thumbnail {
+      width: size(96);
+      height: size(64);
+      @include flex-center;
+      overflow: hidden;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(20);
+
+    .title {
+      font-size: size(18);
+      font-weight: 500;
+    }
+    
+    .text {
+      color: $lifecycletext;
+      font-size: size(14);
+    }
+  }
+}
+
 .cardtestimonial {
   background: $white;
   @include border(solid, 2, $headingtext);

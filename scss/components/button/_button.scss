@@ -64,3 +64,18 @@ button,
     @include setBgColor(transparent, $headingtext);
   }
 }
+
+.btn-started {
+  @include setBgColor(transparent, $headingtext);
+  @include border(solid, 1, $headingtext);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 700;
+  padding: size(12) size(36);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($headingtext, $white);
+  }
+}
