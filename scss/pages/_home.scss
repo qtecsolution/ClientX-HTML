@@ -1,6 +1,84 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.testimonial {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    padding-bottom: size(48);
+  
+    @include breakpoint(desktop1400) {
+      gap: size(80);
+    }
+
+    .info {
+      max-width: size(612);
+      margin-inline: auto;
+    }
+  }
+
+  .swiper {
+    padding-bottom: size(16);
+
+    &-button-next,
+    &-button-prev {
+      background: $primary;
+      @include square(48);
+      @include circle;
+      display: none;
+      overflow: hidden;
+      padding: size(14);
+      margin-top: size(-32);
+      
+      @include breakpoint(tab992) {
+        @include flex-center;
+      }
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+
+      &::after {
+        content: '';
+        font-size: 0;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+
+    &-button-next {
+
+    }
+
+    &-button-prev {
+
+    }
+
+    &-button-disabled {
+      background: rgba($primary, 0.2);
+
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+
 .potential {
   &-content {
     background: url(../images/home/potential-bg.png);

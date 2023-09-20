@@ -1,2 +1,68 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+.cardtestimonial {
+  background: $white;
+  @include border(solid, 2, $headingtext);
+  @include radius(15);
+  box-shadow: $cardshadow;
+  padding: size(16);
+  margin-left: size(8);
+  
+  @include breakpoint(desktop1200) {
+    padding: size(32);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(48);
+  }
+
+  .title {
+    font-size: size(24);
+    font-weight: 500;
+  }
+
+  .clientinfo {
+    padding: size(16);
+    @include flex-column;
+    gap: size(20);
+
+    .text {
+      color: $headingtext;
+      max-width: 90%;
+    }
+
+    .author {
+      @include flex-center-vert;
+      gap: size(24);
+
+      &-thumbnail {
+        @include square(48);
+        @include border(solid, 2, $authorborder);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+        }
+      }
+
+      &-info {
+        width: calc(100% - size(64));
+        @include flex-column;
+        gap: size(4);
+
+        .name {
+          color: $authortext;
+          font-size: size(16);
+        }
+
+        .designation {
+          color: $authortext;
+          font-size: size(13);
+        }
+      }
+    }
+  }
+}

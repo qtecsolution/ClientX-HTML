@@ -31,6 +31,7 @@ $primarytext: hsl(0, 0%, 34%); //#565656
 $textplaceholder: hsl(0, 3%, 46%); //#787272
 $textlink: hsl(200, 100%, 50%); //#00AAFF
 $accordiontext: hsl(0, 0%, 44%); //#707070
+$authortext: hsl(0, 0%, 24%); //#3C3C3C
 
 $danger: hsl(354, 70%, 54%); //#dc3545
 $success: hsl(140, 64%, 62%); //#5EDC89
@@ -38,8 +39,10 @@ $success: hsl(140, 64%, 62%); //#5EDC89
 // BORDER-COLORS
 $headerborder: hsl(0, 0%, 85%); //#D9D9D9
 $cardborder: hsl(220, 100%, 98%); //#F6F9FF
+$authorborder: hsl(246, 58%, 55%); //#5649CF
 
 // SHADOWS
 
 // BOX-SHADOWS
 $formshadow: .4375rem .4375rem 0 0 $headingtext;
+$cardshadow: -0.4656rem .4655rem 0 0 $headingtext;
