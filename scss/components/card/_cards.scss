@@ -1,6 +1,69 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardwebsite {
+  @include flex-column;
+  gap: size(32);
+  @include h100;
+  
+  &-header {
+    .icon {
+      @include radius(20);
+      @include square(72);
+      @include flex-center;
+      overflow: hidden;
+      padding: size(16);
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(16);
+
+    .title {
+      font-size: size(20);
+      font-weight: 500;
+      @include text-overflow;
+    }
+
+    .text {
+      color: $primarytext;
+    }
+  }
+
+  &-1 {
+    .cardwebsite-header {
+      .icon {
+        background: $iconbg-1;
+      }
+    }
+  }
+
+  &-2 {
+    .cardwebsite-header {
+      .icon {
+        background: $iconbg-2;
+      }
+    }
+  }
+
+  &-3 {
+    .cardwebsite-header {
+      .icon {
+        background: $iconbg-3;
+      }
+    }
+  }
+
+  &-4 {
+    .cardwebsite-header {
+      .icon {
+        background: $iconbg-4;
+      }
+    }
+  }
+}
+
 .cardlifecycle {
   background: $white;
   @include border(solid, 2, $headingtext);

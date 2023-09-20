@@ -503,6 +503,51 @@ button:focus,
   color: hsl(0, 0%, 100%);
 }
 
+.cardwebsite {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+.cardwebsite-header .icon {
+  border-radius: 1.25rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1rem;
+}
+.cardwebsite-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardwebsite-body .title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cardwebsite-body .text {
+  color: hsl(0, 0%, 34%);
+}
+.cardwebsite-1 .cardwebsite-header .icon {
+  background: hsl(201, 100%, 92%);
+}
+.cardwebsite-2 .cardwebsite-header .icon {
+  background: hsl(0, 100%, 89%);
+}
+.cardwebsite-3 .cardwebsite-header .icon {
+  background: hsl(54, 100%, 89%);
+}
+.cardwebsite-4 .cardwebsite-header .icon {
+  background: hsl(159, 100%, 74%);
+}
+
 .cardlifecycle {
   background: hsl(0, 0%, 100%);
   border: solid 0.125rem hsl(201, 63%, 12%);
@@ -1204,6 +1249,30 @@ table tr td {
 .footerlist-link:not([disabled]):hover {
   color: hsl(28, 91%, 54%);
   text-decoration: underline;
+}
+
+.buildingwebsite {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .buildingwebsite {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .buildingwebsite {
+    padding: 6rem 1.25rem;
+  }
+}
+.buildingwebsite-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .buildingwebsite-content {
+    gap: 4rem;
+  }
 }
 
 .lifecycle {
