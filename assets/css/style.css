@@ -467,6 +467,24 @@ button:focus,
   color: hsl(0, 0%, 100%);
 }
 
+.btn-submit {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-submit:not([disabled]):hover {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+}
+
 .header {
   background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
@@ -594,6 +612,71 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .was-validated .form-control:valid:focus {
   box-shadow: none;
   outline: none;
+}
+
+.customcheck .checkprivacy:checked ~ .checklabel::before {
+  background: hsl(201, 63%, 12%);
+  border-color: hsl(201, 63%, 12%);
+}
+.customcheck .checkprivacy:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.customcheck .checklabel {
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.875rem;
+}
+.customcheck .checklabel::before, .customcheck .checklabel::after {
+  content: "";
+  position: absolute;
+}
+.customcheck .checklabel::before {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsl(0, 0%, 99%);
+  width: 1.125rem;
+  height: 1.125rem;
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-radius: 0.25rem;
+  transition: all 350ms ease-in-out;
+}
+.customcheck .checklabel::after {
+  width: 0.625rem;
+  height: 0.3125rem;
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border-top: 0;
+  left: 0.28125rem;
+  border-right: 0;
+  top: 50%;
+  transform: translateY(-70%) rotate(-45deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 350ms ease-in-out;
+}
+.customcheck .checklabel::-moz-selection {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+}
+.customcheck .checklabel::selection {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+}
+.customcheck .checklabel .checklink {
+  color: hsl(200, 100%, 50%);
+  transition: color 350ms ease-in-out;
+}
+.customcheck .checklabel .checklink:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+.customcheck .checklabel .checklink::-moz-selection {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+}
+.customcheck .checklabel .checklink::selection {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
 }
 
 .offcanvas.offcanvas-top {
@@ -824,6 +907,53 @@ table tr td {
   padding: 0.75rem;
 }
 
+.contactform {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  padding: 2.5rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .contactform {
+    padding: 3rem 2rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .contactform {
+    padding: 4rem 2rem;
+  }
+}
+.contactform .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.contactform .inputbox .inputlabel {
+  color: hsl(201, 63%, 12%);
+  font-weight: 500;
+}
+.contactform .inputbox .textfield {
+  background: hsl(0, 0%, 99%);
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.contactform .inputbox .textfield:focus {
+  border-color: hsl(196, 82%, 51%);
+}
+.contactform .inputbox .textfield::-moz-placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.contactform .inputbox .textfield::placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.contactform .submitbox {
+  max-width: 8.75rem;
+}
+
 .desktoplist {
   margin: 0;
   padding: 0;
@@ -1002,6 +1132,39 @@ table tr td {
   align-items: flex-end;
   justify-content: flex-end;
   height: 100%;
+}
+
+.contact {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .contact {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .contact {
+    padding: 6rem 1.25rem;
+  }
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .contact-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .contact-content {
+    gap: 6rem;
+  }
+}
+.contact .info {
+  max-width: 30.125rem;
+  margin-inline: auto;
 }
 
 .shipcontainer {

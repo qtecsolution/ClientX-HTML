@@ -1,0 +1,32 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.contact {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(mobile768) {
+      gap: size(64);
+    }
+    
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+
+  .info {
+    max-width: size(482);
+    margin-inline: auto;
+  }
+}

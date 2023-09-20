@@ -33,3 +33,49 @@
     padding: size(12);
   }
 }
+
+.contactform {
+  background: $white;
+  @include border(solid, 2, $headingtext);
+  @include radius(20);
+  box-shadow: $formshadow;
+  padding: size(40) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(48) size(32);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(64) size(32);
+  }
+
+  .inputbox {
+    @include flex-column;
+    gap: size(12);
+
+    .inputlabel {
+      color: $headingtext;
+      font-weight: 500;
+    }
+
+    .textfield {
+      @include setBgColor($contactinputbg, $headingtext);
+      @include border(solid, 1, rgba($headingtext, 0.10));
+      @include radius(4);
+      padding: size(12) size(16);
+      @include transitionsall;
+
+      &:focus {
+        border-color: $secondary;
+      }
+      
+      &::placeholder {
+        color: $textplaceholder;
+      }
+    }
+  }
+
+  .submitbox {
+    max-width: size(140);
+  }
+}

@@ -13,6 +13,7 @@ $cardbg-1: hsl(216, 100%, 95%); //#E4EFFF
 $cardbg-2: hsl(220, 100%, 67%); //#568EFF
 $boxbg: hsl(140, 100%, 93%); //#DBFFE7
 $inputbg: hsl(0, 0%, 98%); //#F9F9F9
+$contactinputbg: hsl(0, 0%, 99%); //#FDFDFD
 
 $sectionbg-1: hsl(15, 100%, 98%); //#FFF6F3
 $sectionbg-2: hsl(180, 100%, 98%); //#F3FFFF
@@ -27,6 +28,8 @@ $iconbg-4: hsl(159, 100%, 74%); //#79FFCF
 // TEXT-COLORS
 $headingtext: hsl(201, 63%, 12%); //#0B2330
 $primarytext: hsl(0, 0%, 34%); //#565656
+$textplaceholder: hsl(0, 3%, 46%); //#787272
+$textlink: hsl(200, 100%, 50%); //#00AAFF
 
 $danger: hsl(354, 70%, 54%); //#dc3545
 $success: hsl(140, 64%, 62%); //#5EDC89
@@ -38,3 +41,4 @@ $cardborder: hsl(220, 100%, 98%); //#F6F9FF
 // SHADOWS
 
 // BOX-SHADOWS
+$formshadow: .4375rem .4375rem 0 0 $headingtext;
