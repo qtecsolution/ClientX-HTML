@@ -112,7 +112,7 @@ button,
 }
 
 .btn-building {
-  @include setBgColor(transparent, $primary);
+  @include setBgColor($primary, $white);
   @include border(solid, 1, $primary);
   @include radius(4);
   @include flex-center;
@@ -122,6 +122,6 @@ button,
   @include transitionsall;
 
   @include hover {
-    @include setBgColor($primary, $white);
+    @include setBgColor(transparent, $primary);
   }
 }

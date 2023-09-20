@@ -541,8 +541,8 @@ button:focus,
 }
 
 .btn-building {
-  background: transparent;
-  color: hsl(28, 91%, 54%);
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
   border: solid 0.0625rem hsl(28, 91%, 54%);
   border-radius: 0.25rem;
   display: flex;
@@ -554,8 +554,38 @@ button:focus,
   transition: all 350ms ease-in-out;
 }
 .btn-building:not([disabled]):hover {
-  background: hsl(28, 91%, 54%);
-  color: hsl(0, 0%, 100%);
+  background: transparent;
+  color: hsl(28, 91%, 54%);
+}
+
+.cardseo {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 0.9375rem;
+  box-shadow: -0.4656rem 0.4655rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 21.5625rem;
+  padding: 2.25rem 1.5rem 3rem;
+}
+.cardseo .title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.cardseo .text {
+  color: hsl(240, 3%, 15%);
+  font-size: 0.875rem;
+  text-align: justify;
+}
+.cardseo.cardseo-1 .title {
+  color: hsl(141, 50%, 47%);
+}
+.cardseo.cardseo-2 .title {
+  color: hsl(28, 91%, 54%);
+}
+.cardseo.cardseo-3 .title {
+  color: hsl(196, 82%, 51%);
 }
 
 .cardwow {
@@ -1402,6 +1432,84 @@ table tr td {
 .footerlist-link:not([disabled]):hover {
   color: hsl(28, 91%, 54%);
   text-decoration: underline;
+}
+
+.seoperformance {
+  padding: 3rem 1.25rem;
+  margin-top: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .seoperformance {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .seoperformance {
+    padding: 6rem 1.25rem;
+  }
+}
+.seoperformance .leftcontent {
+  background: url(../images/seoperformance/seoperformance-bg.png) no-repeat center center/cover;
+  height: 100%;
+  position: relative;
+}
+.seoperformance .leftcontent .contents {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1875rem;
+}
+@media screen and (min-width: 75rem) {
+  .seoperformance .leftcontent .contents {
+    margin-left: -2.5rem;
+    padding-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .seoperformance .leftcontent .contents .cardseo-2 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 75rem) {
+  .seoperformance .leftcontent .contents .cardseo-2 {
+    left: 40%;
+  }
+}
+.seoperformance .leftcontent .topicon {
+  width: 8.125rem;
+  height: 8.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: -5rem;
+  left: -6.25rem;
+}
+.seoperformance .rightcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+  height: 100%;
+}
+.seoperformance .rightcontent .title {
+  font-weight: 700;
+}
+.seoperformance .rightcontent .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.seoperformance .rightcontent .info .text {
+  color: hsl(0, 0%, 34%);
+  font-weight: 500;
+  text-align: justify;
+}
+.seoperformance .rightcontent .start {
+  max-width: 12.5rem;
 }
 
 .cardsection {

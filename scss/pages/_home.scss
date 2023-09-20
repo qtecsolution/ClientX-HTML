@@ -1,6 +1,83 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.seoperformance {
+  padding: size(48) size(20);
+  margin-top: size(48);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  .leftcontent {
+    background: url(../images/seoperformance/seoperformance-bg.png) no-repeat center center/cover;
+    @include h100;
+    position: relative;
+
+    .contents {
+      position: relative;
+      @include flex-column;
+      gap: size(35);
+    
+      @include breakpoint(desktop1200) {
+        margin-left: size(-40);
+        padding-top: size(40);
+      }
+
+      .cardseo-2 {
+        @include breakpoint(tab992) {
+          position: absolute;
+          top: 50%;
+          left: 20%;
+          @include translateY(-50%);
+        }
+    
+        @include breakpoint(desktop1200) {
+          left: 40%;
+        }
+      }
+    }
+
+    .topicon {
+      @include square(130);
+      @include flex-center;
+      overflow: hidden;
+      position: absolute;
+      top: size(-80);
+      left: size(-100);
+    }
+  }
+  
+  .rightcontent {
+    @include flex-column;
+    gap: size(44);
+    @include h100;
+
+    .title {
+      font-weight: 700;
+    }
+
+    .info {
+      @include flex-column;
+      gap: size(24);
+
+      .text {
+        color: $primarytext;
+        font-weight: 500;
+        text-align: justify;
+      }
+    }
+
+    .start {
+      max-width: size(200);
+    }
+  }
+}
+
 .cardsection {
   padding: size(48) size(20);
 
@@ -11,7 +88,6 @@
   @include breakpoint(desktop1400) {
     padding: size(96) size(20);
   }
-
 }
 
 .allindustries {
