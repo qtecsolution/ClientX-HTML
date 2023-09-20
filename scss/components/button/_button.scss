@@ -65,6 +65,37 @@ button,
   }
 }
 
+.btn-quote {
+  @include setBgColor(transparent, $headingtext);
+  @include border(solid, 1, $headingtext);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 700;
+  padding: size(12) size(40);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($headingtext, $white);
+  }
+}
+
+.btn-order {
+  @include setBgColor($white, $headingtext);
+  @include border(solid, 1, $white);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 700;
+  padding: size(12) size(40);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($headingtext, $white);
+    border-color: $headingtext;
+  }
+}
+
 .btn-started {
   @include setBgColor(transparent, $headingtext);
   @include border(solid, 1, $headingtext);

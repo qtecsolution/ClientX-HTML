@@ -485,6 +485,43 @@ button:focus,
   color: hsl(201, 63%, 12%);
 }
 
+.btn-quote {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-quote:not([disabled]):hover {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-order {
+  background: hsl(0, 0%, 100%);
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-order:not([disabled]):hover {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(201, 63%, 12%);
+}
+
 .btn-started {
   background: transparent;
   color: hsl(201, 63%, 12%);
@@ -519,6 +556,78 @@ button:focus,
 .btn-building:not([disabled]):hover {
   background: hsl(28, 91%, 54%);
   color: hsl(0, 0%, 100%);
+}
+
+.cardwow {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.25rem;
+  height: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .cardwow {
+    padding: 2.5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .cardwow {
+    padding: 3.75rem;
+    gap: 4rem;
+  }
+}
+.cardwow-header .card-thumbnail {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: -0.4656rem 0.4655rem 0 0 hsl(201, 63%, 12%);
+  overflow: hidden;
+}
+.cardwow-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cardwow-body .title {
+  font-weight: 700;
+}
+.cardwow-body .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cardwow-body .info .text {
+  color: hsl(201, 63%, 12%);
+  text-align: justify;
+}
+.cardwow-body .actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+}
+.cardwow-body a {
+  max-width: 11.25rem;
+}
+.cardwow.card-1 {
+  background: hsl(220, 100%, 67%) url(../images/card-section/card-1-bg.png) no-repeat center center/cover;
+}
+.cardwow.card-1 .cardwow-body .title {
+  color: hsl(0, 0%, 100%);
+}
+.cardwow.card-1 .cardwow-body .info {
+  margin-bottom: 4rem;
+}
+.cardwow.card-1 .cardwow-body .info .text {
+  color: hsl(0, 0%, 100%);
+}
+.cardwow.card-2 {
+  background: hsl(28, 91%, 54%) url(../images/card-section/card-2-bg.png) no-repeat center center/cover;
+}
+.cardwow.card-2 .cardwow-body .info {
+  margin-bottom: 0.625rem;
 }
 
 .cardindustry {
@@ -1293,6 +1402,20 @@ table tr td {
 .footerlist-link:not([disabled]):hover {
   color: hsl(28, 91%, 54%);
   text-decoration: underline;
+}
+
+.cardsection {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .cardsection {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .cardsection {
+    padding: 6rem 1.25rem;
+  }
 }
 
 .allindustries {

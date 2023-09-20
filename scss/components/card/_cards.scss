@@ -1,6 +1,91 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardwow {
+  @include border(solid, 2, $headingtext);
+  @include radius(20);
+  @include flex-column;
+  gap: size(48);
+  padding: size(20);
+  @include h100;
+  overflow: hidden;
+
+  @include breakpoint(mobile768) {
+    padding: size(40);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(60);
+    gap: size(64);
+  }
+
+  &-header {
+    .card-thumbnail {
+      @include border(solid, 2, $headingtext);
+      @include radius(20);
+      box-shadow: $cardshadow;
+      overflow: hidden;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(24);
+    
+    .title {
+      font-weight: 700;
+    }
+
+    .info {
+      @include flex-column;
+      gap: size(24);
+
+      .text {
+        color: $headingtext;
+        text-align: justify;
+      }
+    }
+
+    .actions {
+      @include flex-center-vert;
+      gap: size(14);
+      flex-wrap: wrap;
+    }
+
+    a {
+      max-width: size(180);
+    }
+  }
+
+  &.card-1 {
+    background: $cardbg-2 url(../images/card-section/card-1-bg.png) no-repeat center center/cover;
+  
+    .cardwow-body {
+      .title {
+        color: $white;
+      }
+
+      .info {
+        margin-bottom: size(64);
+
+        .text {
+          color: $white;
+        }
+      }
+    }
+  }
+  
+  &.card-2 {
+    background: $primary url(../images/card-section/card-2-bg.png) no-repeat center center/cover;
+  
+    .cardwow-body {
+      .info {
+        margin-bottom: size(10);
+      }
+    }
+  }
+}
+
 .cardindustry {
   @include flex-center-column;
   gap: size(32);
