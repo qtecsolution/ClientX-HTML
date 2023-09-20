@@ -597,6 +597,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .form-select:focus {
   box-shadow: none;
   outline: none;
+  border-color: hsl(196, 82%, 51%);
 }
 
 .form-control.is-invalid,
@@ -1165,6 +1166,110 @@ table tr td {
 .contact .info {
   max-width: 30.125rem;
   margin-inline: auto;
+}
+
+.faqs {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .faqs {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .faqs {
+    padding: 6rem 1.25rem;
+  }
+}
+.faqs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .faqs-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .faqs-content {
+    gap: 6rem;
+  }
+}
+.faqs .info {
+  max-width: 30.125rem;
+  margin-inline: auto;
+}
+.faqs .faq-details {
+  position: relative;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+}
+.faqs .faq-details .lefticon,
+.faqs .faq-details .righticon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.faqs .faq-details .lefticon {
+  width: 14.75rem;
+  height: 14.75rem;
+  top: -8.5rem;
+  left: -3rem;
+}
+.faqs .faq-details .righticon {
+  width: 8.125rem;
+  height: 4.9375rem;
+  bottom: 0;
+  right: 0;
+}
+.faqs .faqinfo .accordion-item {
+  border: 0;
+  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+  border-radius: 0rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.faqs .faqinfo .accordion-item:first-of-type .accordion-button, .faqs .faqinfo .accordion-item:last-of-type .accordion-button {
+  border-radius: 0rem;
+}
+.faqs .faqinfo .accordion-header {
+  margin-bottom: 1rem;
+}
+.faqs .faqinfo .accordion-button {
+  font-size: 1.375rem;
+  font-weight: 500;
+  border: 0;
+}
+.faqs .faqinfo .accordion-button:not(.collapsed) {
+  background: hsl(0, 0%, 100%);
+  color: hsl(28, 91%, 54%);
+  box-shadow: none;
+}
+.faqs .faqinfo .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 26.25C21.2132 26.25 26.25 21.2132 26.25 15C26.25 8.7868 21.2132 3.75 15 3.75C8.7868 3.75 3.75 8.7868 3.75 15C3.75 21.2132 8.7868 26.25 15 26.25Z' stroke='%230B2330' stroke-width='1.3' stroke-miterlimit='10'/%3E%3Cpath d='M10.3125 15H19.6875' stroke='%230B2330' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.faqs .faqinfo .accordion-button::after {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.09961 14.9996C3.09961 8.42742 8.42742 3.09961 14.9996 3.09961C21.5718 3.09961 26.8996 8.42742 26.8996 14.9996C26.8996 21.5718 21.5718 26.8996 14.9996 26.8996C8.42742 26.8996 3.09961 21.5718 3.09961 14.9996Z' fill='%230B2330'/%3E%3Cpath d='M10.3125 15H19.6875' stroke='white' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15 10.3125V19.6875' stroke='white' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-size: cover;
+}
+.faqs .faqinfo .accordion-button:focus {
+  border: 0;
+  box-shadow: none;
+}
+.faqs .faqinfo .accordion-body {
+  padding: 0;
+}
+.faqs .faqinfo .accordion-body .faqtext {
+  color: hsl(0, 0%, 44%);
 }
 
 .shipcontainer {
