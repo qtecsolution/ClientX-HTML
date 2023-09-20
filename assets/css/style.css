@@ -1090,6 +1090,7 @@ table tr td {
 }
 
 .potential-content {
+  background: url(../images/home/potential-bg.png);
   background-color: hsl(220, 100%, 73%);
   background-repeat: no-repeat;
   background-position: center;
