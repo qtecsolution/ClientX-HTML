@@ -1,6 +1,66 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.searchform {
+  @include flex-center-vert;
+  gap: size(20);
+  margin-inline: auto;
+  flex-wrap: wrap;
+
+  @include breakpoint(mobile576) {
+    min-width: size(474);
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint(mobile768) {
+    max-width: size(575);
+  }
+
+  .searchfield {
+    @include w100;
+    @include setBgColor($contactinputbg, $headingtext);
+    @include border(solid, 1, rgba($headingtext, 0.1));
+    box-shadow: $searchshadow;
+    font-size: size(15);
+    padding: size(12.75) size(20);
+    @include radius(4);
+    @include transitionsall;
+
+    @include breakpoint(mobile576) {
+      width: calc(100% - size(160));
+    }
+
+    &::placeholder {
+      color: $textplaceholder;
+    }
+
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+
+  .btn-search {
+    margin-inline: auto;
+    width: size(140);
+    @include setBgColor($headingtext, $white);
+    @include border(solid, 1, $headingtext);
+    @include radius(4);
+    @include flex-center;
+    font-weight: 700;
+    padding: size(12) size(40);
+    text-align: center;
+    @include transitionsall;
+
+    @include breakpoint(mobile576) {
+      margin: 0;
+    }
+
+    @include hover {
+      @include setBgColor(transparent, $headingtext);
+    }
+  }
+}
+
 .subscribeform {
   @include flex-center-vert;
   gap: size(12);

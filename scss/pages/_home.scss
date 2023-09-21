@@ -1,6 +1,103 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.homebanner {
+  background: $sectionbg-1;
+  padding: size(48) size(20);
+  min-height: 100vh;
+  
+  @include breakpoint(mobile414) {
+    min-height: 80vh;
+  }
+
+  @include breakpoint(mobile768) {
+    min-height: 70vh;
+  }
+    
+  @include breakpoint(tab992) {
+    min-height: 100vh;
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  .display-6 {
+    @include breakpoint(desktop1400) {
+      font-size: size(40);
+    }
+  }
+
+  .info {
+    max-width: size(574);
+    margin-inline: auto;
+
+    .text {
+      color: $primarytext;
+    }
+  }
+}
+
+.herothumbnail {
+  background: $white;
+  padding: size(0) size(0) size(48);
+
+  @include breakpoint(mobile768) {
+    padding: size(0) size(0) size(64);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(0) size(0) size(64);
+  }
+
+  .herothumbnail {
+    @include flex-center;
+    position: relative;
+    z-index: 100;
+    margin-top: -35%;
+    
+    @include breakpoint(mobile768) {
+      margin-top: -50%;
+    }
+    
+    @include breakpoint(tab992) {
+      margin-top: size(-200);
+    }
+
+    img {
+      @include border(solid, 2, $headingtext);
+      @include radius(20);
+      overflow: hidden;
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .lefticon,
+  .righticon {
+    overflow: hidden;
+    position: absolute;
+    display: none;
+    
+    @include breakpoint(tab992) {
+      @include flex-center;
+    }
+  }
+
+  .lefticon {
+    width: size(106);
+    height: size(69);
+    top: size(-48);
+    left: size(-64);
+  }
+
+  .righticon {
+    @include square(160);
+    bottom: size(-48);
+    right: size(-112);
+  }
+}
+
 .skillsection {
   padding: size(48) size(20);
 
