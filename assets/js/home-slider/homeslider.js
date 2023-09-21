@@ -3,7 +3,7 @@ const homeSlider = new Swiper('.homeSlider', {
     delay: 5000,
     disableOnInteraction: true,
   },
-  loop: true,
+  // loop: true,
   speed: 500,
   parallax: true,
   spaceBetween: 40,

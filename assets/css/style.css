@@ -938,7 +938,7 @@ button:focus,
 }
 
 .header {
-  background: rgba(255, 255, 255, 0.8);
+  background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   display: flex;
   align-items: center;
@@ -992,6 +992,7 @@ button:focus,
   cursor: pointer;
   font: inherit;
   font-weight: 500;
+  text-transform: capitalize;
 }
 .header-nav .language-auth .divider {
   width: 0.0625rem;
@@ -1577,6 +1578,7 @@ table tr td {
 .authlist .login-link {
   color: hsl(201, 63%, 12%);
   font-weight: 500;
+  text-transform: capitalize;
   transition: all 350ms ease-in-out;
 }
 .authlist .login-link:not([disabled]):hover {
@@ -1592,6 +1594,7 @@ table tr td {
   justify-content: center;
   padding: 0.6875rem 1.25rem;
   font-weight: 700;
+  text-transform: capitalize;
   text-align: center;
   transition: all 350ms ease-in-out;
 }
@@ -1926,16 +1929,16 @@ table tr td {
 }
 
 .diysection {
-  padding: 3rem 1.25rem;
+  padding: 0rem 1.25rem 3rem;
 }
 @media screen and (min-width: 48rem) {
   .diysection {
-    padding: 4rem 1.25rem;
+    padding: 0rem 1.25rem 4rem;
   }
 }
 @media screen and (min-width: 87.5rem) {
   .diysection {
-    padding: 6rem 1.25rem;
+    padding: 0rem 1.25rem 6rem;
   }
 }
 .diysection-content {
@@ -2204,11 +2207,11 @@ table tr td {
 .buildingwebsite-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 @media screen and (min-width: 87.5rem) {
   .buildingwebsite-content {
-    gap: 4rem;
+    gap: 5rem;
   }
 }
 
