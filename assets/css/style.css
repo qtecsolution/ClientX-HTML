@@ -1547,7 +1547,7 @@ table tr td {
 }
 @media screen and (min-width: 25.875rem) {
   .homebanner {
-    min-height: 80vh;
+    min-height: 90vh;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -1578,21 +1578,21 @@ table tr td {
   color: hsl(0, 0%, 34%);
 }
 
-.herothumbnail {
+.herothumb {
   background: hsl(0, 0%, 100%);
   padding: 0rem 0rem 3rem;
 }
 @media screen and (min-width: 48rem) {
-  .herothumbnail {
+  .herothumb {
     padding: 0rem 0rem 4rem;
   }
 }
 @media screen and (min-width: 87.5rem) {
-  .herothumbnail {
+  .herothumb {
     padding: 0rem 0rem 4rem;
   }
 }
-.herothumbnail .herothumbnail {
+.herothumb .herothumbnail {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1601,16 +1601,16 @@ table tr td {
   margin-top: -35%;
 }
 @media screen and (min-width: 48rem) {
-  .herothumbnail .herothumbnail {
+  .herothumb .herothumbnail {
     margin-top: -50%;
   }
 }
 @media screen and (min-width: 62rem) {
-  .herothumbnail .herothumbnail {
+  .herothumb .herothumbnail {
     margin-top: -12.5rem;
   }
 }
-.herothumbnail .herothumbnail img {
+.herothumb .herothumbnail img {
   border: solid 0.125rem hsl(201, 63%, 12%);
   border-radius: 1.25rem;
   overflow: hidden;
@@ -1619,31 +1619,43 @@ table tr td {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.herothumbnail .lefticon,
-.herothumbnail .righticon {
+.herothumb .herothumbnail .shadowbox {
+  position: absolute;
+  bottom: -0.75rem;
+  left: auto;
+  right: auto;
+  width: calc(100% - 2.5rem);
+  margin-inline: auto;
+  height: 5rem;
+  background: hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  z-index: -1;
+}
+.herothumb .lefticon,
+.herothumb .righticon {
   overflow: hidden;
   position: absolute;
   display: none;
 }
 @media screen and (min-width: 62rem) {
-  .herothumbnail .lefticon,
-  .herothumbnail .righticon {
+  .herothumb .lefticon,
+  .herothumb .righticon {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-.herothumbnail .lefticon {
+.herothumb .lefticon {
   width: 6.625rem;
   height: 4.3125rem;
   top: -3rem;
   left: -4rem;
 }
-.herothumbnail .righticon {
+.herothumb .righticon {
   width: 10rem;
   height: 10rem;
-  bottom: -3rem;
-  right: -7rem;
+  bottom: -5rem;
+  right: -6rem;
 }
 
 .skillsection {
@@ -2246,6 +2258,42 @@ table tr td {
 }
 .faqs .faqinfo .accordion-body .faqtext {
   color: hsl(0, 0%, 44%);
+}
+
+.blogs {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .blogs {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .blogs {
+    padding: 6rem 1.25rem;
+  }
+}
+.blogs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .blogs-content {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .blogs-content {
+    gap: 6rem;
+  }
+}
+.blogs .info {
+  max-width: 30.125rem;
+  margin-inline: auto;
+}
+.blogs .info .text {
+  color: hsl(0, 0%, 34%);
 }
 
 .marked {

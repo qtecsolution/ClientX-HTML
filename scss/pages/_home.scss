@@ -7,7 +7,7 @@
   min-height: 100vh;
   
   @include breakpoint(mobile414) {
-    min-height: 80vh;
+    min-height: 90vh;
   }
 
   @include breakpoint(mobile768) {
@@ -38,7 +38,7 @@
   }
 }
 
-.herothumbnail {
+.herothumb {
   background: $white;
   padding: size(0) size(0) size(48);
 
@@ -71,6 +71,19 @@
       @include wh100;
       object-fit: cover;
     }
+
+    .shadowbox {
+      position: absolute;
+      bottom: size(-12);
+      left: auto;
+      right: auto;
+      width: calc(100% - size(40));
+      margin-inline: auto;
+      height: size(80);
+      background: $headingtext;
+      @include radius(20);
+      z-index: -1;
+    }
   }
 
   .lefticon,
@@ -93,8 +106,8 @@
 
   .righticon {
     @include square(160);
-    bottom: size(-48);
-    right: size(-112);
+    bottom: size(-80);
+    right: size(-96);
   }
 }
 
