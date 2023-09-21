@@ -938,7 +938,7 @@ button:focus,
 }
 
 .header {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   display: flex;
   align-items: center;
@@ -1007,13 +1007,6 @@ button:focus,
   width: 100%;
   padding: 1.5rem;
   display: none;
-}
-.header.scrolled {
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(0.3125rem);
-          backdrop-filter: blur(0.3125rem);
-  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
 }
 
 input,
@@ -1189,6 +1182,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
   color: hsl(354, 70%, 54%);
 }
 .offcanvas-body {
+  background: hsl(0, 0%, 100%);
   padding-bottom: 24rem;
 }
 .offcanvas-body::-webkit-scrollbar {
@@ -1811,15 +1805,6 @@ table tr td {
     padding: 6rem 0rem;
   }
 }
-.homebanner .topcontent {
-  min-height: 70vh;
-  max-height: 100vh;
-}
-@media screen and (min-width: 48rem) {
-  .homebanner .topcontent {
-    min-height: 80vh;
-  }
-}
 @media screen and (min-width: 87.5rem) {
   .homebanner .topcontent .display-6 {
     font-size: 2.5rem;
@@ -1832,40 +1817,24 @@ table tr td {
 .homebanner .topcontent .info .text {
   color: hsl(0, 0%, 34%);
 }
-
-.herothumb {
+.homebanner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.homebanner .herothumb {
   position: relative;
-  z-index: 100;
-  margin-top: -4rem;
-  padding-bottom: 5rem;
+  z-index: 10;
+  background: hsl(15, 100%, 98%);
 }
-@media screen and (min-width: 25.875rem) {
-  .herothumb {
-    margin-top: -5rem;
-  }
-}
-@media screen and (min-width: 48rem) {
-  .herothumb {
-    margin-top: -6.25rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .herothumb {
-    margin-top: -10rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .herothumb {
-    margin-top: -15.625rem;
-  }
-}
-.herothumb .herothumbnail {
+.homebanner .herothumb .herothumbnail {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 100;
 }
-.herothumb .herothumbnail img {
+.homebanner .herothumb .herothumbnail img {
   border: solid 0.125rem hsl(201, 63%, 12%);
   border-radius: 1.25rem;
   overflow: hidden;
@@ -1873,34 +1842,36 @@ table tr td {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  z-index: 100;
 }
-.herothumb .herothumbnail .lefticon,
-.herothumb .herothumbnail .righticon {
+.homebanner .herothumb .herothumbnail .lefticon,
+.homebanner .herothumb .herothumbnail .righticon {
   overflow: hidden;
   position: absolute;
   display: none;
 }
 @media screen and (min-width: 62rem) {
-  .herothumb .herothumbnail .lefticon,
-  .herothumb .herothumbnail .righticon {
+  .homebanner .herothumb .herothumbnail .lefticon,
+  .homebanner .herothumb .herothumbnail .righticon {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-.herothumb .herothumbnail .lefticon {
+.homebanner .herothumb .herothumbnail .lefticon {
   width: 6.625rem;
   height: 4.3125rem;
   top: -3rem;
   left: -4rem;
 }
-.herothumb .herothumbnail .righticon {
+.homebanner .herothumb .herothumbnail .righticon {
   width: 10rem;
   height: 10rem;
   bottom: -5rem;
   right: -6rem;
 }
-.herothumb .herothumbnail .shadowbox {
+.homebanner .herothumb .herothumbnail .shadowbox {
   position: absolute;
   bottom: -0.75rem;
   left: auto;
@@ -1911,6 +1882,19 @@ table tr td {
   background: hsl(201, 63%, 12%);
   border-radius: 1.25rem;
   z-index: -1;
+}
+.homebanner .herothumb .overlayhero {
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  width: 100%;
+  height: 11.25rem;
+  background: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 62rem) {
+  .homebanner .herothumb .overlayhero {
+    height: 15rem;
+  }
 }
 
 .skillsection {

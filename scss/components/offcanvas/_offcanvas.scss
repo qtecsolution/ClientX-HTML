@@ -44,6 +44,7 @@
   }
 
   &-body {
+    background: $white;
     padding-bottom: size(384);
 
     &::-webkit-scrollbar {
