@@ -1,2 +1,130 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.blogdetails {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+    
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+
+  .toptext {
+    color: $primarytext;
+    font-size: size(14);
+
+    &:first-child {
+      color: $headingtext;
+    }
+  }
+
+  .blogthumb {
+    @include radius(20);
+    @include flex-center;
+    @include w100;
+    height: size(220);
+    overflow: hidden;
+
+    @include breakpoint(mobile768) {
+      height: size(300);
+    }
+    
+    @include breakpoint(tab992) {
+      height: size(400);
+    }
+
+    img {
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.05);
+      }
+    }
+  }
+
+  .detailscontent {
+    @include flex-column;
+    gap: size(80);
+
+    .text {
+      color: $headingtext;
+      font-size: size(16);
+      text-align: justify;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      @include breakpoint(desktop1200) {
+        font-size: size(20);
+      }
+
+      @include breakpoint(desktop1600) {
+        font-size: size(22);
+      }
+    }
+
+    .details {
+      @include flex-column;
+      gap: size(24);
+
+      .title {
+        color: $primary;
+        font-size: size(26);
+        font-weight: 500;
+        @include line-clamp;
+
+        @include breakpoint(desktop1600) {
+          font-size: size(28);
+        }
+      }
+    }
+
+    .descriptions {
+      @include flex-column;
+      gap: size(40);
+    }
+  }
+}
+
+.morearticles {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    padding-bottom: size(80);
+    
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+    
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+}
