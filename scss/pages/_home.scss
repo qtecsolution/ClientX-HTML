@@ -1,6 +1,32 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.skillsection {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(80);
+
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+
+  .info {
+    max-width: size(420);
+    margin-inline: auto;
+  }
+}
+
 .diysection {
   padding: size(48) size(20);
 

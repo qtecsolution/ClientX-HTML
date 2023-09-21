@@ -1,6 +1,47 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardskill {
+  position: relative;
+  background: $cardborder;
+  @include border(solid, 1, $cardbg-1);
+  @include radius(10);
+  padding: size(64) size(24) size(48);
+  @include h100;
+
+  .counter {
+    @include setBgColor($primary, $white);
+    @include square(66);
+    @include circle;
+    @include flex-center;
+    font-size: size(24);
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: size(-33);
+    left: size(24);
+    z-index: 100;
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+  }
+  
+  &-header {
+    .title {
+      font-size: size(22);
+      font-weight: 700;
+    }
+  }
+
+  &-body {
+    .text {
+      color: $primarytext;
+    }
+  }
+}
+
 .cardseo {
   background: $white;
   @include border(solid, 2, $headingtext);
