@@ -1487,6 +1487,8 @@ table tr td {
   border-radius: 1.25rem;
   box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
   padding: 2.5rem 1.25rem;
+  position: relative;
+  z-index: 100;
 }
 @media screen and (min-width: 48rem) {
   .contactform {
@@ -1897,6 +1899,11 @@ table tr td {
 @media screen and (min-width: 62rem) {
   .homebanner .herothumb .overlayhero {
     height: 15rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .homebanner .herothumb .overlayhero {
+    bottom: -6rem;
   }
 }
 
@@ -2410,16 +2417,18 @@ table tr td {
 }
 
 .contact {
-  padding: 3rem 1.25rem;
+  background: hsl(227, 60%, 97%);
+  padding: 3rem 0rem;
+  margin-bottom: 4rem;
 }
 @media screen and (min-width: 48rem) {
   .contact {
-    padding: 4rem 1.25rem;
+    padding: 4rem 0rem;
   }
 }
 @media screen and (min-width: 87.5rem) {
   .contact {
-    padding: 6rem 1.25rem;
+    padding: 6rem 0rem;
   }
 }
 .contact-content {
@@ -2440,6 +2449,32 @@ table tr td {
 .contact .info {
   max-width: 30.125rem;
   margin-inline: auto;
+}
+.contact .contactdetails {
+  position: relative;
+}
+.contact .contactdetails .contactoverlay {
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  width: 100%;
+  height: 15rem;
+  background: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 48rem) {
+  .contact .contactdetails .contactoverlay {
+    bottom: -4rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .contact .contactdetails .contactoverlay {
+    height: 20rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .contact .contactdetails .contactoverlay {
+    bottom: -6rem;
+  }
 }
 
 .faqs {

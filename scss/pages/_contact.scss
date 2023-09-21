@@ -2,14 +2,16 @@
 @use '../partials' as *;
 
 .contact {
-  padding: size(48) size(20);
+  background: $sectionbg-6;
+  padding: size(48) size(0);
+  margin-bottom: size(64);
 
   @include breakpoint(mobile768) {
-    padding: size(64) size(20);
+    padding: size(64) size(0);
   }
   
   @include breakpoint(desktop1400) {
-    padding: size(96) size(20);
+    padding: size(96) size(0);
   }
 
   &-content {
@@ -28,5 +30,30 @@
   .info {
     max-width: size(482);
     margin-inline: auto;
+  }
+
+  .contactdetails {
+    position: relative;
+
+    .contactoverlay {
+      position: absolute;
+      bottom: size(-48);
+      left: 0;
+      @include w100;
+      height: size(240);
+      background: $white;
+
+      @include breakpoint(mobile768) {
+        bottom: size(-64);
+      }
+      
+      @include breakpoint(tab992) {
+        height: size(320);
+      }
+  
+      @include breakpoint(desktop1400) {
+        bottom: size(-96);
+      }
+    }
   }
 }

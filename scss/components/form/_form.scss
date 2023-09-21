@@ -100,6 +100,8 @@
   @include radius(20);
   box-shadow: $formshadow;
   padding: size(40) size(20);
+  position: relative;
+  z-index: 100;
 
   @include breakpoint(mobile768) {
     padding: size(48) size(32);
