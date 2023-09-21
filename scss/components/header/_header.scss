@@ -68,10 +68,10 @@
     display: none;
   }
 
-
   &.scrolled {
-    -webkit-backdrop-filter: blur(size(20));
-    backdrop-filter: blur(size(20));
+    background: rgba($white, 0.2);
+    backdrop-filter: blur(size(5));
     box-shadow: $headershadow;
+    border-color: rgba($white, 0.3);
   }
 }
