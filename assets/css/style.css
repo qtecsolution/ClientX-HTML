@@ -1434,6 +1434,86 @@ table tr td {
   text-decoration: underline;
 }
 
+.diysection {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .diysection {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .diysection {
+    padding: 6rem 1.25rem;
+  }
+}
+.diysection-content {
+  background: hsl(15, 100%, 98%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 48rem) {
+  .diysection-content {
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .diysection-content {
+    padding: 5rem;
+  }
+}
+.diysection .leftinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.diysection .leftinfo .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.diysection .leftinfo .actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+}
+.diysection .rightinfo {
+  position: relative;
+  padding-top: 3rem;
+}
+.diysection .rightinfo .diysection-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.diysection .rightinfo .diyicon {
+  width: 9.125rem;
+  height: 6.875rem;
+  overflow: hidden;
+  position: absolute;
+  top: -4rem;
+  right: -3rem;
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .diysection .rightinfo .diyicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .diysection .rightinfo .diyicon {
+    right: -6rem;
+  }
+}
+
 .seoperformance {
   padding: 3rem 1.25rem;
   margin-top: 3rem;
@@ -1486,14 +1566,26 @@ table tr td {
   justify-content: center;
   overflow: hidden;
   position: absolute;
-  top: -5rem;
-  left: -6.25rem;
+  top: -7rem;
+  left: -2.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .seoperformance .leftcontent .topicon {
+    top: -5rem;
+    left: -6.25rem;
+  }
 }
 .seoperformance .rightcontent {
   display: flex;
   flex-direction: column;
   gap: 2.75rem;
   height: 100%;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 62rem) {
+  .seoperformance .rightcontent {
+    margin-top: 0rem;
+  }
 }
 .seoperformance .rightcontent .title {
   font-weight: 700;

@@ -1,6 +1,79 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.diysection {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    background: $sectionbg-1;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    overflow: hidden;
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      padding: size(48);
+    }
+
+    @include breakpoint(desktop1400) {
+      padding: size(80);
+    }
+  }
+
+  .leftinfo {
+    @include flex-column;
+    gap: size(48);
+    
+    .info {
+      @include flex-column;
+      gap: size(32);
+    }
+
+    .actions {
+      @include flex-center-vert;
+      gap: size(14);
+      flex-wrap: wrap;
+    }
+  }
+
+  .rightinfo {
+    position: relative;
+    padding-top: size(48);
+
+    .diysection-thumbnail {
+      @include wh100;
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .diyicon {
+      width: size(146);
+      height: size(110);
+      overflow: hidden;
+      position: absolute;
+      top: size(-64);
+      right: size(-48);
+      display: none;
+      
+      @include breakpoint(mobile768) {
+        @include flex-center;
+      }
+      
+      @include breakpoint(tab992) {
+        right: size(-96);
+      }
+    }
+  }
+}
+
 .seoperformance {
   padding: size(48) size(20);
   margin-top: size(48);
@@ -47,8 +120,13 @@
       @include flex-center;
       overflow: hidden;
       position: absolute;
-      top: size(-80);
-      left: size(-100);
+      top: size(-112);
+      left: size(-36);
+
+      @include breakpoint(tab992) {
+        top: size(-80);
+        left: size(-100);
+      }
     }
   }
   
@@ -56,6 +134,11 @@
     @include flex-column;
     gap: size(44);
     @include h100;
+    margin-top: size(64);
+
+    @include breakpoint(tab992) {
+      margin-top: size(0);
+    }
 
     .title {
       font-weight: 700;
