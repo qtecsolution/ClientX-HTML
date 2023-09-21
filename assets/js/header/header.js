@@ -14,4 +14,5 @@ ScrollTrigger.create({
   onUpdate: (self) => {
     self.direction === -1 ? showAnim.play() : showAnim.reverse()
   },
+  toggleClass: { targets: 'header', className: 'scrolled' },
 })

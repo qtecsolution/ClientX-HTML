@@ -2,7 +2,7 @@
 @use '../../partials' as *;
 
 .header {
-  background: rgba($white, 0.8);
+  background: rgba($white, 0.7);
   @include border-single(bottom, solid, 1, $headerborder);
   @include flex-center-vert;
   position: fixed;
@@ -66,5 +66,12 @@
     @extend %animation;
     @extend %slideUpIn;
     display: none;
+  }
+
+
+  &.scrolled {
+    -webkit-backdrop-filter: blur(size(20));
+    backdrop-filter: blur(size(20));
+    box-shadow: $headershadow;
   }
 }

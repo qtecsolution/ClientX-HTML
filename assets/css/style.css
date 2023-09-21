@@ -938,7 +938,7 @@ button:focus,
 }
 
 .header {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   display: flex;
   align-items: center;
@@ -1007,6 +1007,11 @@ button:focus,
   width: 100%;
   padding: 1.5rem;
   display: none;
+}
+.header.scrolled {
+  -webkit-backdrop-filter: blur(1.25rem);
+  backdrop-filter: blur(1.25rem);
+  box-shadow: 0 0.125rem 0.25rem rgba(7, 37, 68, 0.06);
 }
 
 input,

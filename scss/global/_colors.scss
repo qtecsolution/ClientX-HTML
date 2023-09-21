@@ -46,9 +46,11 @@ $cardborder: hsl(220, 100%, 98%); //#F6F9FF
 $authorborder: hsl(246, 58%, 55%); //#5649CF
 
 // SHADOWS
+$shade-2: rgba(7,37,68, 0.06);
 
 // BOX-SHADOWS
 $formshadow: .4375rem .4375rem 0 0 $headingtext;
 $cardshadow: -0.4656rem .4655rem 0 0 $headingtext;
 $searchshadow: 0 .5rem 2.5625rem -0.5625rem rgba($black, 0.09);
 $blogshadow: .4375rem .4375rem 0 0 $headingtext;
+$headershadow: 0 .125rem .25rem $shade-2;
