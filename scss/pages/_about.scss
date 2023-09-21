@@ -1,2 +1,52 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.aboutplatform {
+  &-content {
+    background: $sectionbg-5;
+    @include radius(20);
+    overflow: hidden;
+  }
+
+  &-info {
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    overflow: hidden;
+  }
+
+  .leftinfo {
+    @include flex-column;
+    gap: size(32);
+    padding: size(16);
+
+    @include breakpoint(mobile768) {
+      padding: size(40) size(20);
+    }
+    
+    @include breakpoint(desktop1400) {
+      padding: size(60) size(20);
+    }
+
+    .display-6 {
+      font-weight: 700;
+    }
+    
+    .info {
+      .text {
+        color: $headingtext;
+      }
+    }
+
+    .started {
+      max-width: size(200);
+    }
+  }
+
+  &-thumbnail {
+    background-color: $sectionbg-5;
+    @include flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include h100;
+  }
+}

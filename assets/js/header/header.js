@@ -1,11 +1,17 @@
-const header = document.querySelector('.header');
- 
-window.addEventListener('scroll', headerscrolled);
+// HEADER SHOW HIDE ON SCROLL
 
-function headerscrolled() {
-  if (window.scrollY > 0) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-}
+const showAnim = gsap
+  .from('.header', {
+    yPercent: -100,
+    paused: true,
+    duration: 0.2,
+  })
+  .progress(1)
+
+ScrollTrigger.create({
+  start: 'top top',
+  end: 99999,
+  onUpdate: (self) => {
+    self.direction === -1 ? showAnim.play() : showAnim.reverse()
+  },
+})

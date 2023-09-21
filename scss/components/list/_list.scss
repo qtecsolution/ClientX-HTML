@@ -3,10 +3,21 @@
 
 .desktoplist {
   @include list-horizontal;
-  gap: size(16);
+
+  &-item {
+    height: size(100);
+    @include flex-center;
+    padding-inline: size(12);
   
-  @include breakpoint(desktop1400) {
-    gap: size(36);
+    @include breakpoint(desktop1200) {
+      padding-inline: size(18);
+    }
+
+    @include hover {
+      .desktoplist-link:not(.active) {
+        color: $primary;
+      }
+    }
   }
 
   &-link {
@@ -14,12 +25,16 @@
     font-weight: 500;
     @include transitionsall;
 
-    &:hover:not(.active) {
-      color: $primary;
-    }
-
     &.active {
       color: $primary;
+    }
+  }
+
+  .dropdownitem {
+    @include hover {
+      .resourcesdropdown {
+        display: block;
+      }
     }
   }
 }
@@ -74,6 +89,79 @@
 
     &.active {
       color: $primary;
+    }
+  }
+}
+
+.dropdownlist {
+  @include list-horizontal;
+  gap: size(32);
+
+  &-link {
+    @include flex;
+    gap: size(14);
+
+    .icon {
+      @include square(118);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .info {
+      width: calc(100% - size(132));
+      @include flex-column;
+
+      .title {
+        color: $headingtext;
+        font-size: size(14);
+        font-weight: 500;
+        @include transitionscolor;
+      }
+
+      .text {
+        color: $primarytext;
+        font-size: size(12);
+      }
+    }
+
+    @include hover {
+      .info {
+        .title {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.mobiledropdown {
+  @include list-vertical;
+  gap: size(14);
+
+  &-link {
+    @include flex;
+    gap: size(14);
+
+    .icon {
+      @include square(64);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .info {
+      width: calc(100% - size(78));
+      @include flex-column;
+
+      .title {
+        color: $headingtext;
+        font-size: size(14);
+        font-weight: 500;
+      }
+
+      .text {
+        color: $primarytext;
+        font-size: size(12);
+      }
     }
   }
 }

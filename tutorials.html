@@ -25,7 +25,7 @@
   </head>
   <body>
     <!-- HEADER-SECTION START -->
-    <header class="header fixed-top">
+    <header class="header">
       <div class="container">
         <nav id="header-nav" class="header-nav" aria-labelledby="header-nav">
           <!-- HAMBURGER-MENU -->
@@ -73,7 +73,11 @@
                   </li>
 
                   <li class="mobilelist-item">
-                    <a href="#" class="mobilelist-link"> Resources </a>
+                    <a href="about.html" class="mobilelist-link"> About us </a>
+                  </li>
+
+                  <li class="mobilelist-item">
+                    <a href="#" class="mobilelist-link"> Pricing </a>
                   </li>
 
                   <li class="mobilelist-item">
@@ -82,12 +86,96 @@
                     </a>
                   </li>
 
-                  <li class="mobilelist-item">
-                    <a href="#" class="mobilelist-link"> Pricing </a>
-                  </li>
+                  <li class="accordion" id="accordionResources">
+                    <span class="accordion-item">
+                      <span class="accordion-header">
+                        <span
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseResources"
+                          aria-expanded="true"
+                          aria-controls="collapseResources"
+                        >
+                          Resources
+                        </span>
+                      </span>
 
-                  <li class="mobilelist-item">
-                    <a href="about.html" class="mobilelist-link"> About us </a>
+                      <span
+                        id="collapseResources"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionResources"
+                      >
+                        <span class="accordion-body">
+                          <ul class="mobiledropdown">
+                            <li class="mobiledropdown-item">
+                              <a
+                                href="tutorials.html"
+                                class="mobiledropdown-link"
+                              >
+                                <span class="icon">
+                                  <img
+                                    src="assets/images/menu-icons/tutorials.png"
+                                    alt="tutorials-icon"
+                                  />
+                                </span>
+
+                                <span class="info">
+                                  <span class="title">Tutorials</span>
+                                  <span class="text">
+                                    Become a WebWowZer expert with our guided
+                                    product tours and step-by-step tutorials.
+                                  </span>
+                                </span>
+                              </a>
+                            </li>
+
+                            <li class="mobiledropdown-item">
+                              <a href="blogs.html" class="mobiledropdown-link">
+                                <span class="icon">
+                                  <img
+                                    src="assets/images/menu-icons/blog.png"
+                                    alt="tutorials-icon"
+                                  />
+                                </span>
+
+                                <span class="info">
+                                  <span class="title">Blog</span>
+                                  <span class="text">
+                                    Level up your product development with our
+                                    expert-curated collection of guides and
+                                    articles.
+                                  </span>
+                                </span>
+                              </a>
+                            </li>
+
+                            <li class="mobiledropdown-item">
+                              <a
+                                href="contact.html"
+                                class="mobiledropdown-link"
+                              >
+                                <span class="icon">
+                                  <img
+                                    src="assets/images/menu-icons/contact.png"
+                                    alt="contact-icon"
+                                  />
+                                </span>
+
+                                <span class="info">
+                                  <span class="title">Contact us</span>
+                                  <span class="text">
+                                    We're here for anything you need. Just drop
+                                    us a quick message below. We'll get back in
+                                    24 hrs.
+                                  </span>
+                                </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </span>
+                      </span>
+                    </span>
                   </li>
 
                   <li class="mobilelist-item">
@@ -128,11 +216,7 @@
               </li>
 
               <li class="desktoplist-item">
-                <a href="#" class="desktoplist-link">Resources</a>
-              </li>
-
-              <li class="desktoplist-item">
-                <a href="templates.html" class="desktoplist-link">Templates</a>
+                <a href="about.html" class="desktoplist-link">About us</a>
               </li>
 
               <li class="desktoplist-item">
@@ -140,7 +224,81 @@
               </li>
 
               <li class="desktoplist-item">
-                <a href="about.html" class="desktoplist-link">About us</a>
+                <a href="templates.html" class="desktoplist-link">Templates</a>
+              </li>
+
+              <li class="desktoplist-item dropdownitem">
+                <a href="#" class="desktoplist-link">Resources</a>
+
+                <!-- RESOURCES-DROPDOWN -->
+                <span class="resourcesdropdown">
+                  <span class="container">
+                    <span class="row">
+                      <span class="col-xxl-10 mx-xxl-auto">
+                        <ul class="dropdownlist">
+                          <li class="dropdownlist-item">
+                            <a href="tutorials.html" class="dropdownlist-link">
+                              <span class="icon">
+                                <img
+                                  src="assets/images/menu-icons/tutorials.png"
+                                  alt="tutorials-icon"
+                                />
+                              </span>
+
+                              <span class="info">
+                                <span class="title">Tutorials</span>
+                                <span class="text">
+                                  Become a WebWowZer expert with our guided
+                                  product tours and step-by-step tutorials.
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="dropdownlist-item">
+                            <a href="blogs.html" class="dropdownlist-link">
+                              <span class="icon">
+                                <img
+                                  src="assets/images/menu-icons/blog.png"
+                                  alt="tutorials-icon"
+                                />
+                              </span>
+
+                              <span class="info">
+                                <span class="title">Blog</span>
+                                <span class="text">
+                                  Level up your product development with our
+                                  expert-curated collection of guides and
+                                  articles.
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="dropdownlist-item">
+                            <a href="contact.html" class="dropdownlist-link">
+                              <span class="icon">
+                                <img
+                                  src="assets/images/menu-icons/contact.png"
+                                  alt="contact-icon"
+                                />
+                              </span>
+
+                              <span class="info">
+                                <span class="title">Contact us</span>
+                                <span class="text">
+                                  We're here for anything you need. Just drop us
+                                  a quick message below. We'll get back in 24
+                                  hrs.
+                                </span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </span>
+                    </span>
+                  </span>
+                </span>
               </li>
 
               <li class="desktoplist-item">
@@ -227,7 +385,7 @@
                     </div>
 
                     <div class="started">
-                      <a href="#" class="btn-started">Start Building</a>
+                      <a href="#" class="btn-order">Start Building</a>
                     </div>
                   </div>
                 </div>

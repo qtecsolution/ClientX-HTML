@@ -44,6 +44,8 @@
   }
 
   &-body {
+    padding-bottom: size(384);
+
     &::-webkit-scrollbar {
       background: transparent;
       width: size(8);
@@ -51,6 +53,49 @@
 
     &::-webkit-scrollbar-thumb {
       @include radius(8);
+    }
+
+    .accordion {
+      &-item {
+        border: 0;
+        @include radius(0);
+
+        &:first-of-type,
+        &:last-of-type {
+          .accordion-button {
+            @include radius(0);
+          }
+        }
+      }
+
+      &-header {
+        margin-bottom: size(16);
+      }
+      
+      &-button {
+        border: 0;
+        font-weight: 500;
+        margin-bottom: size(16);
+
+        &:not(.collapsed) {
+          @include setBgColor($white, $primary);
+          box-shadow: none;
+        }
+
+        &::after {
+          @include flex-center;
+          overflow: hidden;
+        }
+
+        &:focus {
+          border: 0;
+          box-shadow: none;
+        }
+      }
+      
+      &-body {
+        padding: 0;
+      }
     }
   }
 }

@@ -120,10 +120,6 @@ body {
   scroll-snap-type: y mandatory;
   margin: size(64) 0 0;
 
-  @include breakpoint(desktop1400) {
-    font-size: size(18);
-  }
-
   @include breakpoint(tab992) {
     margin: size(100) 0 0;
   }

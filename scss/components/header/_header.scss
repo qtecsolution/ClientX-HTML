@@ -2,10 +2,15 @@
 @use '../../partials' as *;
 
 .header {
-  background: $white;
+  background: rgba($white, 0.6);
   @include border-single(bottom, solid, 1, $headerborder);
   @include flex-center-vert;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include w100;
   height: size(64);
+  z-index: 9999;
 
   @include breakpoint(tab992) {
     height: size(100);
@@ -48,5 +53,18 @@
         background: $headerborder;
       }
     }
+  }
+
+  .resourcesdropdown {
+    background: $white;
+    @include border-single(bottom, solid, 1, $headerborder);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    @include w100;
+    padding: size(24);
+    @extend %animation;
+    @extend %slideUpIn;
+    display: none;
   }
 }
