@@ -558,6 +558,71 @@ button:focus,
   color: hsl(28, 91%, 54%);
 }
 
+.cardblog {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.cardblog-header {
+  width: 100%;
+  height: 13.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .cardblog-header {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .cardblog-header {
+    height: 25rem;
+  }
+}
+.cardblog-header .blogthumbnail {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.cardblog-header .blogthumbnail img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.cardblog-header .blogthumbnail img:not([disabled]):hover {
+  transform: scale(1.05);
+}
+.cardblog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cardblog-body .blogtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  transition: color 350ms ease-in-out;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardblog-body .blogtitle {
+    font-size: 1.375rem;
+  }
+}
+.cardblog-body .blogtitle:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+.cardblog-body .blogtext {
+  color: hsl(0, 0%, 34%);
+}
+
 .cardskill {
   position: relative;
   background: hsl(220, 100%, 98%);
@@ -1540,6 +1605,58 @@ table tr td {
   text-decoration: underline;
 }
 
+.pagination {
+  gap: 0.875rem;
+}
+.pagination .page-item .page-link {
+  background: hsl(0, 0%, 92%);
+  color: hsl(201, 63%, 12%);
+  border: none;
+  width: 3.1875rem;
+  height: 3.1875rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-align: center;
+}
+.pagination .page-item .page-link:focus {
+  box-shadow: none;
+}
+.pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  background: hsl(0, 0%, 92%);
+  color: hsl(201, 63%, 12%);
+  border: none;
+  border-radius: 0rem;
+  width: 3.1875rem;
+  height: 3.1875rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination .page-item:first-child .page-link span, .pagination .page-item:last-child .page-link span {
+  width: 0.5625rem;
+  height: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pagination .page-item:first-child:not([disabled]):hover .page-link span svg path, .pagination .page-item:last-child:not([disabled]):hover .page-link span svg path {
+  fill: hsl(0, 0%, 100%);
+}
+.pagination .page-item.active .page-link {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+.pagination .page-item:hover:not(.active) .page-link {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
 .homebanner {
   background: hsl(15, 100%, 98%);
   padding: 3rem 1.25rem;
@@ -2276,16 +2393,17 @@ table tr td {
 .blogs-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
+  padding-bottom: 5rem;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 62rem) {
   .blogs-content {
-    gap: 4rem;
+    gap: 6rem;
   }
 }
 @media screen and (min-width: 87.5rem) {
   .blogs-content {
-    gap: 6rem;
+    gap: 7.5rem;
   }
 }
 .blogs .info {

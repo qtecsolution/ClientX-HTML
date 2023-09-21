@@ -1,6 +1,66 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardblog {
+  @include flex-column;
+  gap: size(40);
+
+  &-header {
+    @include w100;
+    height: size(220);
+
+    @include breakpoint(mobile768) {
+      height: size(300);
+    }
+    
+    @include breakpoint(tab992) {
+      height: size(400);
+    }
+
+    .blogthumbnail {
+      @include border(solid, 2, $headingtext);
+      @include radius(20);
+      box-shadow: $blogshadow;
+      @include flex-center;
+      overflow: hidden;
+      @include wh100;
+
+      img {
+        @include wh100;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.05);
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(24);
+
+    .blogtitle {
+      font-size: size(18);
+      font-weight: 500;
+      @include line-clamp;
+      @include transitionscolor;
+
+      @include breakpoint(desktop1400) {
+      font-size: size(22);
+      }
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .blogtext {
+      color: $primarytext;
+    }
+  }
+}
+
 .cardskill {
   position: relative;
   background: $cardborder;
