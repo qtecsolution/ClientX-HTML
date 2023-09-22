@@ -33,12 +33,12 @@
   .dropdownitem {
     @include hover {
       .resourcesdropdown {
-        border-top-color: $primary;
+        border-color: $primary;
         display: block;
 
         &::before,
         &::after {
-          border-top-color: $primary;
+          border-color: $primary;
         }
       }
     }

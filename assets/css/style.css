@@ -1130,7 +1130,6 @@ button:focus,
 }
 .header .resourcesdropdown {
   background: hsl(0, 0%, 100%);
-  border-top: solid 0.0625rem transparent;
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   position: absolute;
   top: 100%;
@@ -1142,11 +1141,10 @@ button:focus,
 .header .resourcesdropdown::before, .header .resourcesdropdown::after {
   content: "";
   position: absolute;
-  top: -0.0625rem;
+  top: 0.0625rem;
   width: 100%;
   height: 100%;
   background: hsl(0, 0%, 100%);
-  border-top: solid 0.0625rem transparent;
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
 }
 .header .resourcesdropdown::before {
@@ -1715,11 +1713,11 @@ table tr td {
   color: hsl(28, 91%, 54%);
 }
 .desktoplist .dropdownitem:not([disabled]):hover .resourcesdropdown {
-  border-top-color: hsl(28, 91%, 54%);
+  border-color: hsl(28, 91%, 54%);
   display: block;
 }
 .desktoplist .dropdownitem:not([disabled]):hover .resourcesdropdown::before, .desktoplist .dropdownitem:not([disabled]):hover .resourcesdropdown::after {
-  border-top-color: hsl(28, 91%, 54%);
+  border-color: hsl(28, 91%, 54%);
 }
 
 .authlist {
