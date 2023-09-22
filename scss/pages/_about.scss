@@ -2,7 +2,7 @@
 @use '../partials' as *;
 
 .aboutus {
-  background: $sectionbg-6 url(../images/sectionbg/aboutsecbg.png) no-repeat center center/cover;
+  background: $sectionbg-6 url(../images/sectionbg/aboutsecbg.png) no-repeat center center/contain;
   padding: size(48) size(0);
   position: relative;
 
@@ -167,7 +167,7 @@
 }
 
 .productvalues {
-  background: $sectionbg-6 url(../images/sectionbg/aboutsecbg.png) no-repeat center center/cover;
+  background: $sectionbg-6 url(../images/sectionbg/aboutsecbg.png) no-repeat center center/contain;
   padding: size(64) size(20);
   margin-bottom: size(80);
 

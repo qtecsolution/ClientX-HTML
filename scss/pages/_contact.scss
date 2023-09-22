@@ -2,7 +2,7 @@
 @use '../partials' as *;
 
 .contact {
-  background: $sectionbg-6 url(../images/sectionbg/contactbg.png) no-repeat center center/cover;
+  background: $sectionbg-6 url(../images/sectionbg/contactbg.png) no-repeat center center/contain;
   padding: size(48) size(0);
   margin-bottom: size(64);
 
