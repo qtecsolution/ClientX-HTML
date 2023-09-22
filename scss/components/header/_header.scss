@@ -70,10 +70,10 @@
     display: none;
   }
 
-  // &.scrolled {
-  //   background: rgba($white, 0.2);
-  //   backdrop-filter: blur(size(5));
-  //   box-shadow: $headershadow;
-  //   border-color: rgba($white, 0.3);
-  // }
+  &.scrolled {
+    // background: rgba($white, 0.2);
+    // backdrop-filter: blur(size(5));
+    box-shadow: $headershadow;
+    border-color: rgba($white, 0.3);
+  }
 }
