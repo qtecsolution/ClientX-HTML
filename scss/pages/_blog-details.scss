@@ -67,17 +67,9 @@
       font-size: size(16);
       text-align: justify;
 
-      @include breakpoint(tab992) {
-        font-size: size(18);
-      }
-
-      @include breakpoint(desktop1200) {
-        font-size: size(20);
-      }
-
-      @include breakpoint(desktop1600) {
-        font-size: size(22);
-      }
+      // @include breakpoint(tab992) {
+      //   font-size: size(18);
+      // }
     }
 
     .details {
@@ -88,11 +80,6 @@
         color: $primary;
         font-size: size(26);
         font-weight: 500;
-        @include line-clamp;
-
-        @include breakpoint(desktop1600) {
-          font-size: size(28);
-        }
       }
     }
 

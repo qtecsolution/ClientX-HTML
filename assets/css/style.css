@@ -562,6 +562,104 @@ button:focus,
   color: hsl(28, 91%, 54%);
 }
 
+.cardtutorial {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cardtutorial-header {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 11.25rem;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (min-width: 48rem) {
+  .cardtutorial-header {
+    height: 13.75rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .cardtutorial-header {
+    height: 19.375rem;
+  }
+}
+.cardtutorial-header .tutorial-thumbnail {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardtutorial-header .tutorial-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 350ms ease-in-out;
+}
+.cardtutorial-header .tutorial-thumbnail img:not([disabled]):hover {
+  transform: scale(1.05);
+}
+.cardtutorial-header .btn-play {
+  background: hsl(28, 91%, 54%);
+  width: 3.1875rem;
+  height: 3.1875rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+.cardtutorial-header .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+.cardtutorial-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.cardtutorial-body .tutorialtitle {
+  cursor: pointer;
+  font-size: 1.375rem;
+  font-weight: 500;
+  transition: color 350ms ease-in-out;
+}
+.cardtutorial-body .tutorialtitle:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+.cardtutorial-body .durations {
+  color: hsl(0, 0%, 34%);
+  font-size: 1rem;
+}
+.cardtutorial:not([disabled]):hover .cardtutorial-header .btn-play, .cardtutorial:not([disabled]):hover .cardtutorial-header .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
 .cardblog {
   display: flex;
   flex-direction: column;
@@ -1762,7 +1860,7 @@ table tr td {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   font-weight: 700;
   text-align: center;
 }
@@ -2688,21 +2786,6 @@ table tr td {
   font-size: 1rem;
   text-align: justify;
 }
-@media screen and (min-width: 62rem) {
-  .blogdetails .detailscontent .text {
-    font-size: 1.125rem;
-  }
-}
-@media screen and (min-width: 75rem) {
-  .blogdetails .detailscontent .text {
-    font-size: 1.25rem;
-  }
-}
-@media screen and (min-width: 100rem) {
-  .blogdetails .detailscontent .text {
-    font-size: 1.375rem;
-  }
-}
 .blogdetails .detailscontent .details {
   display: flex;
   flex-direction: column;
@@ -2712,16 +2795,6 @@ table tr td {
   color: hsl(28, 91%, 54%);
   font-size: 1.625rem;
   font-weight: 500;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-}
-@media screen and (min-width: 100rem) {
-  .blogdetails .detailscontent .details .title {
-    font-size: 1.75rem;
-  }
 }
 .blogdetails .detailscontent .descriptions {
   display: flex;
@@ -2755,6 +2828,31 @@ table tr td {
 }
 @media screen and (min-width: 87.5rem) {
   .morearticles-content {
+    gap: 6rem;
+  }
+}
+
+.tutorials {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .tutorials {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .tutorials {
+    padding: 6rem 1.25rem;
+  }
+}
+.tutorials-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .tutorials-content {
     gap: 6rem;
   }
 }

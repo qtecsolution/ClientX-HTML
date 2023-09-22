@@ -1,6 +1,104 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardtutorial {
+  @include flex-column;
+  gap: size(32);
+
+  &-header {
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-center;
+    @include w100;
+    height: size(180);
+    overflow: hidden;
+    position: relative;
+    
+    @include breakpoint(mobile768) {
+      height: size(220);
+    }
+    
+    @include breakpoint(desktop1400) {
+      height: size(310);
+    }
+
+    .tutorial-thumbnail {
+      @include wh100;
+      min-width: 100%;
+      @include flex-center;
+      overflow: hidden;
+      
+      img {
+        @include wh100;
+        object-fit: cover;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.05);
+        }
+      }
+    }
+
+    .btn-play {
+      background: $primary;
+      @include square(51);
+      @include circle;
+      @include flex-center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: size(16);
+      @include transform(translate(-50%, -50%));
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+
+    .overlay {
+      background: rgba($black, 0.4);
+      position: absolute;
+      inset: 0;
+      @include wh100;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+  }
+  
+  &-body {
+    @include flex-column;
+    gap: size(10);
+
+    .tutorialtitle {
+      cursor: pointer;
+      font-size: size(22);
+      font-weight: 500;
+      @include transitionscolor;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .durations {
+      color: $primarytext;
+      font-size: size(16);
+    }
+  }
+
+  @include hover {
+    .cardtutorial-header {
+      .btn-play, .overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
 .cardblog {
   @include flex-column;
   gap: size(40);
