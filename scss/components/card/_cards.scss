@@ -1,6 +1,35 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardvalue {
+  @include flex-center-column;
+  gap: size(32);
+  text-align: center;
+
+  &-header {
+    @include flex-center;
+
+    .valuethumb {
+      width: size(148);
+      height: size(96);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-body {
+    .title {
+      color: $headingtext;
+      font-size: size(18);
+      font-weight: 500;
+    }
+  }
+}
+
 .cardtutorial {
   @include flex-column;
   gap: size(32);

@@ -1,6 +1,196 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.aboutus {
+  background: $sectionbg-6;
+  padding: size(48) size(0);
+  position: relative;
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(0);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(80);
+
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+
+  .info {
+    max-width: size(558);
+    margin-inline: auto;
+  }
+
+  .about-hero {
+    position: relative;
+    z-index: 100;
+
+    .about-thumb {
+      @include border(solid, 2, $headingtext);
+      @include radius(20);
+      box-shadow: $blogshadow;
+      @include flex-center;
+      @include wh100;
+      overflow: hidden;
+      
+      @include breakpoint(desktop1400) {
+        height: size(267);
+      }
+
+      img {
+        @include wh100;
+      }
+    }
+
+    .heroicon {
+      @include square(236);
+      overflow: hidden;
+      position: absolute;
+      top: size(-110);
+      left: size(-130);
+      z-index: 100;
+      display: none;
+      
+      @include breakpoint(tab992) {
+        @include flex-center;
+      }
+    }
+  }
+
+  .aboutoverlay {
+    position: absolute;
+    bottom: size(0);
+    left: size(0);
+    @include w100;
+    height: size(190);
+    background: $white;
+  }
+}
+
+.ourmission {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-details {
+    @include flex-column;
+    gap: size(40);
+
+    .info {
+
+      .text {
+        color: $headingtext;
+        font-weight: 500;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.autoincrement {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-details {
+    background: $sectionbg-5;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    padding: size(32);
+    margin-bottom: size(64);
+
+    .cardincrement {
+      @include flex-column;
+
+      .text {
+        color: $primarytext;
+      }
+    }
+  }
+}
+
+.aboutmyinfo {
+  padding: size(48) size(20);
+  margin-bottom: size(80);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  .details {
+    @include flex-column;
+    gap: size(40);
+
+    .info {
+      .text {
+        color: $headingtext;
+        text-align: justify;
+      }
+    }
+  }
+
+  .thumbnail {
+    @include square(336);
+    @include flex-center;
+    margin-inline: auto;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: contain;
+    }
+  }
+}
+
+.productvalues {
+  background: $sectionbg-6;
+    padding: size(64) size(20);
+  margin-bottom: size(80);
+
+  @include breakpoint(mobile768) {
+    padding: size(96) size(20);
+    margin-bottom: size(96);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(140) size(20);
+    margin-bottom: size(160);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(80);
+
+    @include breakpoint(desktop1400) {
+      gap: size(96);
+    }
+  }
+}
+
 .aboutplatform {
   &-content {
     background: $sectionbg-5;

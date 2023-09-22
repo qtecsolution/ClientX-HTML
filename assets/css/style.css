@@ -446,7 +446,7 @@ button:focus,
   overflow: hidden;
 }
 .btn-hamburger i {
-  color: hsl(220, 100%, 73%);
+  color: hsl(201, 63%, 12%);
   font-size: 1.5rem;
 }
 .btn-hamburger:not([disabled]):hover i {
@@ -560,6 +560,37 @@ button:focus,
 .btn-building:not([disabled]):hover {
   background: transparent;
   color: hsl(28, 91%, 54%);
+}
+
+.cardvalue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.cardvalue-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardvalue-header .valuethumb {
+  width: 9.25rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.cardvalue-header .valuethumb img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cardvalue-body .title {
+  color: hsl(201, 63%, 12%);
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 .cardtutorial {
@@ -1246,6 +1277,9 @@ input[type=search]::-webkit-search-results-decoration:focus {
   color: hsl(201, 63%, 12%);
 }
 
+.offcanvas {
+  background: hsl(0, 0%, 100%);
+}
 .offcanvas.offcanvas-top {
   border-bottom: 0;
 }
@@ -1731,21 +1765,22 @@ table tr td {
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-content: center;
 }
 .dropdownlist-link {
   display: flex;
   gap: 0.875rem;
 }
 .dropdownlist-link .icon {
-  width: 7.375rem;
-  height: 7.375rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 .dropdownlist-link .info {
-  width: calc(100% - 8.25rem);
+  width: calc(100% - 6.875rem);
   display: flex;
   flex-direction: column;
 }
@@ -1758,6 +1793,7 @@ table tr td {
 .dropdownlist-link .info .text {
   color: hsl(0, 0%, 34%);
   font-size: 0.75rem;
+  max-width: 12.5625rem;
 }
 .dropdownlist-link:not([disabled]):hover .info .title {
   color: hsl(28, 91%, 54%);
@@ -2170,8 +2206,8 @@ table tr td {
 }
 @media screen and (min-width: 62rem) {
   .seoperformance .leftcontent .topicon {
-    top: -5rem;
-    left: -6.25rem;
+    top: -4rem;
+    left: -5.625rem;
   }
 }
 .seoperformance .rightcontent {
@@ -2469,6 +2505,205 @@ table tr td {
   align-items: flex-end;
   justify-content: flex-end;
   height: 100%;
+}
+
+.aboutus {
+  background: hsl(227, 60%, 97%);
+  padding: 3rem 0rem;
+  position: relative;
+}
+@media screen and (min-width: 48rem) {
+  .aboutus {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .aboutus {
+    padding: 6rem 0rem;
+  }
+}
+.aboutus-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .aboutus-content {
+    gap: 6rem;
+  }
+}
+.aboutus .info {
+  max-width: 34.875rem;
+  margin-inline: auto;
+}
+.aboutus .about-hero {
+  position: relative;
+  z-index: 100;
+}
+.aboutus .about-hero .about-thumb {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 87.5rem) {
+  .aboutus .about-hero .about-thumb {
+    height: 16.6875rem;
+  }
+}
+.aboutus .about-hero .about-thumb img {
+  width: 100%;
+  height: 100%;
+}
+.aboutus .about-hero .heroicon {
+  width: 14.75rem;
+  height: 14.75rem;
+  overflow: hidden;
+  position: absolute;
+  top: -6.875rem;
+  left: -8.125rem;
+  z-index: 100;
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .aboutus .about-hero .heroicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.aboutus .aboutoverlay {
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 11.875rem;
+  background: hsl(0, 0%, 100%);
+}
+
+.ourmission {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .ourmission {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .ourmission {
+    padding: 6rem 1.25rem;
+  }
+}
+.ourmission-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.ourmission-details .info .text {
+  color: hsl(201, 63%, 12%);
+  font-weight: 500;
+  text-align: justify;
+}
+
+.autoincrement {
+  padding: 3rem 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .autoincrement {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .autoincrement {
+    padding: 6rem 1.25rem;
+  }
+}
+.autoincrement-details {
+  background: hsl(196, 100%, 96%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+.autoincrement-details .cardincrement {
+  display: flex;
+  flex-direction: column;
+}
+.autoincrement-details .cardincrement .text {
+  color: hsl(0, 0%, 34%);
+}
+
+.aboutmyinfo {
+  padding: 3rem 1.25rem;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 48rem) {
+  .aboutmyinfo {
+    padding: 4rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .aboutmyinfo {
+    padding: 6rem 1.25rem;
+  }
+}
+.aboutmyinfo .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.aboutmyinfo .details .info .text {
+  color: hsl(201, 63%, 12%);
+  text-align: justify;
+}
+.aboutmyinfo .thumbnail {
+  width: 21rem;
+  height: 21rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  overflow: hidden;
+}
+.aboutmyinfo .thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.productvalues {
+  background: hsl(227, 60%, 97%);
+  padding: 4rem 1.25rem;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 48rem) {
+  .productvalues {
+    padding: 6rem 1.25rem;
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .productvalues {
+    padding: 8.75rem 1.25rem;
+    margin-bottom: 10rem;
+  }
+}
+.productvalues-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .productvalues-content {
+    gap: 6rem;
+  }
 }
 
 .aboutplatform-content {
@@ -2855,6 +3090,10 @@ table tr td {
   .tutorials-content {
     gap: 6rem;
   }
+}
+.tutorials .info {
+  max-width: 34.875rem;
+  margin-inline: auto;
 }
 
 .marked {

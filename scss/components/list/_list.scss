@@ -98,19 +98,20 @@
 .dropdownlist {
   @include list-horizontal;
   gap: size(32);
+  justify-content: center;
 
   &-link {
     @include flex;
     gap: size(14);
 
     .icon {
-      @include square(118);
+      @include square(96);
       @include flex-center;
       overflow: hidden;
     }
 
     .info {
-      width: calc(100% - size(132));
+      width: calc(100% - size(110));
       @include flex-column;
 
       .title {
@@ -123,6 +124,7 @@
       .text {
         color: $primarytext;
         font-size: size(12);
+        max-width: size(201);
       }
     }
 

@@ -2,6 +2,8 @@
 @use '../../partials' as *;
 
 .offcanvas {
+  background: $white;
+
   &.offcanvas-top {
     border-bottom: 0;
   }
