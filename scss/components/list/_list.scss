@@ -105,26 +105,27 @@
     gap: size(14);
 
     .icon {
-      @include square(96);
+      @include square(118);
       @include flex-center;
       overflow: hidden;
     }
 
     .info {
-      width: calc(100% - size(110));
+      width: calc(100% - size(132));
       @include flex-column;
+      gap: size(16);
 
       .title {
         color: $headingtext;
-        font-size: size(14);
+        font-size: size(16);
         font-weight: 500;
         @include transitionscolor;
       }
 
       .text {
         color: $primarytext;
-        font-size: size(12);
-        max-width: size(201);
+        font-size: size(16);
+        // max-width: size(201);
       }
     }
 

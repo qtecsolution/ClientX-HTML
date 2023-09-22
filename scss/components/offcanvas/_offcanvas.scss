@@ -3,6 +3,7 @@
 
 .offcanvas {
   background: $white;
+  min-height: 100vh;
 
   &.offcanvas-top {
     border-bottom: 0;
@@ -47,7 +48,7 @@
 
   &-body {
     background: $white;
-    padding-bottom: size(384);
+    padding-bottom: size(48);
 
     &::-webkit-scrollbar {
       background: transparent;
