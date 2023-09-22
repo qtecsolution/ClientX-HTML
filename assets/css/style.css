@@ -2543,7 +2543,7 @@ table tr td {
 }
 
 .aboutus {
-  background: hsl(227, 60%, 97%);
+  background: hsl(227, 60%, 97%) url(../images/sectionbg/aboutbg.png) no-repeat center center/cover;
   padding: 3rem 0rem;
   position: relative;
 }
@@ -2714,7 +2714,7 @@ table tr td {
 }
 
 .productvalues {
-  background: hsl(227, 60%, 97%);
+  background: hsl(227, 60%, 97%) url(../images/sectionbg/aboutsecbg.png) no-repeat center center/cover;
   padding: 4rem 1.25rem;
   margin-bottom: 5rem;
 }
@@ -2785,7 +2785,7 @@ table tr td {
 }
 
 .contact {
-  background: hsl(227, 60%, 97%);
+  background: hsl(227, 60%, 97%) url(../images/sectionbg/contactbg.png) no-repeat center center/cover;
   padding: 3rem 0rem;
   margin-bottom: 4rem;
 }
