@@ -1772,6 +1772,12 @@ table tr td {
   gap: 2rem;
   justify-content: center;
 }
+@media screen and (min-width: 87.5rem) {
+  .dropdownlist {
+    max-width: 70%;
+    margin-inline: auto;
+  }
+}
 .dropdownlist-link {
   display: flex;
   gap: 0.875rem;
@@ -1788,7 +1794,7 @@ table tr td {
   width: calc(100% - 8.25rem);
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 1rem;
 }
 @media screen and (min-width: 87.5rem) {
   .dropdownlist-link .info {

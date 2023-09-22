@@ -100,6 +100,11 @@
   gap: size(32);
   justify-content: center;
 
+  @include breakpoint(desktop1400) {
+    max-width: 70%;
+    margin-inline: auto;
+  }
+
   &-link {
     @include flex;
     gap: size(14);
@@ -113,7 +118,7 @@
     .info {
       width: calc(100% - size(132));
       @include flex-column;
-      gap: size(10);
+      gap: size(16);
 
       @include breakpoint(desktop1400) {
         gap: size(16);
