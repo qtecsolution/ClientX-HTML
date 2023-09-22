@@ -33,7 +33,13 @@
   .dropdownitem {
     @include hover {
       .resourcesdropdown {
+        border-top-color: $primary;
         display: block;
+
+        &::before,
+        &::after {
+          border-top-color: $primary;
+        }
       }
     }
   }
@@ -99,11 +105,6 @@
   @include list-horizontal;
   gap: size(32);
   justify-content: center;
-
-  @include breakpoint(desktop1400) {
-    max-width: 70%;
-    margin-inline: auto;
-  }
 
   &-link {
     @include flex;
