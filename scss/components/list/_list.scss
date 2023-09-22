@@ -113,7 +113,11 @@
     .info {
       width: calc(100% - size(132));
       @include flex-column;
-      gap: size(16);
+      gap: size(10);
+
+      @include breakpoint(desktop1400) {
+        gap: size(16);
+      }
 
       .title {
         color: $headingtext;
@@ -124,8 +128,12 @@
 
       .text {
         color: $primarytext;
-        font-size: size(16);
+        font-size: size(14);
         // max-width: size(201);
+
+        @include breakpoint(desktop1400) {
+          font-size: size(16);
+        }
       }
     }
 
