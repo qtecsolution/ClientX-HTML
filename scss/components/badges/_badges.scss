@@ -1,2 +1,13 @@
 @use "../../global" as *;
 @use "../../partials" as *;
+
+.cardbadge {
+  @include setBgColor($badgebg, $headingtext);
+  @include radius(42);
+  @include flex-center;
+  font-size: size(14);
+  font-weight: 500;
+  height: size(40);
+  padding: size(14);
+  text-align: center;
+}

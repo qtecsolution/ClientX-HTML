@@ -1,2 +1,36 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.pricingsection {
+  background: $sectionbg-6 url(../images/sectionbg/pricingbg.png) no-repeat center center/contain;
+  padding: size(48) size(0);
+  margin-bottom: size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(0);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(0);
+  }
+
+  .packinfo {
+    position: relative;
+
+    .packicon {
+      position: absolute;
+      top: size(-30);
+      left: size(-70);
+      width: size(106);
+      height: size(69);
+      @include flex-center;
+      overflow: hidden;
+    }
+  }
+
+  .nav-tabs {
+    justify-content: center;
+    margin-bottom: size(64);
+    border: none;
+  }
+}

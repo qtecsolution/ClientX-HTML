@@ -655,3 +655,101 @@
     }
   }
 }
+
+.cardprice {
+  background: $white;
+  @include border(solid, 2, $headingtext);
+  @include radius(20);
+  box-shadow: $blogshadow;
+  @include flex-column;
+  gap: size(24);
+  @include h100;
+  padding: size(32);
+  position: relative;
+  
+  &-header {
+    @include flex-column;
+    gap: size(16);
+
+    .details {
+      @include flex-column;
+      gap: size(16);
+
+      .packname {
+        .name {
+          color: $headingtext;
+          font-size: size(34);
+          font-weight: 500;
+        }
+      }
+
+      .info {
+        .text {
+          color: $packagetext;
+          font-size: size(14);
+        }
+      }
+    }
+
+    .packageprice {
+      @include flex;
+      align-items: flex-end;
+      gap: size(4);
+
+      .price {
+        color: $headingtext;
+        font-size: size(44);
+        font-weight: 700;
+      }
+
+      .text {
+        color: $accordiontext;
+        font-size: size(14);
+      }
+    }
+  }
+  
+  &-body {
+    @include flex-column;
+    gap: size(36);
+  }
+
+  .cardbadge {
+    position: absolute;
+    top: size(-20);
+    left: 50%;
+    @include translateX(-50%);
+    z-index: 100;
+    min-width: size(162);
+  }
+
+  &.recommended {
+    border-color: $primary;
+    box-shadow: $pricingshadow;
+  }
+}
+
+.cardpricing {
+  background: $white;
+  @include border(solid, 2, $headingtext);
+  @include radius(20);
+  box-shadow: $blogshadow;
+  @include flex-column;
+  gap: size(24);
+  @include h100;
+  padding: size(32);
+  position: relative;
+  
+  &-header {
+
+  }
+  
+  &-body {
+    @include flex-column;
+  }
+
+  &.recommended {
+    border-color: $primary;
+    box-shadow: $pricingshadow;
+  }
+}

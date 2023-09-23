@@ -417,6 +417,20 @@ iframe {
   font-family: inherit;
 }
 
+.cardbadge {
+  background: hsl(28, 100%, 86%);
+  color: hsl(201, 63%, 12%);
+  border-radius: 2.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.5rem;
+  padding: 0.875rem;
+  text-align: center;
+}
+
 button,
 [type=button],
 [type=reset],
@@ -590,6 +604,25 @@ button:focus,
 }
 .search-button:not(.collapsed) .closeicon {
   display: block;
+}
+
+.btn-build {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(28, 91%, 54%);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.btn-build:not([disabled]):hover {
+  background: transparent;
+  color: hsl(28, 91%, 54%);
 }
 
 .cardtemplate {
@@ -1213,6 +1246,90 @@ button:focus,
 .cardtestimonial .clientinfo .author-info .designation {
   color: hsl(0, 0%, 24%);
   font-size: 0.8125rem;
+}
+
+.cardprice {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+}
+.cardprice-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardprice-header .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardprice-header .details .packname .name {
+  color: hsl(201, 63%, 12%);
+  font-size: 2.125rem;
+  font-weight: 500;
+}
+.cardprice-header .details .info .text {
+  color: hsl(0, 0%, 35%);
+  font-size: 0.875rem;
+}
+.cardprice-header .packageprice {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+.cardprice-header .packageprice .price {
+  color: hsl(201, 63%, 12%);
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.cardprice-header .packageprice .text {
+  color: hsl(0, 0%, 44%);
+  font-size: 0.875rem;
+}
+.cardprice-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+.cardprice .cardbadge {
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  min-width: 10.125rem;
+}
+.cardprice.recommended {
+  border-color: hsl(28, 91%, 54%);
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(28, 91%, 54%);
+}
+
+.cardpricing {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+}
+.cardpricing-body {
+  display: flex;
+  flex-direction: column;
+}
+.cardpricing.recommended {
+  border-color: hsl(28, 91%, 54%);
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(28, 91%, 54%);
 }
 
 .header {
@@ -2064,6 +2181,32 @@ table tr td {
 .footerlist-link:not([disabled]):hover {
   color: hsl(28, 91%, 54%);
   text-decoration: underline;
+}
+
+.packagelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.packagelist-item {
+  display: flex;
+  gap: 0.625rem;
+}
+.packagelist-item .icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.packagelist-item .text {
+  color: hsl(0, 0%, 35%);
+  font-size: 0.9375rem;
+  width: calc(100% - 2rem);
 }
 
 .pagination {
@@ -2929,6 +3072,41 @@ table tr td {
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+}
+
+.pricingsection {
+  background: hsl(227, 60%, 97%) url(../images/sectionbg/pricingbg.png) no-repeat center center/contain;
+  padding: 3rem 0rem;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .pricingsection {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .pricingsection {
+    padding: 6rem 0rem;
+  }
+}
+.pricingsection .packinfo {
+  position: relative;
+}
+.pricingsection .packinfo .packicon {
+  position: absolute;
+  top: -1.875rem;
+  left: -4.375rem;
+  width: 6.625rem;
+  height: 4.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pricingsection .nav-tabs {
+  justify-content: center;
+  margin-bottom: 4rem;
+  border: none;
 }
 
 .templates {

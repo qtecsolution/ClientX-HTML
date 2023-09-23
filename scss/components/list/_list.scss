@@ -231,3 +231,25 @@
     }
   }
 }
+
+.packagelist {
+  @include list-vertical;
+  gap: size(24);
+
+  &-item {
+    @include flex;
+    gap: size(10);
+
+    .icon {
+      @include square(22);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .text {
+      color: $packagetext;
+      font-size: size(15);
+      width: calc(100% - size(32));
+    }
+  }
+}

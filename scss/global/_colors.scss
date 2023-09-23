@@ -16,6 +16,7 @@ $inputbg: hsl(0, 0%, 98%); //#F9F9F9
 $contactinputbg: hsl(0, 0%, 99%); //#FDFDFD
 $paginationitembg: hsl(0, 0%, 92%); //#EAEAEA
 $editbtnbg: hsl(0, 0%, 95%); //#F2F2F2
+$badgebg: hsl(28, 100%, 86%); //#FFDABA
 
 $sectionbg-1: hsl(15, 100%, 98%); //#FFF6F3
 $sectionbg-2: hsl(180, 100%, 98%); //#F3FFFF
@@ -37,6 +38,7 @@ $textlink: hsl(200, 100%, 50%); //#00AAFF
 $accordiontext: hsl(0, 0%, 44%); //#707070
 $authortext: hsl(0, 0%, 24%); //#3C3C3C
 $lifecycletext: hsl(240, 3%, 15%); //#242426
+$packagetext: hsl(0, 0%, 35%); //#5A5A5A
 
 $danger: hsl(354, 70%, 54%); //#dc3545
 $success: hsl(140, 64%, 62%); //#5EDC89
@@ -55,4 +57,5 @@ $formshadow: .4375rem .4375rem 0 0 $headingtext;
 $cardshadow: -0.4656rem .4655rem 0 0 $headingtext;
 $searchshadow: 0 .5rem 2.5625rem -0.5625rem rgba($black, 0.09);
 $blogshadow: .4375rem .4375rem 0 0 $headingtext;
+$pricingshadow: .4375rem .4375rem 0 0 $primary;
 $headershadow: 0 .25rem 1.875rem rgba($black, 0.1);
