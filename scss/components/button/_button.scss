@@ -125,3 +125,34 @@ button,
     @include setBgColor(transparent, $primary);
   }
 }
+
+.search-button {
+  @include square(48);
+  @include flex-center;
+  overflow: hidden;
+  margin-top: size(-5);
+
+  .icon {
+    @include square(48);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .searchicon {
+    display: block;
+  }
+
+  .closeicon {
+    display: none;
+  }
+
+  &:not(.collapsed) {
+    .searchicon {
+      display: none;
+    }
+
+    .closeicon {
+      display: block;
+    }
+  }
+}

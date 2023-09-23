@@ -1,2 +1,87 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.templates {
+  padding: size(48) size(20);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    padding-bottom: size(80);
+    
+    @include breakpoint(tab992) {
+      gap: size(96);
+    }
+    
+    @include breakpoint(desktop1400) {
+      gap: size(120);
+    }
+  }
+
+  .info {
+    max-width: size(482);
+    margin-inline: auto;
+
+    .text {
+      color: $primarytext;
+    }
+  }
+
+  .nav-tabs {
+    border: none;
+    @include radius(0);
+    gap: size(8) size(16);
+    
+    .nav-link {
+      @include setBgColor($editbtnbg, $headingtext);
+      border: none;
+      @include radius(200);
+      font-weight: 500;
+      padding: size(8) size(16);
+
+      &.active {
+        @include setBgColor($headingtext, $editbtnbg);
+        border: none;
+      }
+    }
+  }
+
+  .searchform {
+    background: $editbtnbg;
+    @include radius(200);
+    @include flex-center-vert;
+    gap: size(0);
+    overflow: hidden;
+
+    .searchinput {
+      @include setBgColor(transparent, $headingtext);
+      font-size: size(15);
+      padding: size(12.75) size(0) size(12.75) size(24);
+      width: calc(100% - size(64));
+
+      &::placeholder {
+        color: $textplaceholder;
+      }
+    }
+
+    .submitbox {
+      width: size(64);
+      height: size(48);
+      @include flex-center;
+
+      .btn-searchtemplate {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+      }
+    }
+  }
+}

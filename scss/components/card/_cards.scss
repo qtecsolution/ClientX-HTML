@@ -1,6 +1,123 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.cardtemplate {
+  @include flex-center-column;
+  gap: size(24);
+
+  &-header {
+    background: $white;
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    @include flex-center;
+    overflow: hidden;
+    @include w100;
+    height: size(200);
+    padding: size(15);
+    
+    @include breakpoint(mobile768) {
+      height: size(288);
+    }
+
+    .template-thumbnail {
+      @include radius(12);
+      @include wh100;
+      @include flex-center;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        @include wh100;
+        min-width: 100%;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.05);
+        }
+      }
+
+      .viewedit {
+        background: rgba($headingtext, 0.70);
+        @include radius(12);
+        @include flex-center-column;
+        gap: size(8);
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        @include transitionsall;
+
+        .btn-edit,
+        .btn-view {
+          @include radius(30);
+          @include flex-center;
+          font-size: size(14);
+          padding: size(8) size(24);
+          max-width: size(96);
+          overflow: hidden;
+          text-align: center;
+          @include transitionsall;
+        }
+
+        .btn-edit {
+          @include setBgColor($editbtnbg, $headingtext);
+
+          @include hover {
+            @include setBgColor($headingtext, $editbtnbg);
+          }
+        }
+
+        .btn-view {
+          @include setBgColor($primary, $white);
+
+          @include hover {
+            @include setBgColor($white, $primary);
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(16);
+    text-align: center;
+
+    .title {
+      cursor: pointer;
+      font-size: size(22);
+      font-weight: 500;
+      @include transitionscolor;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .category {
+      @include setBgColor($editbtnbg, $primarytext);
+      @include radius(30);
+      display: inline-block;
+      font-size: size(14);
+      padding: size(8) size(20);
+      text-align: center;
+    }
+  }
+
+  @include hover {
+    .cardtemplate-header {
+      .template-thumbnail {
+        .viewedit {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
 .cardvalue {
   @include flex-center-column;
   gap: size(32);
