@@ -3083,6 +3083,19 @@ table tr td {
   }
 }
 
+.aboutplatform {
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .aboutplatform {
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .aboutplatform {
+    padding-bottom: 6rem;
+  }
+}
 .aboutplatform-content {
   background: hsl(196, 100%, 96%);
   border-radius: 1.25rem;
