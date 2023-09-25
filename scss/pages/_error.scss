@@ -1,2 +1,29 @@
 @use '../global' as *;
 @use '../partials' as *;
+
+.errormain {
+  @include w100;
+  min-height: 60vh;
+  overflow: hidden;
+
+  @include breakpoint(mobile768) {
+    min-height: 100vh;
+  }
+
+  .errorthumbnail {
+    @include w100;
+    overflow: hidden;
+    
+    @include breakpoint(mobile576) {
+      height: size(300);
+    }
+
+    @include breakpoint(tab992) {
+      height: size(480);
+    }
+
+    @include breakpoint(desktop1400) {
+      height: size(620);
+    }
+  }
+}

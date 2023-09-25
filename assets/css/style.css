@@ -3790,6 +3790,36 @@ table tr td {
   margin-inline: auto;
 }
 
+.errormain {
+  width: 100%;
+  min-height: 60vh;
+  overflow: hidden;
+}
+@media screen and (min-width: 48rem) {
+  .errormain {
+    min-height: 100vh;
+  }
+}
+.errormain .errorthumbnail {
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .errormain .errorthumbnail {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .errormain .errorthumbnail {
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .errormain .errorthumbnail {
+    height: 38.75rem;
+  }
+}
+
 .marked {
   color: hsl(28, 91%, 54%);
 }
