@@ -3791,12 +3791,12 @@ table tr td {
 }
 
 .errormain {
-  width: 100%;
-  min-height: 60vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-height: 60vh;
+  overflow: hidden;
 }
 @media screen and (min-width: 48rem) {
   .errormain {
@@ -3804,6 +3804,9 @@ table tr td {
   }
 }
 .errormain .errorthumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
 }

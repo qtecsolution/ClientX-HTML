@@ -2,16 +2,17 @@
 @use '../partials' as *;
 
 .errormain {
+  @include flex-center;
   @include w100;
   min-height: 60vh;
   overflow: hidden;
-  @include flex-center;
 
   @include breakpoint(mobile768) {
     min-height: 100vh;
   }
 
   .errorthumbnail {
+    @include flex-center;
     @include w100;
     overflow: hidden;
     
