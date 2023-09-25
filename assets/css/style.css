@@ -3794,6 +3794,9 @@ table tr td {
   width: 100%;
   min-height: 60vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 48rem) {
   .errormain {
@@ -3809,14 +3812,9 @@ table tr td {
     height: 18.75rem;
   }
 }
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 48rem) {
   .errormain .errorthumbnail {
-    height: 30rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .errormain .errorthumbnail {
-    height: 38.75rem;
+    height: 28.75rem;
   }
 }
 

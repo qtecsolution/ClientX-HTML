@@ -5,6 +5,7 @@
   @include w100;
   min-height: 60vh;
   overflow: hidden;
+  @include flex-center;
 
   @include breakpoint(mobile768) {
     min-height: 100vh;
@@ -18,12 +19,8 @@
       height: size(300);
     }
 
-    @include breakpoint(tab992) {
-      height: size(480);
-    }
-
-    @include breakpoint(desktop1400) {
-      height: size(620);
+    @include breakpoint(mobile768) {
+      height: size(460);
     }
   }
 }
