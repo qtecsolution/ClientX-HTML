@@ -14,6 +14,31 @@
     padding: size(96) size(0);
   }
 
+  &-content {
+    @include flex-column;
+    gap: size(64);
+    position: relative;
+    z-index: 100;
+    
+    @include breakpoint(desktop1200) {
+      gap: size(96);
+    }
+
+    @include breakpoint(desktop1400) {
+      gap: size(110);
+    }
+
+    .pricing-overlay {
+      background: $white;
+      position: absolute;
+      bottom: size(-64);
+      left: 0;
+      @include w100;
+      height: 65%;
+      z-index: -1;
+    }
+  }
+
   .packinfo {
     position: relative;
 
@@ -23,14 +48,143 @@
       left: size(-70);
       width: size(106);
       height: size(69);
-      @include flex-center;
       overflow: hidden;
+      display: none;
+      
+      @include breakpoint(tab992) {
+        @include flex-center;
+      }
     }
   }
 
   .nav-tabs {
+    background: $tabbg;
+    @include radius(48);
+    border: 0;
     justify-content: center;
+    gap: size(8);
     margin-bottom: size(64);
-    border: none;
+    overflow: hidden;
+    padding: size(4);
+    max-width: size(274);
+    margin-inline: auto;
+
+    .nav-link {
+      @include setBgColor($tabbg, $black);
+      border: 0;
+      @include radius(48);
+      @include flex-center;
+      font-size: size(12);
+      font-weight: 500;
+      margin: 0;
+      padding: size(11) size(28);
+      text-align: center;
+
+      &.active {
+        border: 0;
+        @include setBgColor($primary, $white);
+      }
+    }
+  }
+}
+
+.ecommercepricing {
+  padding: size(48) size(0);
+  margin-bottom: size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(0);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+  }
+
+  .nav-tabs {
+    background: $tabbg;
+    @include radius(48);
+    border: 0;
+    justify-content: center;
+    gap: size(8);
+    margin-bottom: size(64);
+    overflow: hidden;
+    padding: size(4);
+    max-width: size(214);
+    margin-inline: auto;
+
+    .nav-link {
+      @include setBgColor($tabbg, $black);
+      border: 0;
+      @include radius(48);
+      @include flex-center;
+      font-size: size(12);
+      font-weight: 500;
+      margin: 0;
+      padding: size(11) size(28);
+      text-align: center;
+
+      &.active {
+        border: 0;
+        @include setBgColor($primary, $white);
+      }
+    }
+  }
+}
+
+.dropmessage {
+  padding: size(48) size(0);
+  margin-bottom: size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(0);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    background: $sectionbg-3;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-center-column;
+    gap: size(24);
+    padding: size(48) size(24);
+    text-align: center;
+
+    @include breakpoint(mobile768) {
+      padding: size(48);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(64);
+    }
+
+    .info {
+      .text {
+        color: $primarytext;
+  
+        @include breakpoint(desktop1400) {
+          font-size: size(18);
+        }
+      }
+
+      .link {
+        color: $primary;
+        font-size: inherit;
+        font-weight: 500;
+        @include transitionscolor;
+
+        @include hover {
+          color: $secondary;
+        }
+      }
+    }
   }
 }

@@ -741,11 +741,68 @@
   position: relative;
   
   &-header {
+    @include flex-column;
+    gap: size(16);
 
+    .details {
+      @include flex-column;
+      gap: size(16);
+
+      .packagename {
+        @include flex-center-vert;
+        gap: size(5);
+
+        .name {
+          color: $headingtext;
+          font-size: size(34);
+          font-weight: 500;
+        }
+
+        .text {
+          color: $headingtext;
+          font-size: size(15);
+          display: inline-block;
+          margin-top: size(12);
+        }
+      }
+
+      .info {
+        .text {
+          color: $packagetext;
+          font-size: size(14);
+        }
+      }
+    }
+
+    .packageprice {
+      @include flex;
+      align-items: flex-end;
+      gap: size(4);
+
+      .price {
+        color: $headingtext;
+        font-size: size(44);
+        font-weight: 700;
+      }
+
+      .text {
+        color: $accordiontext;
+        font-size: size(14);
+      }
+    }
   }
   
   &-body {
     @include flex-column;
+  }
+
+  .cardbadge {
+    position: absolute;
+    top: size(-20);
+    left: 50%;
+    @include translateX(-50%);
+    z-index: 100;
+    min-width: size(162);
   }
 
   &.recommended {

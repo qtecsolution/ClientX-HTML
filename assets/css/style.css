@@ -1323,9 +1323,61 @@ button:focus,
   padding: 2rem;
   position: relative;
 }
+.cardpricing-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardpricing-header .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardpricing-header .details .packagename {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.cardpricing-header .details .packagename .name {
+  color: hsl(201, 63%, 12%);
+  font-size: 2.125rem;
+  font-weight: 500;
+}
+.cardpricing-header .details .packagename .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.9375rem;
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+.cardpricing-header .details .info .text {
+  color: hsl(0, 0%, 35%);
+  font-size: 0.875rem;
+}
+.cardpricing-header .packageprice {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+.cardpricing-header .packageprice .price {
+  color: hsl(201, 63%, 12%);
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.cardpricing-header .packageprice .text {
+  color: hsl(0, 0%, 44%);
+  font-size: 0.875rem;
+}
 .cardpricing-body {
   display: flex;
   flex-direction: column;
+}
+.cardpricing .cardbadge {
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  min-width: 10.125rem;
 }
 .cardpricing.recommended {
   border-color: hsl(28, 91%, 54%);
@@ -3089,6 +3141,32 @@ table tr td {
     padding: 6rem 0rem;
   }
 }
+.pricingsection-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  z-index: 100;
+}
+@media screen and (min-width: 75rem) {
+  .pricingsection-content {
+    gap: 6rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .pricingsection-content {
+    gap: 6.875rem;
+  }
+}
+.pricingsection-content .pricing-overlay {
+  background: hsl(0, 0%, 100%);
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  z-index: -1;
+}
 .pricingsection .packinfo {
   position: relative;
 }
@@ -3098,15 +3176,152 @@ table tr td {
   left: -4.375rem;
   width: 6.625rem;
   height: 4.3125rem;
+  overflow: hidden;
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .pricingsection .packinfo .packicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.pricingsection .nav-tabs {
+  background: hsl(260, 9%, 94%);
+  border-radius: 3rem;
+  border: 0;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 0.25rem;
+  max-width: 17.125rem;
+  margin-inline: auto;
+}
+.pricingsection .nav-tabs .nav-link {
+  background: hsl(260, 9%, 94%);
+  color: hsl(0, 0%, 0%);
+  border: 0;
+  border-radius: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.6875rem 1.75rem;
+  text-align: center;
 }
-.pricingsection .nav-tabs {
-  justify-content: center;
+.pricingsection .nav-tabs .nav-link.active {
+  border: 0;
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.ecommercepricing {
+  padding: 3rem 0rem;
   margin-bottom: 4rem;
-  border: none;
+}
+@media screen and (min-width: 48rem) {
+  .ecommercepricing {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .ecommercepricing {
+    padding: 6rem 0rem;
+  }
+}
+.ecommercepricing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.ecommercepricing .nav-tabs {
+  background: hsl(260, 9%, 94%);
+  border-radius: 3rem;
+  border: 0;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 0.25rem;
+  max-width: 13.375rem;
+  margin-inline: auto;
+}
+.ecommercepricing .nav-tabs .nav-link {
+  background: hsl(260, 9%, 94%);
+  color: hsl(0, 0%, 0%);
+  border: 0;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.6875rem 1.75rem;
+  text-align: center;
+}
+.ecommercepricing .nav-tabs .nav-link.active {
+  border: 0;
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.dropmessage {
+  padding: 3rem 0rem;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .dropmessage {
+    padding: 4rem 0rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .dropmessage {
+    padding: 6rem 0rem;
+  }
+}
+.dropmessage-content {
+  background: hsl(21, 81%, 96%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 48rem) {
+  .dropmessage-content {
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .dropmessage-content {
+    padding: 4rem;
+  }
+}
+.dropmessage-content .info .text {
+  color: hsl(0, 0%, 34%);
+}
+@media screen and (min-width: 87.5rem) {
+  .dropmessage-content .info .text {
+    font-size: 1.125rem;
+  }
+}
+.dropmessage-content .info .link {
+  color: hsl(28, 91%, 54%);
+  font-size: inherit;
+  font-weight: 500;
+  transition: color 350ms ease-in-out;
+}
+.dropmessage-content .info .link:not([disabled]):hover {
+  color: hsl(196, 82%, 51%);
 }
 
 .templates {
