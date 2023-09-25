@@ -193,6 +193,7 @@
 
 .aboutplatform {
   padding-bottom: size(48);
+  margin-bottom: size(48);
 
   @include breakpoint(mobile768) {
     padding-bottom: size(64);

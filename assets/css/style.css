@@ -2836,6 +2836,20 @@ table tr td {
   fill: hsl(28, 91%, 54%);
 }
 
+.potential {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .potential {
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .potential {
+    padding-bottom: 6rem;
+  }
+}
 .potential-content {
   background: url(../images/home/potential-bg.png);
   background-color: hsl(220, 100%, 73%);
@@ -3085,6 +3099,7 @@ table tr td {
 
 .aboutplatform {
   padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 48rem) {
   .aboutplatform {

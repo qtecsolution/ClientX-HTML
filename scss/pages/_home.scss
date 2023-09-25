@@ -502,6 +502,17 @@
 }
 
 .potential {
+  padding-bottom: size(48);
+  margin-bottom: size(48);
+
+  @include breakpoint(mobile768) {
+    padding-bottom: size(64);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding-bottom: size(96);
+  }
+  
   &-content {
     background: url(../images/home/potential-bg.png);
     background-color: $sectionbg-4;
