@@ -3791,6 +3791,131 @@ table tr td {
   margin-inline: auto;
 }
 
+.authmain {
+  background: hsl(0, 0%, 100%) url(../images/sectionbg/authbg.png) no-repeat center center/contain;
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 3rem 1.25rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .authmain {
+    padding: 4rem 1.25rem 5rem;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .authmain {
+    padding: 6rem 1.25rem 7.5rem;
+    margin-bottom: 6rem;
+  }
+}
+.authmain-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.authmain .authform {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .authmain .authform {
+    padding: 3rem 2rem;
+  }
+}
+.authmain .authform-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.authmain .authform-header .titlebox {
+  max-width: 23.125rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.authmain .authform-header .authtitle {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.authmain .authform-header .info {
+  max-width: 26.625rem;
+}
+.authmain .authform-header .info .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.authmain .authform-header .info .authtext {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+.authmain .authform-body .inputbox .textfield {
+  background: hsl(0, 0%, 99%);
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.authmain .authform-body .inputbox .textfield:focus {
+  border-color: hsl(196, 82%, 51%);
+}
+.authmain .authform-body .inputbox .textfield::-moz-placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.authmain .authform-body .inputbox .textfield::placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.authmain .authform-body .forgotbox {
+  position: relative;
+}
+.authmain .authform-body .forgotbox .textfield {
+  padding-right: 3rem;
+}
+.authmain .authform-body .forgotbox .btn-showhide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.authmain .authform-body .authlink {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  transition: color 350ms ease-in-out;
+}
+.authmain .authform-body .authlink:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+.authmain .authform-footer {
+  text-align: center;
+}
+.authmain .authform-footer .authtext {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+}
+.authmain .authform-footer .authtext .marked:not([disabled]):hover {
+  text-decoration: underline;
+}
+
 .errormain {
   background: hsl(0, 0%, 100%) url(../images/sectionbg/errorbg.png) no-repeat center center/contain;
   display: flex;
