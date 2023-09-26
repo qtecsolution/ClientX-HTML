@@ -1,0 +1,31 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.button-strip {
+  background: $tabbg;
+  @include radius(24);
+  cursor: pointer;
+  @include flex;
+  padding: size(4);
+  overflow: hidden;
+  max-width: size(184);
+
+  .strip-button {
+    @include setBgColor($tabbg, $black);
+    @include radius(24);
+    overflow: hidden;
+    padding: size(8) size(24);
+    height: size(40);
+
+    &-text {
+      color: inherit;
+      font-size: size(12);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    &.active-strip-button {
+      @include setBgColor($primary, $white);
+    }
+  }
+}

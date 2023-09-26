@@ -40,6 +40,8 @@ $accordiontext: hsl(0, 0%, 44%); //#707070
 $authortext: hsl(0, 0%, 24%); //#3C3C3C
 $lifecycletext: hsl(240, 3%, 15%); //#242426
 $packagetext: hsl(0, 0%, 35%); //#5A5A5A
+$pricesuccess: hsl(139, 100%, 44%); //#00DF46
+
 
 $danger: hsl(354, 70%, 54%); //#dc3545
 $success: hsl(140, 64%, 62%); //#5EDC89
@@ -49,9 +51,11 @@ $green: hsl(141, 50%, 47%); //3CB265
 $headerborder: hsl(0, 0%, 85%); //#D9D9D9
 $cardborder: hsl(220, 100%, 98%); //#F6F9FF
 $authorborder: hsl(246, 58%, 55%); //#5649CF
+$greenborder: hsl(139, 100%, 61%); //#3AFF78
 
 // SHADOWS
 $shade-2: rgba(7,37,68, 0.06);
+$greenshade: hsl(139, 100%, 88%); //#C3FFD6
 
 // BOX-SHADOWS
 $formshadow: .4375rem .4375rem 0 0 $headingtext;
@@ -60,3 +64,4 @@ $searchshadow: 0 .5rem 2.5625rem -0.5625rem rgba($black, 0.09);
 $blogshadow: .4375rem .4375rem 0 0 $headingtext;
 $pricingshadow: .4375rem .4375rem 0 0 $primary;
 $headershadow: 0 .25rem 1.875rem rgba($black, 0.1);
+$summaryshadow: .4375rem .4375rem 0 0 $greenshade;

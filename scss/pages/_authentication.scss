@@ -137,3 +137,201 @@
     }
   }
 }
+
+.register {
+  background: $white url(../images/sectionbg/authbg.png) no-repeat center center/contain;
+  @include w100;
+  min-height: 100vh;
+  margin-bottom: size(64);
+  overflow: hidden;
+  padding: size(48) size(20) size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20) size(80);
+    margin-bottom: size(80);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20) size(120);
+    margin-bottom: size(96);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+  
+    @include breakpoint(desktop1400) {
+      gap: size(64);
+    }
+
+    .info {
+      max-width: size(420);
+      margin-inline: auto;
+    }
+  }
+
+  .reg {
+    background: $white;
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(20);
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      padding: size(32);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(40);
+    }
+
+    &-header {
+      @include flex-center-between;
+      @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+      padding-bottom: size(20);
+    }
+    
+    &-body {}
+
+    .title {
+      font-size: size(22);
+      font-weight: 500;
+    }
+  }
+
+  .ordersummary {
+    background: $white;
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(24);
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      padding: size(32);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(40);
+    }
+
+    &-header {
+      @include border-single(bottom, solid, 1, $headerborder);
+      padding-bottom: size(20);
+
+      .title {
+        font-size: size(22);
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(40);
+
+      .orderinfo {
+        @include border-single(bottom, solid, 1, $headerborder);
+        padding-bottom: size(20);
+        @include flex-column;
+        gap: size(20);
+
+        .orderlist {
+          @include list-vertical;
+          gap: size(16);
+
+          &-item {
+            @include flex-center-between;
+
+            .title,
+            .text {
+              color: $headingtext;
+              font-size: size(15);
+            }
+
+            .headingmarked {
+              color: $secondary;
+            }
+          }
+        }
+
+        .divider {
+          @include w100;
+          height: size(1);
+          @include border-single(bottom, dashed, 1, rgba($headingtext, 0.15));
+        }
+
+        .total {
+          @include flex-center-between;
+
+          .title,
+          .totalprice {
+            color: $headingtext;
+            font-size: size(15);
+            font-weight: 500;
+          }
+        }
+      }
+
+      .details {
+        @include flex-column;
+        gap: size(40);
+
+        .info {
+          .text {
+            color: $headingtext;
+            font-size: size(15);
+          }
+        }
+      }
+    }
+  }
+
+  .mysummary {
+    background: $white;
+    @include border(solid, 1, $greenborder);
+    @include radius(20);
+    box-shadow: $summaryshadow;
+    @include flex-column;
+    gap: size(24);
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      padding: size(32);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(40);
+    }
+
+    &-header {
+      @include flex-center;
+      gap: size(8);
+
+      .icon {
+        @include square(64);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .title {
+        color: $pricesuccess;
+        font-size: size(44);
+        font-weight: 400;
+      }
+    }
+
+    &-body {
+      .text {
+        color: $headingtext;
+        font-size: size(13);
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
+}
