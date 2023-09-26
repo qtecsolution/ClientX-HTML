@@ -172,3 +172,31 @@ button,
     @include setBgColor(transparent, $primary);
   }
 }
+
+.login-link {
+  color: $headingtext;
+  font-weight: 500;
+  text-transform: capitalize;
+  @include transitionsall;
+
+  @include hover {
+    color: $secondary;
+  }
+}
+
+.register-link {
+  @include setBgColor($white, $primary);
+  @include border(solid, 1, $headerborder);
+  @include radius(4);
+  @include flex-center;
+  padding: size(11) size(20);
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primary, $white);
+    border-color: $primary;
+  }
+}

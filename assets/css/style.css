@@ -625,6 +625,36 @@ button:focus,
   color: hsl(28, 91%, 54%);
 }
 
+.login-link {
+  color: hsl(201, 63%, 12%);
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 350ms ease-in-out;
+}
+.login-link:not([disabled]):hover {
+  color: hsl(196, 82%, 51%);
+}
+
+.register-link {
+  background: hsl(0, 0%, 100%);
+  color: hsl(28, 91%, 54%);
+  border: solid 0.0625rem hsl(0, 0%, 85%);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6875rem 1.25rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.register-link:not([disabled]):hover {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+  border-color: hsl(28, 91%, 54%);
+}
+
 .cardtemplate {
   display: flex;
   align-items: center;
@@ -2051,34 +2081,6 @@ table tr td {
     gap: 1.25rem;
   }
 }
-.authlist .login-link {
-  color: hsl(201, 63%, 12%);
-  font-weight: 500;
-  text-transform: capitalize;
-  transition: all 350ms ease-in-out;
-}
-.authlist .login-link:not([disabled]):hover {
-  color: hsl(196, 82%, 51%);
-}
-.authlist .register-link {
-  background: hsl(0, 0%, 100%);
-  color: hsl(28, 91%, 54%);
-  border: solid 0.0625rem hsl(0, 0%, 85%);
-  border-radius: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6875rem 1.25rem;
-  font-weight: 700;
-  text-transform: capitalize;
-  text-align: center;
-  transition: all 350ms ease-in-out;
-}
-.authlist .register-link:not([disabled]):hover {
-  background: hsl(28, 91%, 54%);
-  color: hsl(0, 0%, 100%);
-  border-color: hsl(28, 91%, 54%);
-}
 
 .mobilelist {
   margin: 0;
@@ -2285,10 +2287,9 @@ table tr td {
   background: hsl(0, 0%, 92%);
   color: hsl(201, 63%, 12%);
   border: none;
-  border-radius: 0rem;
+  border-radius: 100%;
   width: 3.1875rem;
   height: 3.1875rem;
-  border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3791,16 +3792,18 @@ table tr td {
 }
 
 .errormain {
+  background: hsl(0, 0%, 100%) url(../images/sectionbg/errorbg.png) no-repeat center center/contain;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 60vh;
+  min-height: 100vh;
+  margin-bottom: 3rem;
   overflow: hidden;
 }
 @media screen and (min-width: 48rem) {
   .errormain {
-    min-height: 100vh;
+    margin-bottom: 4rem;
   }
 }
 .errormain .errorthumbnail {
@@ -3817,8 +3820,24 @@ table tr td {
 }
 @media screen and (min-width: 48rem) {
   .errormain .errorthumbnail {
-    height: 28.75rem;
+    max-height: 28.75rem;
   }
+}
+.errormain .details {
+  max-width: 20.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.errormain .details .text {
+  color: hsl(201, 63%, 12%);
+}
+.errormain .details .linkbox {
+  max-width: 7.5rem;
+  margin-inline: auto;
 }
 
 .marked {

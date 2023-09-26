@@ -25,9 +25,8 @@
       .page-link {
         @include setBgColor($paginationitembg, $headingtext);
         border: none;
-        @include radius(0);
-        @include square(51);
         @include circle;
+        @include square(51);
         @include flex-center;
 
         span {
