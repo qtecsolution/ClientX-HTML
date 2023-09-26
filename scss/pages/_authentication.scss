@@ -93,23 +93,6 @@
         }
       }
 
-      .forgotbox {
-        position: relative;
-        
-        .textfield {
-          padding-right: size(48);
-        }
-
-        .btn-showhide {
-          position: absolute;
-          top: 50%;
-          @include translateY(-50%);
-          right: size(16);
-          @include square(24);
-          @include flex-center;
-        }
-      }
-
       .authlink {
         color: $headingtext;
         font-size: size(14);
@@ -135,6 +118,23 @@
         }
       }
     }
+  }
+}
+
+.forgotbox {
+  position: relative;
+  
+  .textfield {
+    padding-right: size(48);
+  }
+
+  .btn-showhide {
+    position: absolute;
+    top: 50%;
+    @include translateY(-50%);
+    right: size(16);
+    @include square(24);
+    @include flex-center;
   }
 }
 
@@ -191,9 +191,52 @@
       @include flex-center-between;
       @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
       padding-bottom: size(20);
+      flex-wrap: wrap;
+      gap: size(10);
     }
     
-    &-body {}
+    &-body {
+      @include flex-column;
+      gap: size(48);
+
+      .regdetail {
+        @include flex-column;
+        gap: size(20);
+
+        &-header {
+          @include flex-center-between;
+          @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+          padding-bottom: size(20);
+          flex-wrap: wrap;
+          gap: size(10);
+
+          .logtext {
+            color: $headingtext;
+            font-size: size(14);
+            font-weight: 500;
+
+            .loglink {
+              color: $primary;
+              font-size: size(14);
+              font-weight: 700;
+              text-decoration: underline;
+              @include transitionsall;
+
+              @include hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        &-body {
+          .regdetailtext {
+            color: $headingtext;
+            font-size: size(15);
+          }
+        }
+      }
+    }
 
     .title {
       font-size: size(22);
@@ -249,6 +292,10 @@
             .text {
               color: $headingtext;
               font-size: size(15);
+            }
+
+            .text {
+              @include flex;
             }
 
             .headingmarked {

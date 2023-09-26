@@ -168,6 +168,10 @@ iframe {
   @include w100;
 }
 
+select {
+  cursor: pointer;
+}
+
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {

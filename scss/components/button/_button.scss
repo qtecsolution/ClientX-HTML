@@ -200,3 +200,16 @@ button,
     border-color: $primary;
   }
 }
+
+.btn-coupon {
+  color: $headingtext;
+  font-size: size(15);
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: underline;
+  @include transitionsall;
+
+  @include hover {
+    color: $primary;
+  }
+}
