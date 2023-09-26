@@ -36,6 +36,10 @@
       @include w100;
       height: 65%;
       z-index: -1;
+  
+      @include breakpoint(desktop1400) {
+        bottom: size(-96);
+      }
     }
   }
 
@@ -44,8 +48,8 @@
 
     .packicon {
       position: absolute;
-      top: size(-30);
-      left: size(-70);
+      top: size(0);
+      left: size(-54);
       width: size(106);
       height: size(69);
       overflow: hidden;

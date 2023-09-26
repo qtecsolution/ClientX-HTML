@@ -745,8 +745,10 @@
     gap: size(16);
 
     .details {
+      @include border-single(bottom, solid, 1, $headerborder);
       @include flex-column;
       gap: size(16);
+      padding-bottom: size(32);
 
       .packagename {
         @include flex-center-vert;
