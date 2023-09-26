@@ -745,10 +745,8 @@
     gap: size(16);
 
     .details {
-      @include border-single(bottom, solid, 1, $headerborder);
       @include flex-column;
       gap: size(16);
-      padding-bottom: size(32);
 
       .packagename {
         @include flex-center-vert;
@@ -777,9 +775,12 @@
     }
 
     .packageprice {
+      @include border-single(bottom, solid, 1, $headerborder);
       @include flex;
       align-items: flex-end;
       gap: size(4);
+      padding-bottom: size(32);
+      margin-bottom: size(8);
 
       .price {
         color: $headingtext;
