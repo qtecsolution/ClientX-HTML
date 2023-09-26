@@ -60,36 +60,6 @@
       }
     }
   }
-
-  .nav-tabs {
-    background: $tabbg;
-    @include radius(48);
-    border: 0;
-    justify-content: center;
-    gap: size(8);
-    margin-bottom: size(64);
-    overflow: hidden;
-    padding: size(4);
-    max-width: size(274);
-    margin-inline: auto;
-
-    .nav-link {
-      @include setBgColor($tabbg, $black);
-      border: 0;
-      @include radius(48);
-      @include flex-center;
-      font-size: size(12);
-      font-weight: 500;
-      margin: 0;
-      padding: size(11) size(28);
-      text-align: center;
-
-      &.active {
-        border: 0;
-        @include setBgColor($primary, $white);
-      }
-    }
-  }
 }
 
 .ecommercepricing {
