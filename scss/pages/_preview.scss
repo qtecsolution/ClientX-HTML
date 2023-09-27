@@ -1,0 +1,83 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.panel__top {
+  background: $white;
+  @include border-single(bottom, solid, 1, $headerborder);
+  @include flex-center-vert;
+  @include w100;
+  height: size(65);
+  padding: 0;
+  position: initial;
+
+  .gjs-one-bg {
+    background: transparent;
+  }
+
+  .panelinfo {
+    @include flex-center-between;
+    @include w100;
+  }
+}
+
+.panel__basic-actions {
+  position: initial;
+}
+
+.panel__devices {
+  position: initial;
+}
+
+.btn-back {
+  background: $editbtnbg;
+  @include radius(20);
+  @include flex-center;
+  gap: size(5);
+  padding: size(8) size(20);
+  transition: none;
+
+  .icon {
+    @include square(16);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $headingtext;
+    font-size: (14);
+    font-weight: 500;
+  }
+
+  @include hover {
+    background: $headingtext;
+
+    .icon {
+      svg {
+        path {
+          fill: $editbtnbg;
+        }
+      }
+    }
+
+    .text {
+      color: $editbtnbg;
+      font-size: (14);
+      font-weight: 500;
+    }
+  }
+}
+
+.btn-start {
+  @include setBgColor($primary, $white);
+  @include radius(20);
+  @include flex-center;
+  font-size: (14);
+  font-weight: 500;
+  gap: size(5);
+  padding: size(8) size(20);
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 10%), $white);
+  }
+}
