@@ -1769,6 +1769,10 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .modal-header .btn-close:not([disabled]):hover svg {
   transform: rotate(90deg);
 }
+.modal-header .btn-close:not([disabled]):hover svg path {
+  fill: hsl(354, 70%, 54%);
+}
+
 .tooltip-inner {
   background: hsl(201, 63%, 12%);
   font-size: 0.75rem;
