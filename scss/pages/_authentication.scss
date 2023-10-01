@@ -335,50 +335,50 @@
       }
     }
   }
+}
 
-  .mysummary {
-    background: $white;
-    @include border(solid, 1, $greenborder);
-    @include radius(20);
-    box-shadow: $summaryshadow;
-    @include flex-column;
-    gap: size(24);
-    padding: size(24);
+.mysummary {
+  background: $white;
+  @include border(solid, 1, $greenborder);
+  @include radius(20);
+  box-shadow: $summaryshadow;
+  @include flex-column;
+  gap: size(24);
+  padding: size(24);
 
-    @include breakpoint(mobile768) {
-      padding: size(32);
-    }
+  @include breakpoint(mobile768) {
+    padding: size(32);
+  }
 
-    @include breakpoint(tab992) {
-      padding: size(40);
-    }
+  @include breakpoint(tab992) {
+    padding: size(40);
+  }
 
-    &-header {
+  &-header {
+    @include flex-center;
+    gap: size(8);
+
+    .icon {
+      @include square(64);
+      @include circle;
       @include flex-center;
-      gap: size(8);
-
-      .icon {
-        @include square(64);
-        @include circle;
-        @include flex-center;
-        overflow: hidden;
-      }
-
-      .title {
-        color: $pricesuccess;
-        font-size: size(44);
-        font-weight: 400;
-      }
+      overflow: hidden;
     }
 
-    &-body {
-      .text {
-        color: $headingtext;
-        font-size: size(13);
-        font-style: normal;
-        font-weight: 400;
-        text-align: center;
-      }
+    .title {
+      color: $pricesuccess;
+      font-size: size(44);
+      font-weight: 400;
+    }
+  }
+
+  &-body {
+    .text {
+      color: $headingtext;
+      font-size: size(13);
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
     }
   }
 }

@@ -3,7 +3,7 @@
 
 .modal {
   &-content {
-    @include radius(4);
+    @include radius(20);
   }
 
   &-header {

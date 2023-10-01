@@ -1747,7 +1747,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
 }
 
 .modal-content {
-  border-radius: 0.25rem;
+  border-radius: 1.25rem;
 }
 .modal-header {
   border-bottom: 0;
@@ -4218,7 +4218,8 @@ table tr td {
   color: hsl(201, 63%, 12%);
   font-size: 0.9375rem;
 }
-.register .mysummary {
+
+.mysummary {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem hsl(139, 100%, 61%);
   border-radius: 1.25rem;
@@ -4229,22 +4230,22 @@ table tr td {
   padding: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
-  .register .mysummary {
+  .mysummary {
     padding: 2rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .register .mysummary {
+  .mysummary {
     padding: 2.5rem;
   }
 }
-.register .mysummary-header {
+.mysummary-header {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
-.register .mysummary-header .icon {
+.mysummary-header .icon {
   width: 4rem;
   height: 4rem;
   border-radius: 100%;
@@ -4253,12 +4254,12 @@ table tr td {
   justify-content: center;
   overflow: hidden;
 }
-.register .mysummary-header .title {
+.mysummary-header .title {
   color: hsl(139, 100%, 44%);
   font-size: 2.75rem;
   font-weight: 400;
 }
-.register .mysummary-body .text {
+.mysummary-body .text {
   color: hsl(201, 63%, 12%);
   font-size: 0.8125rem;
   font-style: normal;
