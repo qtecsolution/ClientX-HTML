@@ -4271,6 +4271,59 @@ table tr td {
   text-align: center;
 }
 
+.workingprgoress {
+  background: hsl(0, 0%, 100%) url(../images/sectionbg/workprogress.png) no-repeat center center/contain;
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  padding: 3rem 1.25rem 4rem;
+}
+@media screen and (min-width: 48rem) {
+  .workingprgoress {
+    padding: 4rem 1.25rem 5rem;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .workingprgoress {
+    padding: 6rem 1.25rem 7.5rem;
+    margin-bottom: 6rem;
+  }
+}
+.workingprgoress-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+@media screen and (min-width: 87.5rem) {
+  .workingprgoress-content {
+    gap: 5rem;
+  }
+}
+.workingprgoress-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.workingprgoress-body .info {
+  max-width: 23.125rem;
+  margin-inline: auto;
+}
+.workingprgoress-body .info .text {
+  color: hsl(201, 63%, 12%);
+  font-weight: 400;
+}
+.workingprgoress-body .backbutton {
+  max-width: 7.5rem;
+}
+
 .panel__top {
   background: hsl(0, 0%, 100%);
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);

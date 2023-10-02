@@ -1,0 +1,51 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.workingprgoress {
+  background: $white url(../images/sectionbg/workprogress.png) no-repeat center center/contain;
+  @include w100;
+  min-height: 100vh;
+  margin-bottom: size(64);
+  overflow: hidden;
+  padding: size(48) size(20) size(64);
+
+  @include breakpoint(mobile768) {
+    padding: size(64) size(20) size(80);
+    margin-bottom: size(80);
+  }
+  
+  @include breakpoint(desktop1400) {
+    padding: size(96) size(20) size(120);
+    margin-bottom: size(96);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(48);
+    padding-bottom: size(48);
+    text-align: center;
+    
+    @include breakpoint(desktop1400) {
+      gap: size(80);
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(24);
+
+    .info {
+      max-width: size(370);
+      margin-inline: auto;
+
+      .text {
+        color: $headingtext;
+        font-weight: 400;
+      }
+    }
+
+    .backbutton {
+      max-width: size(120);
+    }
+  }
+}
