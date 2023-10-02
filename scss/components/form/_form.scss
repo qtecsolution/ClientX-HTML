@@ -222,3 +222,45 @@
     }
   }
 }
+
+.domainsearchform {
+  @include flex-center-vert;
+  gap: size(12);
+  @include w100;
+
+  .searchfield {
+    @include setBgColor($inputbg, $black);
+    @include border(solid, 1, rgba($headingtext, 0.10));
+    @include radius(4);
+    font-size: size(15);
+    padding: size(11.75) size(16);
+    @include transitionsall;
+
+    @include breakpoint(mobile768) {
+      width: calc(100% - size(162));
+    }
+
+    &::placeholder {
+      color: $textplaceholder;
+    }
+
+    &:focus {
+      border-color: $secondary;
+    }
+  }
+
+  .btn-search {
+    @include setBgColor($headingtext, $white);
+    @include radius(4);
+    font-weight: 700;
+    @include flex-center;
+    overflow: hidden;
+    padding: size(12);
+    width: size(150);
+    @include transitionsall;
+
+    @include hover {
+      @include setBgColor($primary, $white);
+    }
+  }
+}
