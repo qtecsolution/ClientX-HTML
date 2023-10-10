@@ -671,6 +671,17 @@ button:focus,
   color: hsl(28, 91%, 54%);
 }
 
+.btn-upgrade {
+  background: hsl(28, 91%, 54%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 8.1875rem;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  text-align: center;
+}
+
 .cardtemplate {
   display: flex;
   align-items: center;
@@ -1631,6 +1642,32 @@ header {
 .loggedinheader .loggedinuser:not([disabled]):hover .userdropdown {
   display: block;
 }
+.loggedinheader .offcanvas {
+  background: hsl(201, 63%, 12%);
+}
+.loggedinheader .offcanvas-body {
+  background: hsl(201, 63%, 12%);
+}
+.loggedinheader .offcanvas-body .mobilelist {
+  gap: 0rem;
+}
+.loggedinheader .offcanvas-body .mobilelist-link {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.loggedinheader .offcanvas-body .mobilelist-link:hover:not(.active) {
+  background: hsl(201, 58%, 9%);
+  color: hsl(28, 91%, 54%);
+}
+.loggedinheader .offcanvas-body .mobilelist-link.active {
+  background: hsl(201, 58%, 9%);
+  color: hsl(28, 91%, 54%);
+}
+
 input,
 select,
 textarea {
@@ -4762,6 +4799,33 @@ table tr td {
 .btn-start:not([disabled]):hover {
   background: #d6690a;
   color: hsl(0, 0%, 100%);
+}
+
+.trial {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+}
+.trial .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.trial .text span {
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+}
+
+.templateview .cardtemplate {
+  align-items: flex-start;
+}
+.templateview .cardtemplate-header .template-thumbnail .viewedit .btn-edit {
+  max-width: 9.375rem;
+}
+.templateview .cardtemplate-body {
+  align-items: flex-start;
+  text-align: left;
 }
 
 .errormain {

@@ -66,27 +66,25 @@
               </button>
             </div>
 
-            <div class="offcanvas-body pt-0">
-              <div class="d-flex flex-column gap-4">
-                <!-- MOBILE-LIST -->
-                <ul class="mobilelist">
-                  <li class="mobilelist-item">
-                    <a href="sitelist.html" class="mobilelist-link">Sites</a>
-                  </li>
+            <div class="offcanvas-body px-0">
+              <!-- MOBILE-LIST -->
+              <ul class="mobilelist">
+                <li class="mobilelist-item">
+                  <a href="sitelist.html" class="mobilelist-link">Sites</a>
+                </li>
 
-                  <li class="mobilelist-item">
-                    <a href="#" class="mobilelist-link">Templates</a>
-                  </li>
+                <li class="mobilelist-item">
+                  <a href="template.html" class="mobilelist-link">Templates</a>
+                </li>
 
-                  <li class="mobilelist-item">
-                    <a href="plans.html" class="mobilelist-link">Plans</a>
-                  </li>
+                <li class="mobilelist-item">
+                  <a href="plans.html" class="mobilelist-link">Plans</a>
+                </li>
 
-                  <li class="mobilelist-item">
-                    <a href="../contact.html" class="mobilelist-link">Help</a>
-                  </li>
-                </ul>
-              </div>
+                <li class="mobilelist-item">
+                  <a href="../contact.html" class="mobilelist-link">Help</a>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -104,7 +102,7 @@
                 </li>
 
                 <li class="desklist-item">
-                  <a href="#" class="desklist-link">Templates</a>
+                  <a href="template.html" class="desklist-link">Templates</a>
                 </li>
 
                 <li class="desklist-item">
@@ -139,7 +137,7 @@
 
                   <li class="droplist-item">
                     <a
-                      href="../authentications//login.html"
+                      href="../authentications/login.html"
                       class="droplist-link"
                     >
                       Log Out
@@ -154,20 +152,35 @@
     </header>
     <!-- HEADER-SECTION END -->
 
+    <!-- TRIAL-BOX START -->
+    <div class="trial">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <p class="text">Your free trial ends in <span>13 days.</span></p>
+              <a href="#" class="btn-upgrade">Upgrade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TRIAL-BOX END -->
+
     <!-- MAIN-SECTION START -->
     <main class="main">
       <!-- TEMPLATES-SECTION START -->
-      <section class="templates">
-        <div class="templates-content">
+      <section class="templates templateview">
+        <div class="templates-content gap-4">
           <div class="container" data-aos="fade-up">
             <div class="row">
               <div class="col-lg-6 mx-lg-auto">
                 <div class="d-flex flex-column gap-4 text-center">
-                  <h1 class="display-5 fw-bold">Templates Gallery</h1>
+                  <h1 class="display-5 fw-bold">Choose a template</h1>
                   <div class="info">
                     <p class="text">
-                      Pick a template, then head to your dashboard. Expect a
-                      welcome email for plan options after site creation.
+                      Select your staring point, customize easily, and build a
+                      great website.
                     </p>
                   </div>
                 </div>
@@ -175,206 +188,15 @@
             </div>
           </div>
 
-          <div class="container" data-aos="fade-up">
-            <ul
-              class="nav nav-tabs justify-content-center"
-              id="templateTab"
-              role="tablist"
-            >
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="alltemplates-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#alltemplates-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="alltemplates-tab-pane"
-                  aria-selected="true"
-                >
-                  All Templates
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="business-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#business-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="business-tab-pane"
-                  aria-selected="false"
-                >
-                  Business
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="ecommerce-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#ecommerce-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="ecommerce-tab-pane"
-                  aria-selected="false"
-                >
-                  Ecommerce
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="blog-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#blog-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="blog-tab-pane"
-                  aria-selected="false"
-                >
-                  Blog
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="entertainment-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#entertainment-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="entertainment-tab-pane"
-                  aria-selected="false"
-                >
-                  Entertainment
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="news-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#news-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="news-tab-pane"
-                  aria-selected="false"
-                >
-                  News
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="portfolio-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#portfolio-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="portfolio-tab-pane"
-                  aria-selected="false"
-                >
-                  Portfolio
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="personal-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#personal-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="personal-tab-pane"
-                  aria-selected="false"
-                >
-                  Personal
-                </button>
-              </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="search-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSearchForm"
-                  aria-expanded="false"
-                  aria-controls="collapseSearchForm"
-                >
-                  <span class="icon">
-                    <span class="searchicon">
-                      <svg
-                        width="65"
-                        height="65"
-                        viewBox="0 0 65 65"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect width="65" height="65" rx="32.5" fill="#F2F2F2" />
-                        <path
-                          d="M31.5 39.5C35.9183 39.5 39.5 35.9183 39.5 31.5C39.5 27.0817 35.9183 23.5 31.5 23.5C27.0817 23.5 23.5 27.0817 23.5 31.5C23.5 35.9183 27.0817 39.5 31.5 39.5Z"
-                          stroke="#0B2330"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M41.5004 41.5004L37.1504 37.1504"
-                          stroke="#0B2330"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-
-                    <span class="closeicon">
-                      <svg
-                        width="65"
-                        height="65"
-                        viewBox="0 0 65 65"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect width="65" height="65" rx="32.5" fill="#0B2330" />
-                        <path
-                          d="M38.5 26.5L26.5 38.5"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M26.5 26.5L38.5 38.5"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                </button>
-              </li>
-            </ul>
-
-            <div class="py-5">
-              <div class="collapse" id="collapseSearchForm">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-6">
                 <div class="row">
                   <div class="col-lg-8 col-md-9 mx-md-auto">
                     <form class="searchform">
                       <input
                         type="search"
-                        placeholder="Search here"
+                        placeholder="Search template here ..."
                         class="searchinput"
                       />
 
@@ -409,1809 +231,351 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="tab-content" id="templateTabContent">
-              <!-- ALL-TEMPLATES -->
-              <div
-                class="tab-pane fade show active"
-                id="alltemplates-tab-pane"
-                role="tabpanel"
-                aria-labelledby="alltemplates-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+          <div class="container" data-aos="fade-up">
+            <div class="row gx-4 gy-5">
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-1.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-7.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-7.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Business</span>
                   </div>
                 </div>
               </div>
 
-              <!-- BUSINESS-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="business-tab-pane"
-                role="tabpanel"
-                aria-labelledby="business-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-2.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Business</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Ecommerce</span>
                   </div>
                 </div>
               </div>
 
-              <!-- ECOMMERCE-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="ecommerce-tab-pane"
-                role="tabpanel"
-                aria-labelledby="ecommerce-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-3.png"
+                        alt="template-thumbnail"
+                      />
 
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Ecommerce</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Blog</span>
                   </div>
                 </div>
               </div>
 
-              <!-- BLOG-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="blog-tab-pane"
-                role="tabpanel"
-                aria-labelledby="blog-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-4.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Blog</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Entertainment</span>
                   </div>
                 </div>
               </div>
 
-              <!-- ENTERTAINMENT-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="entertainment-tab-pane"
-                role="tabpanel"
-                aria-labelledby="entertainment-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-5.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Entertainment</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">News</span>
                   </div>
                 </div>
               </div>
 
-              <!-- NEWS-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="news-tab-pane"
-                role="tabpanel"
-                aria-labelledby="news-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-6.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">News</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Portfolio</span>
                   </div>
                 </div>
               </div>
 
-              <!-- PORTFOLIO-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="portfolio-tab-pane"
-                role="tabpanel"
-                aria-labelledby="portfolio-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-7.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
-
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Portfolio</span>
-                      </div>
-                    </div>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Personal</span>
                   </div>
                 </div>
               </div>
 
-              <!-- PERSONAL-TEMPLATES -->
-              <div
-                class="tab-pane fade"
-                id="personal-tab-pane"
-                role="tabpanel"
-                aria-labelledby="personal-tab"
-                tabindex="0"
-                data-aos="fade-up"
-              >
-                <div class="row gx-4 gy-5">
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-1.png"
-                            alt="template-thumbnail"
-                          />
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-1.png"
+                        alt="template-thumbnail"
+                      />
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
-
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-2.png"
-                            alt="template-thumbnail"
-                          />
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Business</span>
+                  </div>
+                </div>
+              </div>
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-2.png"
+                        alt="template-thumbnail"
+                      />
 
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-3.png"
-                            alt="template-thumbnail"
-                          />
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Ecommerce</span>
+                  </div>
+                </div>
+              </div>
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-3.png"
+                        alt="template-thumbnail"
+                      />
 
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-4.png"
-                            alt="template-thumbnail"
-                          />
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Blog</span>
+                  </div>
+                </div>
+              </div>
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-4.png"
+                        alt="template-thumbnail"
+                      />
 
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-5.png"
-                            alt="template-thumbnail"
-                          />
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Entertainment</span>
+                  </div>
+                </div>
+              </div>
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-5.png"
+                        alt="template-thumbnail"
+                      />
 
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
-                      </div>
-                    </div>
+                    </figure>
                   </div>
 
-                  <div class="col-lg-4 col-sm-6">
-                    <div class="cardtemplate">
-                      <div class="cardtemplate-header">
-                        <figure class="template-thumbnail">
-                          <img
-                            src="../assets/images/templates/template-6.png"
-                            alt="template-thumbnail"
-                          />
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">News</span>
+                  </div>
+                </div>
+              </div>
 
-                          <div class="viewedit">
-                            <button class="btn-edit d-none">Edit</button>
-                            <button class="btn-view d-none">View</button>
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-6.png"
+                        alt="template-thumbnail"
+                      />
 
-                            <a href="workinginprogress.html" class="btn-edit">
-                              Edit
-                            </a>
-                            <a href="workinginprogress.html" class="btn-view">
-                              View
-                            </a>
-                          </div>
-                        </figure>
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
+                    </figure>
+                  </div>
 
-                      <div class="cardtemplate-body">
-                        <h5 class="title">Air Table Example</h5>
-                        <span class="category">Personal</span>
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Portfolio</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-7.png"
+                        alt="template-thumbnail"
+                      />
+
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
                       </div>
-                    </div>
+                    </figure>
+                  </div>
+
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Personal</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6">
+                <div class="cardtemplate">
+                  <div class="cardtemplate-header">
+                    <figure class="template-thumbnail">
+                      <img
+                        src="../assets/images/templates/template-3.png"
+                        alt="template-thumbnail"
+                      />
+
+                      <div class="viewedit">
+                        <button class="btn-edit">Start Building</button>
+                        <button class="btn-view">View</button>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div class="cardtemplate-body">
+                    <h5 class="title">Air Table Example</h5>
+                    <span class="category">Business</span>
                   </div>
                 </div>
               </div>
@@ -2280,52 +644,6 @@
         </div>
       </section>
       <!-- TEMPLATES-SECTION END -->
-
-      <!-- POTENTIAL-SECTION START -->
-      <section class="potential" data-aos="flip-up">
-        <div class="container">
-          <div class="potential-content">
-            <div class="potential-info">
-              <div class="row g-4">
-                <div class="offset-xl-1 offset-0 col-xl-6 col-lg-8">
-                  <div class="leftinfo">
-                    <h2 class="display-6">
-                      Unlock your product’s full potential
-                    </h2>
-
-                    <div class="info">
-                      <p class="text">
-                        Webwowzer is one of the few that offer a great website
-                        builder with free templates, widgets and Aps. With our
-                        builder, you can create the best DIY e-commerce websites
-                        for your business. Our custom-made website services have
-                        a wide variety of templates and formats available for
-                        use immediately.
-                      </p>
-                    </div>
-
-                    <div class="started">
-                      <a href="workinginprogress.html" class="btn-order">
-                        Start Building
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="offset-xl-1 offset-0 col-lg-4">
-                  <figure class="potential-thumbnail">
-                    <img
-                      src="../assets/images/home/potential-thumbnail.png"
-                      alt="potential-thumbnail"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- POTENTIAL-SECTION END -->
     </main>
     <!-- MAIN-SECTION END -->
 

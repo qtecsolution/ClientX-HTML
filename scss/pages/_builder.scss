@@ -1,0 +1,41 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.trial {
+  background: $white;
+  box-shadow: $headderdownshadow;
+  padding: size(8);
+
+  .text {
+    color: $headingtext;
+    font-size: size(14);
+    font-weight: 400;
+
+    span {
+      color: inherit;
+      font: inherit;
+      font-weight: 500;
+    }
+  }
+}
+
+.templateview {
+  .cardtemplate {
+    align-items: flex-start;
+
+    &-header {
+      .template-thumbnail {
+        .viewedit {
+          .btn-edit {
+            max-width: size(150);
+          }
+        }
+      }
+    }
+
+    &-body {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+}

@@ -213,3 +213,13 @@ button,
     color: $primary;
   }
 }
+
+.btn-upgrade {
+  @include setBgColor($primary, $white);
+  @include radius(131);
+  display: inline-block;
+  font-size: size(12);
+  font-weight: 700;
+  padding: size(4) size(12);
+  text-align: center;
+}

@@ -208,8 +208,30 @@ header {
   }
 
   .offcanvas {
+    background: $headingtext;
+
     &-body {
-      
+      background: $headingtext;
+
+      .mobilelist {
+        gap: size(0);
+
+        &-link {
+          @include setBgColor($headingtext, $white);
+          display: inline-block;
+          padding: size(12) size(24);
+          @include w100;
+          @include transitionsall;
+
+          &:hover:not(.active) {
+            @include setBgColor($activebg, $primary);
+          }
+
+          &.active {
+            @include setBgColor($activebg, $primary);
+          }
+        }
+      }
     }
   }
 }
