@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PAGE-TITLE -->
-    <title>WebWowZer | Templates</title>
+    <title>WebWowZer | Builder Templates</title>
     <!-- FAVICON -->
     <link
       rel="shortcut icon"
@@ -74,7 +74,9 @@
                 </li>
 
                 <li class="mobilelist-item">
-                  <a href="template.html" class="mobilelist-link">Templates</a>
+                  <a href="template.html" class="mobilelist-link active">
+                    Templates
+                  </a>
                 </li>
 
                 <li class="mobilelist-item">
@@ -102,7 +104,9 @@
                 </li>
 
                 <li class="desklist-item">
-                  <a href="template.html" class="desklist-link">Templates</a>
+                  <a href="template.html" class="desklist-link active">
+                    Templates
+                  </a>
                 </li>
 
                 <li class="desklist-item">
@@ -188,47 +192,72 @@
             </div>
           </div>
 
-          <div class="container">
+          <div class="container mb-3">
             <div class="row g-4">
               <div class="col-lg-6">
-                <div class="row">
-                  <div class="col-lg-8 col-md-9 mx-md-auto">
-                    <form class="searchform">
-                      <input
-                        type="search"
-                        placeholder="Search template here ..."
-                        class="searchinput"
-                      />
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <select class="form-select">
+                      <option selected>All templates</option>
+                      <option value="Business">Business</option>
+                      <option value="Ecommerce">Ecommerce</option>
+                      <option value="Blog">Blog</option>
+                      <option value="Entertainment">Entertainment</option>
+                      <option value="News">News</option>
+                      <option value="Portfolio">Portfolio</option>
+                      <option value="Personal">Personal</option>
+                    </select>
+                  </div>
 
-                      <div class="submitbox">
-                        <button type="submit" class="btn-searchtemplate">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                              stroke="#0B2330"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M20.9984 20.9999L16.6484 16.6499"
-                              stroke="#0B2330"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </form>
+                  <div class="col-md-6">
+                    <select class="form-select">
+                      <option selected>Select category</option>
+                      <option value="Portfolio">Portfolio</option>
+                      <option value="Landing page">Landing page</option>
+                      <option value="Business site">Business site</option>
+                      <option value="Online store">Online store</option>
+                      <option value="Lifestyle">Lifestyle</option>
+                      <option value="Just browsing">Just browsing</option>
+                    </select>
                   </div>
                 </div>
+              </div>
+
+              <div class="col-lg-6">
+                <form class="searchform">
+                  <input
+                    type="search"
+                    placeholder="Search template here ..."
+                    class="searchinput"
+                  />
+
+                  <div class="submitbox">
+                    <button type="submit" class="btn-searchtemplate">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                          stroke="#0B2330"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M20.9984 20.9999L16.6484 16.6499"
+                          stroke="#0B2330"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -759,7 +788,7 @@
                   </li>
 
                   <li class="footerlist-item">
-                    <a href="about.html" class="footerlist-link">About Us</a>
+                    <a href="../about.html" class="footerlist-link">About Us</a>
                   </li>
 
                   <li class="footerlist-item">
@@ -785,7 +814,7 @@
 
                 <ul class="footerlist">
                   <li class="footerlist-item">
-                    <a href="contact.html" class="footerlist-link">
+                    <a href="../contact.html" class="footerlist-link">
                       Contact Us
                     </a>
                   </li>

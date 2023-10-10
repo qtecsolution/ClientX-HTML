@@ -4827,6 +4827,16 @@ table tr td {
   align-items: flex-start;
   text-align: left;
 }
+.templateview .form-select {
+  background-color: hsl(0, 0%, 95%);
+  border-color: hsl(0, 0%, 85%);
+  border-radius: 12.5rem;
+  padding: 0.6875rem 1.25rem;
+  transition: all 350ms ease-in-out;
+}
+.templateview .form-select:focus {
+  border-color: hsl(196, 82%, 51%);
+}
 
 .errormain {
   background: hsl(0, 0%, 100%) url(../images/sectionbg/errorbg.png) no-repeat center center/contain;
