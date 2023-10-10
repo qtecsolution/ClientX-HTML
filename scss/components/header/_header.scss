@@ -1,10 +1,7 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
-.header {
-  // background: rgba($white, 0.8);
-  background: $white;
-  @include border-single(bottom, solid, 1, $headerborder);
+header {
   @include flex-center-vert;
   position: fixed;
   top: 0;
@@ -16,6 +13,12 @@
   @include breakpoint(tab992) {
     height: size(100);
   }
+}
+
+.header {
+  // background: rgba($white, 0.8);
+  background: $white;
+  @include border-single(bottom, solid, 1, $headerborder);
 
   &-nav {
     @include flex-center-between;
@@ -88,11 +91,125 @@
       right: -100%;
     }
   }
+}
 
-  &.scrolled {
-    // background: rgba($white, 0.2);
-    // backdrop-filter: blur(size(5));
-    box-shadow: $headershadow;
-    border-color: rgba($white, 0.3);
+.scrolled {
+  // background: rgba($white, 0.2);
+  // backdrop-filter: blur(size(5));
+  box-shadow: $headershadow;
+  border-color: rgba($white, 0.3);
+}
+
+.loggedinheader {
+  background: $headingtext;
+
+  .btn-hamburger {
+    i {
+      color: $white;
+    }
+
+    @include hover {
+      i {
+        color: $primary;
+      }
+    }
+  }
+
+  .desklist {
+    @include list-horizontal;
+
+    &-link {
+      @include setBgColor($headingtext, $white);
+      @include flex-center;
+      padding-inline: size(20);
+      height: size(64);
+      @include transitionsall;
+
+      @include breakpoint(tab992) {
+        height: size(100);
+      }
+
+      &:hover:not(.active) {
+        @include setBgColor($activebg, $primary);
+      }
+
+      &.active {
+        @include setBgColor($activebg, $primary);
+      }
+    }
+  }
+  
+  .loggedinuser {
+    cursor: pointer;
+    @include flex-center;
+    padding: size(14);
+    position: relative;
+    height: size(64);
+
+    @include breakpoint(tab992) {
+      height: size(100);
+    }
+
+    .userthumb {
+      @include setBgColor($secondary, $white);
+      @include square(36);
+      @include circle;
+      @include flex-center;
+      font-size: size(24);
+      font-weight: 700;
+      overflow: hidden;
+    }
+
+    .userdropdown {
+      background: $white;
+      box-shadow: $headershadow;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      @include w100;
+      @extend %animation;
+      @extend %slideUpIn;
+      min-width: size(180);
+      display: none;
+
+      .droplist {
+        @include list-vertical;
+
+        &-link {
+          color: $headingtext;
+          @include border-single(bottom, solid, 1, $headerborder);
+          display: inline-block;
+          font-size: size(15);
+          padding: size(10) size(20);
+          @include w100;
+          @include transitionsall;
+
+          &:hover {
+            border-color: $primary;
+            color: $primary;
+          }
+        }
+
+        &-item {
+          &:last-child {
+            .droplist-link {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    @include hover {
+      .userdropdown {
+        display: block;
+      }
+    }
+  }
+
+  .offcanvas {
+    &-body {
+      
+    }
   }
 }

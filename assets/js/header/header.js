@@ -1,7 +1,7 @@
 // HEADER SHOW HIDE ON SCROLL
 
 const showAnim = gsap
-  .from('.header', {
+  .from('header', {
     yPercent: -100,
     paused: true,
     duration: 0.2,

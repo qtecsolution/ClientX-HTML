@@ -8,7 +8,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.header .resourcesdropdown {
+.header .resourcesdropdown, .loggedinheader .loggedinuser .userdropdown {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -46,7 +46,7 @@
     transform: translateY(1.25rem);
   }
 }
-.header .resourcesdropdown {
+.header .resourcesdropdown, .loggedinheader .loggedinuser .userdropdown {
   animation-name: slideUpIn;
 }
 
@@ -1433,9 +1433,7 @@ button:focus,
   box-shadow: 0.4375rem 0.4375rem 0 0 hsl(28, 91%, 54%);
 }
 
-.header {
-  background: hsl(0, 0%, 100%);
-  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+header {
   display: flex;
   align-items: center;
   position: fixed;
@@ -1446,9 +1444,14 @@ button:focus,
   z-index: 9999;
 }
 @media screen and (min-width: 62rem) {
-  .header {
+  header {
     height: 6.25rem;
   }
+}
+
+.header {
+  background: hsl(0, 0%, 100%);
+  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
 }
 .header-nav {
   display: flex;
@@ -1520,11 +1523,114 @@ button:focus,
 .header .resourcesdropdown::after {
   right: -100%;
 }
-.header.scrolled {
+
+.scrolled {
   box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.loggedinheader {
+  background: hsl(201, 63%, 12%);
+}
+.loggedinheader .btn-hamburger i {
+  color: hsl(0, 0%, 100%);
+}
+.loggedinheader .btn-hamburger:not([disabled]):hover i {
+  color: hsl(28, 91%, 54%);
+}
+.loggedinheader .desklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.loggedinheader .desklist-link {
+  background: hsl(201, 63%, 12%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.25rem;
+  height: 4rem;
+  transition: all 350ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .loggedinheader .desklist-link {
+    height: 6.25rem;
+  }
+}
+.loggedinheader .desklist-link:hover:not(.active) {
+  background: hsl(201, 58%, 9%);
+  color: hsl(28, 91%, 54%);
+}
+.loggedinheader .desklist-link.active {
+  background: hsl(201, 58%, 9%);
+  color: hsl(28, 91%, 54%);
+}
+.loggedinheader .loggedinuser {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem;
+  position: relative;
+  height: 4rem;
+}
+@media screen and (min-width: 62rem) {
+  .loggedinheader .loggedinuser {
+    height: 6.25rem;
+  }
+}
+.loggedinheader .loggedinuser .userthumb {
+  background: hsl(196, 82%, 51%);
+  color: hsl(0, 0%, 100%);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  overflow: hidden;
+}
+.loggedinheader .loggedinuser .userdropdown {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  min-width: 11.25rem;
+  display: none;
+}
+.loggedinheader .loggedinuser .userdropdown .droplist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.loggedinheader .loggedinuser .userdropdown .droplist-link {
+  color: hsl(201, 63%, 12%);
+  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+  display: inline-block;
+  font-size: 0.9375rem;
+  padding: 0.625rem 1.25rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.loggedinheader .loggedinuser .userdropdown .droplist-link:hover {
+  border-color: hsl(28, 91%, 54%);
+  color: hsl(28, 91%, 54%);
+}
+.loggedinheader .loggedinuser .userdropdown .droplist-item:last-child .droplist-link {
+  border-bottom: 0;
+}
+.loggedinheader .loggedinuser:not([disabled]):hover .userdropdown {
+  display: block;
+}
 input,
 select,
 textarea {
