@@ -114,7 +114,7 @@
     &-body {
       @include flex-column;
       gap: size(32);
-      
+
       .planinfo {
         @include flex-column;
 
@@ -150,6 +150,62 @@
             color: $primary;
           }
         }
+      }
+    }
+  }
+}
+
+.accountsettings {
+  &-content {
+    @include flex-column;
+    gap: size(40);
+  }
+
+  &-header {
+    .title {
+      font-size: size(28);
+    }
+  }
+
+  &-body {
+    background: $white;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(96);
+    padding: size(20);
+    
+    @include breakpoint(tab992) {
+      padding: size(36);
+    }
+
+    .inputbox {
+      @include flex-column;
+      gap: size(16);
+
+      .inputlabel {
+        color: $headingtext;
+        font-size: size(16);
+        font-weight: 500;
+
+        span {
+          font: inherit;
+          color: $primary;
+        }
+      }
+    }
+
+    .btn-change {
+      color: $primarytext;
+      font-size: size(14);
+      font-weight: 400;
+      text-align: left;
+      text-decoration-line: underline;
+      @include transitionscolor;
+
+      @include hover {
+        color: $secondary;
       }
     }
   }

@@ -25,7 +25,7 @@
     <!-- CUSTOM-CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
-  <body>
+  <body class="p-0">
     <!-- HEADER-SECTION START -->
     <header class="loggedinheader">
       <div class="container">
@@ -170,7 +170,174 @@
     <!-- TRIAL-BOX END -->
 
     <!-- MAIN-SECTION START -->
-    <main class="loggedmain"></main>
+    <main class="loggedmain" data-aos="fade-up">
+      <section class="accountsettings">
+        <div class="container">
+          <div class="accountsettings-content">
+            <div class="row">
+              <div class="col-lg-8 mx-lg-auto">
+                <div class="accountsettings-header">
+                  <h2 class="title">Account Settings</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-8 mx-lg-auto">
+                <div class="accountsettings-body">
+                  <form class="authform">
+                    <div class="authform-body">
+                      <div class="row g-4">
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="fullname" class="inputlabel">
+                              Full name <span>*</span>
+                            </label>
+
+                            <input
+                              type="text"
+                              id="fullname"
+                              placeholder="Enter full name"
+                              class="textfield"
+                              autocomplete="off"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="inputbox forgotbox">
+                            <label for="email" class="inputlabel">
+                              Full name <span>*</span>
+                            </label>
+
+                            <input
+                              type="email"
+                              id="email"
+                              placeholder="Enter email address"
+                              class="textfield"
+                              autocomplete="off"
+                              required
+                              disabled
+                            />
+
+                            <button
+                              type="button"
+                              class="btn-showhide"
+                              style="transform: translateY(50%)"
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M5 15C5 11.134 8.13401 8 12 8C15.866 8 19 11.134 19 15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15Z"
+                                  stroke="#141B30"
+                                  stroke-opacity="0.698039"
+                                  stroke-width="1.5"
+                                />
+                                <path
+                                  d="M16.5 9.5V6.5C16.5 4.01472 14.4853 2 12 2C9.51472 2 7.5 4.01472 7.5 6.5V9.5"
+                                  stroke="#141B30"
+                                  stroke-opacity="0.698039"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                />
+                                <path
+                                  d="M12 15H12.009"
+                                  stroke="#141B30"
+                                  stroke-opacity="0.698039"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="companyname" class="inputlabel">
+                              Company Name
+                            </label>
+
+                            <input
+                              type="text"
+                              id="companyname"
+                              placeholder="Enter company name"
+                              class="textfield"
+                              autocomplete="off"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="inputbox">
+                            <label for="phonenumber" class="inputlabel">
+                              Phone <span>*</span>
+                            </label>
+
+                            <input
+                              type="tel"
+                              id="phonenumber"
+                              placeholder="Enter phone number"
+                              class="textfield"
+                              autocomplete="off"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="d-flex flex-column gap-2">
+                            <div class="inputbox">
+                              <label for="password" class="inputlabel">
+                                Password
+                              </label>
+
+                              <input
+                                type="password"
+                                id="password"
+                                placeholder="*****************"
+                                class="textfield"
+                                autocomplete="off"
+                                required
+                              />
+                            </div>
+
+                            <button
+                              type="button"
+                              class="btn-change"
+                              data-bs-toggle="modal"
+                              data-bs-target="#changePasswordModal"
+                            >
+                              Change password
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="col-12 mt-5">
+                          <div class="d-flex justify-content-center">
+                            <button class="btn-submit" type="submit">
+                              Save
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- MAIN-SECTION END -->
 
     <!-- FOOTER-SECTION START -->
@@ -192,6 +359,270 @@
       </div>
     </footer>
     <!-- FOOTER-SECTION END -->
+
+    <!-- CHANGE-PASSWORD MODAL -->
+    <div
+      class="modal fade pe-0 changemodal"
+      id="changePasswordModal"
+      tabindex="-1"
+      aria-labelledby="changePasswordModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Change Password</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="ri-close-fill"></i>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form class="authform">
+              <div class="authform-body">
+                <div class="row g-4">
+                  <div class="col-12">
+                    <div class="d-flex flex-column gap-2">
+                      <div class="inputbox forgotbox">
+                        <label for="currentpassword" class="inputlabel">
+                          Current password
+                        </label>
+
+                        <input
+                          type="password"
+                          id="currentpassword"
+                          placeholder="Enter your current password"
+                          class="textfield"
+                          autocomplete="off"
+                          required
+                        />
+
+                        <button
+                          type="button"
+                          class="btn-showhide"
+                          style="transform: translateY(40%)"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.3055 13.824C9.87034 13.3896 9.60547 12.7993 9.60547 12.1372C9.60547 10.8105 10.674 9.74121 11.9998 9.74121C12.656 9.74121 13.2599 10.0068 13.6874 10.4412"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M14.3496 12.562C14.174 13.5382 13.4052 14.3086 12.4297 14.4857"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7.95519 16.1744C6.75419 15.2314 5.73709 13.8541 5 12.137C5.74466 10.4124 6.76857 9.02747 7.97713 8.07697C9.17812 7.12647 10.5638 6.61035 12.0001 6.61035C13.4448 6.61035 14.8297 7.13404 16.0382 8.09135"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M17.6366 9.75586C18.1572 10.4475 18.6151 11.2459 19.0003 12.1366C17.5117 15.5852 14.8812 17.6626 12.0001 17.6626C11.347 17.6626 10.703 17.5566 10.084 17.35"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M17.9685 6.16797L6.03125 18.1052"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <a
+                        href="../authentications/forgotpassword.html"
+                        class="btn-forgot"
+                      >
+                        Forgot password
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="d-flex flex-column gap-2">
+                      <div class="inputbox forgotbox">
+                        <label for="newpassword" class="inputlabel">
+                          New password
+                        </label>
+
+                        <input
+                          type="password"
+                          id="newpassword"
+                          placeholder="Enter your current password"
+                          class="textfield"
+                          autocomplete="off"
+                          required
+                        />
+
+                        <button
+                          type="button"
+                          class="btn-showhide"
+                          style="transform: translateY(40%)"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.3055 13.824C9.87034 13.3896 9.60547 12.7993 9.60547 12.1372C9.60547 10.8105 10.674 9.74121 11.9998 9.74121C12.656 9.74121 13.2599 10.0068 13.6874 10.4412"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M14.3496 12.562C14.174 13.5382 13.4052 14.3086 12.4297 14.4857"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7.95519 16.1744C6.75419 15.2314 5.73709 13.8541 5 12.137C5.74466 10.4124 6.76857 9.02747 7.97713 8.07697C9.17812 7.12647 10.5638 6.61035 12.0001 6.61035C13.4448 6.61035 14.8297 7.13404 16.0382 8.09135"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M17.6366 9.75586C18.1572 10.4475 18.6151 11.2459 19.0003 12.1366C17.5117 15.5852 14.8812 17.6626 12.0001 17.6626C11.347 17.6626 10.703 17.5566 10.084 17.35"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M17.9685 6.16797L6.03125 18.1052"
+                              stroke="#787272"
+                              stroke-width="1.13515"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="info">
+                        <p class="text">
+                          Password must include at least 8 characters, 1 number
+                          and a mix of upper & lowercase letters.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="inputbox forgotbox">
+                      <label for="confirmnewpassword" class="inputlabel">
+                        Confirm new password
+                      </label>
+
+                      <input
+                        type="password"
+                        id="confirmnewpassword"
+                        placeholder="Enter your current password"
+                        class="textfield"
+                        autocomplete="off"
+                        required
+                      />
+
+                      <button
+                        type="button"
+                        class="btn-showhide"
+                        style="transform: translateY(40%)"
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.3055 13.824C9.87034 13.3896 9.60547 12.7993 9.60547 12.1372C9.60547 10.8105 10.674 9.74121 11.9998 9.74121C12.656 9.74121 13.2599 10.0068 13.6874 10.4412"
+                            stroke="#787272"
+                            stroke-width="1.13515"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M14.3496 12.562C14.174 13.5382 13.4052 14.3086 12.4297 14.4857"
+                            stroke="#787272"
+                            stroke-width="1.13515"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M7.95519 16.1744C6.75419 15.2314 5.73709 13.8541 5 12.137C5.74466 10.4124 6.76857 9.02747 7.97713 8.07697C9.17812 7.12647 10.5638 6.61035 12.0001 6.61035C13.4448 6.61035 14.8297 7.13404 16.0382 8.09135"
+                            stroke="#787272"
+                            stroke-width="1.13515"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M17.6366 9.75586C18.1572 10.4475 18.6151 11.2459 19.0003 12.1366C17.5117 15.5852 14.8812 17.6626 12.0001 17.6626C11.347 17.6626 10.703 17.5566 10.084 17.35"
+                            stroke="#787272"
+                            stroke-width="1.13515"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M17.9685 6.16797L6.03125 18.1052"
+                            stroke="#787272"
+                            stroke-width="1.13515"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="submitinfo">
+            <button
+              type="button"
+              class="login-link fw-bold"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn-submit">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CHANGE-PASSWORD MODAL -->
 
     <!-- GSAP -->
     <script src="../assets/js/gsap/gsap.min.js"></script>

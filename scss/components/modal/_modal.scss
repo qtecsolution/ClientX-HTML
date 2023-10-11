@@ -7,7 +7,7 @@
   }
 
   &-header {
-    border-bottom: 0;
+    border: 0;
 
     .btn-close {
       @include square(24);
@@ -15,20 +15,87 @@
       overflow: hidden;
       opacity: 1;
 
-      svg {
-        @include wh100;
-        @include transitiontransform;
+      i {
+        color: $primary;
+        font-size: size(24);
       }
 
       @include hover {
-        svg {
-          @include rotate(90);
+        opacity: 1;
+        @include rotate(180);
 
-          path {
-            fill: $danger;
-          }
+        i {
+          color: $danger;
         }
       }
     }
+  }
+}
+
+.changemodal {
+  .modal-content {
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(24);
+  }
+
+  .modal-header {
+    @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+    margin-inline: size(40);
+    padding: size(24) size(0);
+
+    .modal-title {
+      font-size: size(18);
+      font-weight: 500;
+    }
+  }
+
+  .modal-body {
+    padding-inline: size(40);
+
+    .inputbox {
+      @include flex-column;
+      gap: size(16);
+
+      .inputlabel {
+        color: $headingtext;
+        font-size: size(16);
+        font-weight: 500;
+
+        span {
+          font: inherit;
+          color: $primary;
+        }
+      }
+    }
+
+    .btn-forgot {
+      color: $secondary;
+      font-size: size(14);
+      font-weight: 400;
+      text-align: left;
+      text-decoration-line: underline;
+      @include transitionscolor;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    .info {
+      .text {
+        color: $textplaceholder;
+        font-size: size(14);
+        font-weight: 400;
+      }
+    }
+  }
+
+  .submitinfo {
+    @include flex-end;
+    gap: size(32);
+    padding: size(60) size(40) size(36);
   }
 }
