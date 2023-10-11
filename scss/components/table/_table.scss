@@ -13,8 +13,6 @@ table {
 }
 
 table.dataTable {
-  border-collapse: collapse;
-
   thead {
     tr>th,
     tr>td {
@@ -24,7 +22,10 @@ table.dataTable {
 }
 
 table.dataTable.no-footer {
-  border: 0;
+  @include border(solid, 1, rgba($headingtext, 0.10));
+  border-bottom: 0;
+  @include radius(4);
+  overflow: hidden;
 }
 
 table.dataTable thead>tr>th.sorting:before, table.dataTable thead>tr>th.sorting_asc:before, table.dataTable thead>tr>th.sorting_desc:before, table.dataTable thead>tr>th.sorting_asc_disabled:before, table.dataTable thead>tr>th.sorting_desc_disabled:before, table.dataTable thead>tr>td.sorting:before, table.dataTable thead>tr>td.sorting_asc:before, table.dataTable thead>tr>td.sorting_desc:before, table.dataTable thead>tr>td.sorting_asc_disabled:before, table.dataTable thead>tr>td.sorting_desc_disabled:before,
@@ -34,18 +35,13 @@ table.dataTable thead>tr>th.sorting:after, table.dataTable thead>tr>th.sorting_a
 }
 
 .dataTables_wrapper {
-  @include border(solid, 1, rgba($headingtext, 0.10));
-  border-bottom: 0;
-  @include radius(4);
-  overflow: hidden;
-
   table {
     thead {
       tr {
         background: $theadbg;
-        @include border-single(bottom, solid, 1, rgba($headingtext, 0.10));
 
         th {
+          @include border-single(bottom, solid, 1, rgba($headingtext, 0.10));
           color: $textplaceholder;
           font-size: size(12);
           font-weight: 500;
@@ -64,14 +60,12 @@ table.dataTable thead>tr>th.sorting:after, table.dataTable thead>tr>th.sorting_a
 
     tbody {
       tr {
-        // background: rebeccapurple;
-        @include border-single(bottom, solid, 1, rgba($headingtext, 0.10));
-
         th, td {
           color: $headingtext;
           font-size: size(12);
           font-weight: 500;
           padding: size(12) size(14);
+          @include border-single(bottom, solid, 1, rgba($headingtext, 0.10));
 
           .customcheck {
             .checklabel {

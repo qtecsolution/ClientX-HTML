@@ -69,6 +69,8 @@
     @include border(solid, 2, $headingtext);
     @include radius(20);
     box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(96);
     padding: size(20);
     
     @include breakpoint(tab992) {
@@ -90,6 +92,64 @@
       .title {
         font-size: size(18);
         font-weight: 500;
+      }
+    }
+  }
+
+  .myplan {
+    @include flex-column;
+    gap: size(20);
+
+    &-header {
+      @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+      padding-bottom: size(20);
+
+      .title {
+        color: $headingtext;
+        font-size: size(18);
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(32);
+      
+      .planinfo {
+        @include flex-column;
+
+        .title {
+          color: $plantext;
+          font-size: size(12);
+          font-weight: 500;
+        }
+        
+        .plantext {
+          color: $headingtext;
+          font-size: size(16);
+          font-weight: 400;
+
+          &.package {
+            color: $primary;
+          }
+        }
+      }
+
+      .text {
+        color: $plantext;
+        font-size: size(12);
+        font-weight: 400;
+
+        .link {
+          color: $headingtext;
+          font: inherit;
+          text-decoration: underline;
+          @include transitionscolor;
+
+          @include hover {
+            color: $primary;
+          }
+        }
       }
     }
   }

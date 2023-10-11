@@ -2126,16 +2126,16 @@ table tr td {
   vertical-align: middle;
 }
 
-table.dataTable {
-  border-collapse: collapse;
-}
 table.dataTable thead tr > th,
 table.dataTable thead tr > td {
   border: none;
 }
 
 table.dataTable.no-footer {
-  border: 0;
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-bottom: 0;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 
 table.dataTable thead > tr > th.sorting:before, table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr > th.sorting_desc:before, table.dataTable thead > tr > th.sorting_asc_disabled:before, table.dataTable thead > tr > th.sorting_desc_disabled:before, table.dataTable thead > tr > td.sorting:before, table.dataTable thead > tr > td.sorting_asc:before, table.dataTable thead > tr > td.sorting_desc:before, table.dataTable thead > tr > td.sorting_asc_disabled:before, table.dataTable thead > tr > td.sorting_desc_disabled:before,
@@ -2144,17 +2144,11 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   opacity: 1;
 }
 
-.dataTables_wrapper {
-  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
-  border-bottom: 0;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
 .dataTables_wrapper table thead tr {
   background: hsl(0, 0%, 97%);
-  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.1);
 }
 .dataTables_wrapper table thead tr th {
+  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.1);
   color: hsl(0, 3%, 46%);
   font-size: 0.75rem;
   font-weight: 500;
@@ -2165,14 +2159,12 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   font-size: 0.75rem;
   font-weight: 500;
 }
-.dataTables_wrapper table tbody tr {
-  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.1);
-}
 .dataTables_wrapper table tbody tr th, .dataTables_wrapper table tbody tr td {
   color: hsl(201, 63%, 12%);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.75rem 0.875rem;
+  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.1);
 }
 .dataTables_wrapper table tbody tr th .customcheck .checklabel, .dataTables_wrapper table tbody tr td .customcheck .checklabel {
   font-size: 0.75rem;
@@ -5067,6 +5059,9 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   border: solid 0.125rem hsl(201, 63%, 12%);
   border-radius: 1.25rem;
   box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
   padding: 1.25rem;
 }
 @media screen and (min-width: 62rem) {
@@ -5091,6 +5086,56 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .billingdetails .paymenthistory-header .title {
   font-size: 1.125rem;
   font-weight: 500;
+}
+.billingdetails .myplan {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.billingdetails .myplan-header {
+  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.15);
+  padding-bottom: 1.25rem;
+}
+.billingdetails .myplan-header .title {
+  color: hsl(201, 63%, 12%);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.billingdetails .myplan-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.billingdetails .myplan-body .planinfo {
+  display: flex;
+  flex-direction: column;
+}
+.billingdetails .myplan-body .planinfo .title {
+  color: hsl(0, 0%, 60%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.billingdetails .myplan-body .planinfo .plantext {
+  color: hsl(201, 63%, 12%);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.billingdetails .myplan-body .planinfo .plantext.package {
+  color: hsl(28, 91%, 54%);
+}
+.billingdetails .myplan-body .text {
+  color: hsl(0, 0%, 60%);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.billingdetails .myplan-body .text .link {
+  color: hsl(201, 63%, 12%);
+  font: inherit;
+  text-decoration: underline;
+  transition: color 350ms ease-in-out;
+}
+.billingdetails .myplan-body .text .link:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
 }
 
 .errormain {
