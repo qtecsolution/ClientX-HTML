@@ -69,3 +69,31 @@
     }
   }
 }
+
+.loggedfooter {
+  background: $white;
+  box-shadow: $footershadow;
+  padding: size(14);
+
+  .privacylist {
+    @include list-horizontal;
+    gap: size(14);
+
+    &-item {
+      color: rgba($black, 0.40);
+      font-size: size(14);
+      font-weight: 400;
+    }
+    
+    &-link {
+      color: rgba($black, 0.40);
+      font-size: size(14);
+      font-weight: 400;
+      @include transitionscolor;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+  }
+}

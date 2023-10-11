@@ -18,6 +18,7 @@ $paginationitembg: hsl(0, 0%, 92%); //#EAEAEA
 $editbtnbg: hsl(0, 0%, 95%); //#F2F2F2
 $badgebg: hsl(28, 100%, 86%); //#FFDABA
 $tabbg: hsl(260, 9%, 94%); //#EEEDF0
+$theadbg: hsl(0, 0%, 97%); //#F7F7F7
 
 $activebg: hsl(201, 58%, 9%); //#0A1C26
 
@@ -45,6 +46,7 @@ $packagetext: hsl(0, 0%, 35%); //#5A5A5A
 $pricesuccess: hsl(139, 100%, 44%); //#00DF46
 $coupontext: hsl(139, 100%, 34%); //#00AD36
 $dangercolor: hsl(7, 100%, 55%); //#FF371C
+$textsuccess: hsl(139, 62%, 52%); //#37D067
 
 
 $danger: hsl(354, 70%, 54%); //#dc3545
@@ -56,6 +58,7 @@ $headerborder: hsl(0, 0%, 85%); //#D9D9D9
 $cardborder: hsl(220, 100%, 98%); //#F6F9FF
 $authorborder: hsl(246, 58%, 55%); //#5649CF
 $greenborder: hsl(139, 100%, 61%); //#3AFF78
+$paginationborder: hsl(0, 0%, 71%); //#B5B5B5
 
 // SHADOWS
 $shade-2: rgba(7,37,68, 0.06);
@@ -70,3 +73,4 @@ $pricingshadow: .4375rem .4375rem 0 0 $primary;
 $headershadow: 0 .25rem 1.875rem rgba($black, 0.1);
 $summaryshadow: .4375rem .4375rem 0 0 $greenshade;
 $headderdownshadow: 0 .25rem .25rem 0 rgba($black, 0.05);
+$footershadow:  -0.25rem 0 .25rem 0 rgba($black, 0.05);

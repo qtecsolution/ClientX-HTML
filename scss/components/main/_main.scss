@@ -8,3 +8,12 @@
     padding-bottom: size(160);
   }
 }
+
+.loggedmain {
+  background: $theadbg;
+  padding: size(60) size(0) size(80);
+  
+  @include breakpoint(desktop1400) {    
+    padding: size(60)  size(0) size(160);
+  }
+}

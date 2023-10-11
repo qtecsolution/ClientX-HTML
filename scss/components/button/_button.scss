@@ -223,3 +223,44 @@ button,
   padding: size(4) size(12);
   text-align: center;
 }
+
+.btn-download {
+  @include flex-center;
+  gap: size(10);
+
+  .icon {
+    @include square(14);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $secondary;
+    font-size: size(12);
+    font-weight: 500;
+  }
+}
+
+.btn-downloadall {
+  background: $headingtext;
+  @include radius(4);
+  padding: size(8) size(16);
+  @include flex-center;
+  gap: size(8);
+
+  .icon {
+    @include square(18);
+    @include flex-center;
+    overflow: hidden;
+  }
+
+  .text {
+    color: $white;
+    font-size: size(13);
+    font-weight: 500;
+  }
+
+  @include hover {
+    background: $primary;
+  }
+}

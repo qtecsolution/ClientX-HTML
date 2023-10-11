@@ -51,3 +51,46 @@
     }
   }
 }
+
+.billingdetails {
+  &-content {
+    @include flex-column;
+    gap: size(40);
+  }
+
+  &-header {
+    .title {
+      font-size: size(28);
+    }
+  }
+
+  &-body {
+    background: $white;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    padding: size(20);
+    
+    @include breakpoint(tab992) {
+      padding: size(36);
+    }
+  }
+
+  .paymenthistory {
+    @include flex-column;
+    gap: size(14);
+
+    &-header {
+      padding-bottom: size(12);
+      @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+      @include flex-center-between;
+      gap: size(12);
+      flex-wrap: wrap;
+
+      .title {
+        font-size: size(18);
+        font-weight: 500;
+      }
+    }
+  }
+}
