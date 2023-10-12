@@ -8,7 +8,7 @@
 /**=====================================================**
                 ANIMATION-STYLES
 =======================================================**/
-.header .resourcesdropdown, .loggedinheader .loggedinuser .userdropdown {
+.sitelist-body table tbody .tabledropdown-list, .header .resourcesdropdown, .loggedinheader .loggedinuser .userdropdown {
   animation-duration: 350ms;
   animation-fill-mode: both;
 }
@@ -46,7 +46,7 @@
     transform: translateY(1.25rem);
   }
 }
-.header .resourcesdropdown, .loggedinheader .loggedinuser .userdropdown {
+.sitelist-body table tbody .tabledropdown-list, .header .resourcesdropdown, .loggedinheader .loggedinuser .userdropdown {
   animation-name: slideUpIn;
 }
 
@@ -1888,7 +1888,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
   transform: rotate(180deg);
 }
 .offcanvas-header .btn-close:not([disabled]):hover i {
-  color: hsl(354, 70%, 54%);
+  color: hsl(0, 91%, 54%);
 }
 .offcanvas-body {
   background: hsl(0, 0%, 100%);
@@ -1964,10 +1964,10 @@ input[type=search]::-webkit-search-results-decoration:focus {
   transform: rotate(180deg);
 }
 .modal-header .btn-close:not([disabled]):hover i {
-  color: hsl(354, 70%, 54%);
+  color: hsl(0, 91%, 54%);
 }
 .modal-header .btn-close:not([disabled]):hover svg path {
-  stroke: hsl(354, 70%, 54%);
+  stroke: hsl(0, 91%, 54%);
 }
 
 .changemodal .modal-content {
@@ -2460,7 +2460,6 @@ table.dataTable.no-footer {
   border: solid 0.0625rem rgba(11, 36, 50, 0.1);
   border-bottom: 0;
   border-radius: 0.25rem;
-  overflow: hidden;
 }
 
 table.dataTable thead > tr > th.sorting:before, table.dataTable thead > tr > th.sorting_asc:before, table.dataTable thead > tr > th.sorting_desc:before, table.dataTable thead > tr > th.sorting_asc_disabled:before, table.dataTable thead > tr > th.sorting_desc_disabled:before, table.dataTable thead > tr > td.sorting:before, table.dataTable thead > tr > td.sorting_asc:before, table.dataTable thead > tr > td.sorting_desc:before, table.dataTable thead > tr > td.sorting_asc_disabled:before, table.dataTable thead > tr > td.sorting_desc_disabled:before,
@@ -2861,89 +2860,6 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .domainsearchform .btn-search:not([disabled]):hover {
   background: hsl(28, 91%, 54%);
   color: hsl(0, 0%, 100%);
-}
-
-.authform {
-  background: hsl(0, 0%, 100%);
-  border: solid 0.125rem hsl(201, 63%, 12%);
-  border-radius: 1.25rem;
-  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 2rem;
-}
-@media screen and (min-width: 48rem) {
-  .authform {
-    padding: 3rem 2rem;
-  }
-}
-.authform-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.authform-header .titlebox {
-  max-width: 23.125rem;
-  margin-inline: auto;
-  text-align: center;
-}
-.authform-header .authtitle {
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-}
-.authform-header .info {
-  max-width: 26.625rem;
-}
-.authform-header .info .text {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-}
-.authform-header .info .authtext {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
-}
-.authform-body .inputbox .textfield {
-  background: hsl(0, 0%, 99%);
-  color: hsl(201, 63%, 12%);
-  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
-  width: 100%;
-  transition: all 350ms ease-in-out;
-}
-.authform-body .inputbox .textfield:focus {
-  border-color: hsl(196, 82%, 51%);
-}
-.authform-body .inputbox .textfield::-moz-placeholder {
-  color: hsl(0, 3%, 46%);
-}
-.authform-body .inputbox .textfield::placeholder {
-  color: hsl(0, 3%, 46%);
-}
-.authform-body .authlink {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-  transition: color 350ms ease-in-out;
-}
-.authform-body .authlink:not([disabled]):hover {
-  color: hsl(28, 91%, 54%);
-}
-.authform-footer {
-  text-align: center;
-}
-.authform-footer .authtext {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-}
-.authform-footer .authtext .marked:not([disabled]):hover {
-  text-decoration: underline;
 }
 
 .desktoplist {
@@ -4764,6 +4680,88 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   flex-direction: column;
   gap: 2rem;
 }
+.authmain .authform {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .authmain .authform {
+    padding: 3rem 2rem;
+  }
+}
+.authmain .authform-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.authmain .authform-header .titlebox {
+  max-width: 23.125rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.authmain .authform-header .authtitle {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.authmain .authform-header .info {
+  max-width: 26.625rem;
+}
+.authmain .authform-header .info .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.authmain .authform-header .info .authtext {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+.authmain .authform-body .inputbox .textfield {
+  background: hsl(0, 0%, 99%);
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.authmain .authform-body .inputbox .textfield:focus {
+  border-color: hsl(196, 82%, 51%);
+}
+.authmain .authform-body .inputbox .textfield::-moz-placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.authmain .authform-body .inputbox .textfield::placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.authmain .authform-body .authlink {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  transition: color 350ms ease-in-out;
+}
+.authmain .authform-body .authlink:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+.authmain .authform-footer {
+  text-align: center;
+}
+.authmain .authform-footer .authtext {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+}
+.authmain .authform-footer .authtext .marked:not([disabled]):hover {
+  text-decoration: underline;
+}
 
 .forgotbox {
   position: relative;
@@ -5599,6 +5597,287 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 }
 .accountsettings-body .btn-change:not([disabled]):hover {
   color: hsl(196, 82%, 51%);
+}
+
+.sitelists {
+  width: 100%;
+}
+.sitelists-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.sitelists-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sitelists-header .title {
+  font-size: 1.75rem;
+}
+.sitelists-header .start .btn-building {
+  border-radius: 8.1875rem;
+  padding: 0.5rem 1.5rem;
+}
+.sitelists-body {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 1.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .sitelists-body {
+    padding: 2.25rem;
+  }
+}
+
+.sitelist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sitelist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+.sitelist-header .listsearch {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(0, 0%, 85%);
+  border-radius: 12.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.sitelist-header .listsearch .btnsearch {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sitelist-header .listsearch .searchfield {
+  background: transparent;
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  width: calc(100% - 1.875rem);
+}
+.sitelist-header .listsearch .searchfield::-moz-placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.sitelist-header .listsearch .searchfield::placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.sitelist-header .listsearch:focus-within {
+  border-color: hsl(196, 82%, 51%);
+}
+.sitelist-header .btn-createnew {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.sitelist-header .btn-createnew .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sitelist-header .btn-createnew .text {
+  color: hsl(0, 3%, 46%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.sitelist-header .btn-createnew:not([disabled]):hover .icon svg path {
+  stroke: hsl(196, 82%, 51%);
+}
+.sitelist-header .btn-createnew:not([disabled]):hover .text {
+  color: hsl(196, 82%, 51%);
+}
+.sitelist-body table {
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+}
+.sitelist-body table thead {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.sitelist-body table thead th {
+  background: hsl(0, 0%, 97%);
+  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  color: hsl(0, 3%, 46%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.75rem 0.875rem;
+}
+.sitelist-body table thead th:last-child {
+  width: 2rem;
+  margin-left: auto;
+}
+.sitelist-body table tbody {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.sitelist-body table tbody tr {
+  background: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+.sitelist-body table tbody tr:not([disabled]):hover {
+  background: hsl(0, 0%, 97%);
+}
+.sitelist-body table tbody .siteinfo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.sitelist-body table tbody .siteinfo .sitethumb {
+  width: 5rem;
+  height: 2.8125rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sitelist-body table tbody .siteinfo .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.sitelist-body table tbody .siteinfo .detail .title {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.sitelist-body table tbody .siteinfo .detail .text {
+  color: hsl(0, 3%, 46%);
+  font-size: 0.625rem;
+  font-weight: 400;
+}
+.sitelist-body table tbody .editdview {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sitelist-body table tbody .editdview .btn-edit,
+.sitelist-body table tbody .editdview .btn-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sitelist-body table tbody .editdview .btn-edit {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.sitelist-body table tbody .editdview .btn-view {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.sitelist-body table tbody .unpublished,
+.sitelist-body table tbody .free {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.sitelist-body table tbody .premium {
+  color: hsl(28, 91%, 54%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.sitelist-body table tbody .published {
+  color: hsl(28, 91%, 54%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.sitelist-body table tbody .success {
+  color: hsl(141, 50%, 47%);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.sitelist-body table tbody .tabledropdown {
+  cursor: pointer;
+  position: relative;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.sitelist-body table tbody .tabledropdown .dropdownicon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sitelist-body table tbody .tabledropdown-list {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.04);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 12.6875rem;
+  display: none;
+  z-index: 100;
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist-link {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist-link .icon {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist-link .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist-item:last-child .dropdownlist-link .text {
+  color: hsl(0, 91%, 54%);
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist-item:not(:last-child):not([disabled]):hover .dropdownlist-link .icon svg path {
+  stroke: hsl(28, 91%, 54%);
+}
+.sitelist-body table tbody .tabledropdown-list .dropdownlist-item:not(:last-child):not([disabled]):hover .dropdownlist-link .text {
+  color: hsl(28, 91%, 54%);
+}
+.sitelist-body table tbody .tabledropdown:not([disabled]):hover .dropdownicon svg path {
+  stroke: hsl(196, 82%, 51%);
+}
+.sitelist-body table tbody .tabledropdown:not([disabled]):hover .tabledropdown-list {
+  display: block;
 }
 
 .errormain {

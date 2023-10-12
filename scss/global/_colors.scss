@@ -49,8 +49,7 @@ $dangercolor: hsl(7, 100%, 55%); //#FF371C
 $textsuccess: hsl(139, 62%, 52%); //#37D067
 $plantext: hsl(0, 0%, 60%); //#989898
 
-
-$danger: hsl(354, 70%, 54%); //#dc3545
+$danger: hsl(0, 91%, 54%); //#F51F1F
 $success: hsl(140, 64%, 62%); //#5EDC89
 $green: hsl(141, 50%, 47%); //3CB265
 
@@ -75,3 +74,4 @@ $headershadow: 0 .25rem 1.875rem rgba($black, 0.1);
 $summaryshadow: .4375rem .4375rem 0 0 $greenshade;
 $headderdownshadow: 0 .25rem .25rem 0 rgba($black, 0.05);
 $footershadow:  -0.25rem 0 .25rem 0 rgba($black, 0.05);
+$dropdownshadow: .25rem .25rem .25rem 0 rgba($black, 0.04);

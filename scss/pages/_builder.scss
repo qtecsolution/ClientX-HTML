@@ -268,3 +268,322 @@
     }
   }
 }
+
+.sitelists {
+  @include w100;
+
+  &-content {
+    @include flex-column;
+    gap: size(40);
+  }
+
+  &-header {
+    @include flex-center-between;
+
+    .title {
+      font-size: size(28);
+    }
+
+    .start {
+      .btn-building {
+        @include radius(131);
+        padding: size(8) size(24);
+      }
+    }
+  }
+
+  &-body {
+    background: $white;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(96);
+    padding: size(20);
+    
+    @include breakpoint(tab992) {
+      padding: size(36);
+    }
+  }
+}
+
+.sitelist {
+  @include flex-column;
+  gap: size(16);
+
+  &-header {
+    @include flex-center-between;
+    gap: size(10);
+    flex-wrap: wrap;
+
+    .listsearch {
+      background: $white;
+      @include border(solid, 1, $headerborder);
+      @include radius(200);
+      @include flex-center-vert;
+      gap: size(10);
+      padding: size(10) size(16);
+      @include transitionsall;
+
+      .btnsearch {
+        @include square(20);
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .searchfield {
+        @include setBgColor(transparent, $headingtext);
+        font-size: size(14);
+        font-weight: 400;
+        width: calc(100% - size(30));
+
+        &::placeholder {
+          color: $textplaceholder;
+        }
+      }
+
+      &:focus-within {
+        border-color: $secondary;
+      }
+    }
+
+    .btn-createnew {
+      @include flex-center;
+      gap: size(8);
+      padding: size(8) size(16);
+
+      .icon {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .text {
+        color: $textplaceholder;
+        font-size: size(14);
+        font-weight: 500;
+      }
+
+      @include hover {
+        .icon {
+          svg {
+            path {
+              stroke: $secondary;
+            }
+          }
+        }
+
+        .text {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  &-body {
+    table {
+      @include border(solid, 1, rgba($headingtext, 0.10));
+
+      thead {
+        @include double-radius(top, left, 4, top, right, 4);
+
+        th {
+          background: $theadbg;
+          @include border-single(bottom, solid, 1, rgba($headingtext, 0.10));
+          color: $textplaceholder;
+          font-size: size(12);
+          font-weight: 500;
+          padding: size(12) size(14);
+
+          &:last-child {
+            width: size(32);
+            margin-left: auto;
+          }
+        }
+      }
+
+      tbody {
+        @include double-radius(bottom, left, 4, bottom, right, 4);
+
+        tr {
+          background: $white;
+          cursor: pointer;
+          @include transitionsall;
+
+          @include hover {
+            background: $theadbg;
+          }
+        }
+
+        .siteinfo {
+          @include flex-center-vert;
+          gap: size(10);
+
+          .sitethumb {
+            width: size(80);
+            height: size(45);
+            @include radius(4);
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          .detail {
+            @include flex-column;
+            gap: size(4);
+
+            .title {
+              font-size: size(12);
+              font-weight: 500;
+            }
+
+            .text {
+              color: $textplaceholder;
+              font-size: size(10);
+              font-weight: 400;
+            }
+          }
+        }
+
+        .editdview {
+          @include flex-center-vert;
+          gap: size(8);
+
+          .btn-edit,
+          .btn-view {
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          .btn-edit {
+            @include square(14);
+          }
+
+          .btn-view {
+            @include square(18);
+          }
+        }
+
+        .unpublished,
+        .free {
+          color: $headingtext;
+          font-size: size(12);
+          font-weight: 500;
+        }
+
+        .premium {
+          color: $primary;
+          font-size: size(12);
+          font-weight: 500;
+        }
+
+        .published {
+          color: $primary;
+          font-size: size(12);
+          font-weight: 500;
+        }
+
+        .success {
+          color: $green;
+          font-size: size(12);
+          font-weight: 500;
+        }
+
+        .tabledropdown {
+          cursor: pointer;
+          position: relative;
+          width: size(32);
+          @include flex-center;
+          margin-left: auto;
+
+          .dropdownicon {
+            @include square(24);
+            @include flex-center;
+            overflow: hidden;
+          }
+
+          &-list {
+            background: $white;
+            @include border(solid, 1, rgba($headingtext, 0.10));
+            box-shadow: $dropdownshadow;
+            @include radius(10);
+            padding: size(24);
+            position: absolute;
+            top: 100%;
+            right: 0;
+            min-width: size(203);
+            display: none;
+            @extend %slideUpIn;
+            @extend %animation;
+            z-index: 100;
+            
+            .dropdownlist {
+              @include list-vertical;
+              gap: size(16);
+              align-items: flex-start;
+
+              &-link {
+                @include flex-center-vert;
+                gap: size(10);
+
+                .icon {
+                  @include square(16);
+                  @include flex-center;
+                  overflow: hidden;
+                }
+
+                .text {
+                  color: $headingtext;
+                  font-size: size(16);
+                  font-weight: 400;
+                }
+              }
+
+              &-item {
+                &:last-child {
+                  .dropdownlist-link {
+                    .text {
+                      color: $danger;
+                    }
+                  }
+                }
+
+                &:not(:last-child) {
+                  @include hover {
+                    .dropdownlist-link {
+                      .icon {
+                        svg {
+                          path {
+                            stroke: $primary;
+                          }
+                        }
+                      }
+
+                      .text {
+                        color: $primary;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          @include hover {
+            .dropdownicon {
+              svg {
+                path {
+                  stroke: $secondary;
+                }
+              }
+            }
+
+            .tabledropdown-list {
+              display: block;
+              
+            }
+          }
+        }
+      }
+    }
+  }
+}

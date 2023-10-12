@@ -23,6 +23,102 @@
     @include flex-column;
     gap: size(32);
   }
+
+  .authform {
+    background: $white;
+    @include border(solid, 2, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(48);
+    padding: size(32);
+
+    @include breakpoint(mobile768) {
+      padding: size(48) size(32);
+    }
+
+    &-header {
+      @include flex-column;
+      gap: size(12);
+
+      .titlebox {
+        max-width: size(370);
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .authtitle {
+        font-size: size(18);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .info {
+        max-width: size(426);
+        
+        .text {
+          color: $headingtext;
+          font-size: size(14);
+          font-style: normal;
+          font-weight: 400;
+        }
+
+        .authtext {
+          color: $headingtext;
+          font-size: size(14);
+          font-style: normal;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+
+    &-body {
+      .inputbox {
+        .textfield {
+          @include setBgColor($contactinputbg, $headingtext);
+          @include border(solid, 1, rgba($headingtext, 0.10));
+          @include radius(4);
+          padding: size(12) size(16);
+          @include w100;
+          @include transitionsall;
+
+          &:focus {
+            border-color: $secondary;
+          }
+          
+          &::placeholder {
+            color: $textplaceholder;
+          }
+        }
+      }
+
+      .authlink {
+        color: $headingtext;
+        font-size: size(14);
+        @include transitionscolor;
+
+        @include hover {
+          color: $primary;
+        }
+      }
+    }
+
+    &-footer {
+      text-align: center;
+
+      .authtext {
+        color: $headingtext;
+        font-size: size(14);
+
+        .marked {
+          @include hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
 
 .forgotbox {
