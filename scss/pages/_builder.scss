@@ -19,6 +19,39 @@
   }
 }
 
+.startbuild {
+  &-content {
+    @include flex-center-column;
+    gap: size(32);
+    text-align: center;
+
+    .icon {
+      width: size(172);
+      height: size(157);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .info {
+      max-width: size(527);
+      margin-inline: auto;
+
+      .text {
+        color: $headingtext;
+        font-size: size(16);
+        font-weight: 400;
+      }
+    }
+
+    .start {
+      .btn-building {
+        @include radius(131);
+        padding: size(8) size(24);
+      }
+    }
+  }
+}
+
 .templateview {
   .cardtemplate {
     align-items: flex-start;

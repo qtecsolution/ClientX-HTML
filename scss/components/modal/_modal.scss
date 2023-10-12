@@ -20,12 +20,23 @@
         font-size: size(24);
       }
 
+      svg {
+        @include wh100;
+        @include transitiontransform;
+      }
+
       @include hover {
         opacity: 1;
         @include rotate(180);
 
         i {
           color: $danger;
+        }
+
+        svg {
+          path {
+            stroke: $danger;
+          }
         }
       }
     }
@@ -97,5 +108,43 @@
     @include flex-end;
     gap: size(32);
     padding: size(60) size(40) size(36);
+  }
+}
+
+.categorymodal {
+  .modal-content {
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(24);
+  }
+
+  .modal-body {
+    .selectcategory {
+      @include flex-center-column;
+      gap: size(24);
+      text-align: center;
+
+      &-header {
+        @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+        padding-bottom: size(24);
+        @include w100;
+
+        .titlebox {
+          max-width: size(322);
+          margin-inline: auto;
+        }
+
+        .title {
+          font-size: size(22);
+          font-weight: 500;
+        }
+      }
+
+      &-body {
+        padding-bottom: size(40);
+      }
+    }
   }
 }
