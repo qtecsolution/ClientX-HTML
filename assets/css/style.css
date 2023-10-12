@@ -2060,6 +2060,228 @@ input[type=search]::-webkit-search-results-decoration:focus {
   padding-bottom: 2.5rem;
 }
 
+.buildermodal .modal-content {
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.buildermodal .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .buildermodal .modal-body {
+    flex-direction: row;
+  }
+}
+.buildermodal .modal-body .templateinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.buildermodal .modal-body .templateinfo .templatethumb {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 16.125rem;
+  overflow: hidden;
+  padding: 0.9375rem;
+}
+.buildermodal .modal-body .templateinfo .templatethumb img {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+}
+.buildermodal .modal-body .templateinfo .title {
+  color: hsl(201, 63%, 12%);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.buildermodal .modal-body .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: rgba(11, 36, 50, 0.15);
+}
+@media screen and (min-width: 62rem) {
+  .buildermodal .modal-body .divider {
+    width: 0.0625rem;
+    height: 100%;
+    min-height: 22.6875rem;
+  }
+}
+.buildermodal .modal-body .description {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.buildermodal .modal-body .description .title {
+  color: hsl(201, 63%, 12%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 48rem) {
+  .buildermodal .modal-body .description .title {
+    font-size: 2rem;
+  }
+}
+.buildermodal .modal-body .description .information {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.buildermodal .modal-body .description .information .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.buildermodal .modal-body .description .information .detail .detailtitle {
+  color: hsl(201, 63%, 12%);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.buildermodal .modal-body .description .start {
+  max-width: 10rem;
+  margin-inline: auto;
+}
+.buildermodal .modal-body .description .start .btn-building {
+  border-radius: 8.1875rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.paymentmodal .modal-content {
+  border: solid 0.0625rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-inline: 0.9375rem;
+}
+.paymentmodal .modal-header {
+  border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.15);
+}
+.paymentmodal .modal-header .modal-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 75rem) {
+  .paymentmodal .modal-body .leftinfo {
+    padding: 0rem 1.5rem 1.5rem;
+  }
+}
+.paymentmodal .modal-body .leftinfo .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.paymentmodal .modal-body .leftinfo .inputbox .inputlabel {
+  color: hsl(201, 63%, 12%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.paymentmodal .modal-body .leftinfo .inputbox .inputlabel span {
+  font: inherit;
+  color: hsl(28, 91%, 54%);
+}
+.paymentmodal .modal-body .rightinfo .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 75rem) {
+  .paymentmodal .modal-body .rightinfo .summary {
+    padding: 0rem 1.5rem 1.5rem;
+  }
+}
+.paymentmodal .modal-body .rightinfo .summary-header {
+  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+  padding-bottom: 1.25rem;
+}
+.paymentmodal .modal-body .rightinfo .summary-header .title {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+.paymentmodal .modal-body .rightinfo .summary-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo {
+  border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
+  padding-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .orderlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .orderlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .orderlist-item .title,
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .orderlist-item .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.9375rem;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .orderlist-item .text {
+  display: flex;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .orderlist-item .headingmarked {
+  color: hsl(196, 82%, 51%);
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .divider {
+  width: 100%;
+  height: 0.0625rem;
+  border-bottom: dashed 0.0625rem rgba(11, 36, 50, 0.15);
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .total .title,
+.paymentmodal .modal-body .rightinfo .summary-body .orderinfo .total .totalprice {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.paymentmodal .modal-body .rightinfo .summary-body .details .info .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.9375rem;
+}
+@media screen and (max-width: 35.875rem) {
+  .paymentmodal .modal-body .rightinfo .couponbox {
+    flex-direction: column;
+  }
+  .paymentmodal .modal-body .rightinfo .couponbox .textfield {
+    width: 100%;
+  }
+}
+
 .tooltip-inner {
   background: hsl(201, 63%, 12%);
   font-size: 0.75rem;
@@ -2208,7 +2430,12 @@ input[type=search]::-webkit-search-results-decoration:focus {
 
 .loggedmain {
   background: hsl(0, 0%, 97%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 3.75rem 0rem 5rem;
+  min-height: 100vh;
 }
 @media screen and (min-width: 87.5rem) {
   .loggedmain {
@@ -2634,6 +2861,89 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .domainsearchform .btn-search:not([disabled]):hover {
   background: hsl(28, 91%, 54%);
   color: hsl(0, 0%, 100%);
+}
+
+.authform {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 48rem) {
+  .authform {
+    padding: 3rem 2rem;
+  }
+}
+.authform-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.authform-header .titlebox {
+  max-width: 23.125rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.authform-header .authtitle {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.authform-header .info {
+  max-width: 26.625rem;
+}
+.authform-header .info .text {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.authform-header .info .authtext {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+.authform-body .inputbox .textfield {
+  background: hsl(0, 0%, 99%);
+  color: hsl(201, 63%, 12%);
+  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 350ms ease-in-out;
+}
+.authform-body .inputbox .textfield:focus {
+  border-color: hsl(196, 82%, 51%);
+}
+.authform-body .inputbox .textfield::-moz-placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.authform-body .inputbox .textfield::placeholder {
+  color: hsl(0, 3%, 46%);
+}
+.authform-body .authlink {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+  transition: color 350ms ease-in-out;
+}
+.authform-body .authlink:not([disabled]):hover {
+  color: hsl(28, 91%, 54%);
+}
+.authform-footer {
+  text-align: center;
+}
+.authform-footer .authtext {
+  color: hsl(201, 63%, 12%);
+  font-size: 0.875rem;
+}
+.authform-footer .authtext .marked:not([disabled]):hover {
+  text-decoration: underline;
 }
 
 .desktoplist {
@@ -4454,88 +4764,6 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   flex-direction: column;
   gap: 2rem;
 }
-.authmain .authform {
-  background: hsl(0, 0%, 100%);
-  border: solid 0.125rem hsl(201, 63%, 12%);
-  border-radius: 1.25rem;
-  box-shadow: 0.4375rem 0.4375rem 0 0 hsl(201, 63%, 12%);
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 2rem;
-}
-@media screen and (min-width: 48rem) {
-  .authmain .authform {
-    padding: 3rem 2rem;
-  }
-}
-.authmain .authform-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.authmain .authform-header .titlebox {
-  max-width: 23.125rem;
-  margin-inline: auto;
-  text-align: center;
-}
-.authmain .authform-header .authtitle {
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-}
-.authmain .authform-header .info {
-  max-width: 26.625rem;
-}
-.authmain .authform-header .info .text {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-}
-.authmain .authform-header .info .authtext {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
-}
-.authmain .authform-body .inputbox .textfield {
-  background: hsl(0, 0%, 99%);
-  color: hsl(201, 63%, 12%);
-  border: solid 0.0625rem rgba(11, 36, 50, 0.1);
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
-  width: 100%;
-  transition: all 350ms ease-in-out;
-}
-.authmain .authform-body .inputbox .textfield:focus {
-  border-color: hsl(196, 82%, 51%);
-}
-.authmain .authform-body .inputbox .textfield::-moz-placeholder {
-  color: hsl(0, 3%, 46%);
-}
-.authmain .authform-body .inputbox .textfield::placeholder {
-  color: hsl(0, 3%, 46%);
-}
-.authmain .authform-body .authlink {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-  transition: color 350ms ease-in-out;
-}
-.authmain .authform-body .authlink:not([disabled]):hover {
-  color: hsl(28, 91%, 54%);
-}
-.authmain .authform-footer {
-  text-align: center;
-}
-.authmain .authform-footer .authtext {
-  color: hsl(201, 63%, 12%);
-  font-size: 0.875rem;
-}
-.authmain .authform-footer .authtext .marked:not([disabled]):hover {
-  text-decoration: underline;
-}
 
 .forgotbox {
   position: relative;
@@ -4589,7 +4817,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   max-width: 26.25rem;
   margin-inline: auto;
 }
-.register .reg {
+
+.reg {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem hsl(201, 63%, 12%);
   border-radius: 1.25rem;
@@ -4600,16 +4829,16 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   padding: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
-  .register .reg {
+  .reg {
     padding: 2rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .register .reg {
+  .reg {
     padding: 2.5rem;
   }
 }
-.register .reg-header {
+.reg-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4618,17 +4847,17 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   flex-wrap: wrap;
   gap: 0.625rem;
 }
-.register .reg-body {
+.reg-body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-.register .reg-body .regdetail {
+.reg-body .regdetail {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-.register .reg-body .regdetail-header {
+.reg-body .regdetail-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4637,30 +4866,31 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   flex-wrap: wrap;
   gap: 0.625rem;
 }
-.register .reg-body .regdetail-header .logtext {
+.reg-body .regdetail-header .logtext {
   color: hsl(201, 63%, 12%);
   font-size: 0.875rem;
   font-weight: 500;
 }
-.register .reg-body .regdetail-header .logtext .loglink {
+.reg-body .regdetail-header .logtext .loglink {
   color: hsl(28, 91%, 54%);
   font-size: 0.875rem;
   font-weight: 700;
   text-decoration: underline;
   transition: all 350ms ease-in-out;
 }
-.register .reg-body .regdetail-header .logtext .loglink:not([disabled]):hover {
+.reg-body .regdetail-header .logtext .loglink:not([disabled]):hover {
   text-decoration: none;
 }
-.register .reg-body .regdetail-body .regdetailtext {
+.reg-body .regdetail-body .regdetailtext {
   color: hsl(201, 63%, 12%);
   font-size: 0.9375rem;
 }
-.register .reg .title {
+.reg .title {
   font-size: 1.375rem;
   font-weight: 500;
 }
-.register .ordersummary {
+
+.ordersummary {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem hsl(201, 63%, 12%);
   border-radius: 1.25rem;
@@ -4671,36 +4901,36 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   padding: 1.5rem;
 }
 @media screen and (min-width: 48rem) {
-  .register .ordersummary {
+  .ordersummary {
     padding: 2rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .register .ordersummary {
+  .ordersummary {
     padding: 2.5rem;
   }
 }
-.register .ordersummary-header {
+.ordersummary-header {
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   padding-bottom: 1.25rem;
 }
-.register .ordersummary-header .title {
+.ordersummary-header .title {
   font-size: 1.375rem;
   font-weight: 500;
 }
-.register .ordersummary-body {
+.ordersummary-body {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-.register .ordersummary-body .orderinfo {
+.ordersummary-body .orderinfo {
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
   padding-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-.register .ordersummary-body .orderinfo .orderlist {
+.ordersummary-body .orderinfo .orderlist {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -4708,44 +4938,44 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   flex-direction: column;
   gap: 1rem;
 }
-.register .ordersummary-body .orderinfo .orderlist-item {
+.ordersummary-body .orderinfo .orderlist-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.register .ordersummary-body .orderinfo .orderlist-item .title,
-.register .ordersummary-body .orderinfo .orderlist-item .text {
+.ordersummary-body .orderinfo .orderlist-item .title,
+.ordersummary-body .orderinfo .orderlist-item .text {
   color: hsl(201, 63%, 12%);
   font-size: 0.9375rem;
 }
-.register .ordersummary-body .orderinfo .orderlist-item .text {
+.ordersummary-body .orderinfo .orderlist-item .text {
   display: flex;
 }
-.register .ordersummary-body .orderinfo .orderlist-item .headingmarked {
+.ordersummary-body .orderinfo .orderlist-item .headingmarked {
   color: hsl(196, 82%, 51%);
 }
-.register .ordersummary-body .orderinfo .divider {
+.ordersummary-body .orderinfo .divider {
   width: 100%;
   height: 0.0625rem;
   border-bottom: dashed 0.0625rem rgba(11, 36, 50, 0.15);
 }
-.register .ordersummary-body .orderinfo .total {
+.ordersummary-body .orderinfo .total {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.register .ordersummary-body .orderinfo .total .title,
-.register .ordersummary-body .orderinfo .total .totalprice {
+.ordersummary-body .orderinfo .total .title,
+.ordersummary-body .orderinfo .total .totalprice {
   color: hsl(201, 63%, 12%);
   font-size: 0.9375rem;
   font-weight: 500;
 }
-.register .ordersummary-body .details {
+.ordersummary-body .details {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-.register .ordersummary-body .details .info .text {
+.ordersummary-body .details .info .text {
   color: hsl(201, 63%, 12%);
   font-size: 0.9375rem;
 }
@@ -5153,6 +5383,9 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   font-weight: 500;
 }
 
+.startbuild {
+  width: 100%;
+}
 .startbuild-content {
   display: flex;
   align-items: center;
@@ -5178,11 +5411,28 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   font-size: 1rem;
   font-weight: 400;
 }
-.startbuild-content .start .btn-building {
+.startbuild .progress {
+  background: hsl(0, 0%, 85%);
+  border-radius: 2.5rem;
+  width: 100%;
+  height: 0.5rem;
+}
+.startbuild .progress-bar {
+  background: hsl(28, 91%, 54%);
+  border-radius: 2.5rem;
+}
+.startbuild .loadingtitle {
+  font-size: 1.75rem;
+  text-align: center;
+}
+.startbuild .start .btn-building {
   border-radius: 8.1875rem;
   padding: 0.5rem 1.5rem;
 }
 
+.templateview {
+  width: 100%;
+}
 .templateview .cardtemplate {
   align-items: flex-start;
 }
@@ -5204,6 +5454,9 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   border-color: hsl(196, 82%, 51%);
 }
 
+.billingdetails {
+  width: 100%;
+}
 .billingdetails-content {
   display: flex;
   flex-direction: column;
@@ -5296,6 +5549,9 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   color: hsl(28, 91%, 54%);
 }
 
+.accountsettings {
+  width: 100%;
+}
 .accountsettings-content {
   display: flex;
   flex-direction: column;

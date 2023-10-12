@@ -148,3 +148,242 @@
     }
   }
 }
+
+.buildermodal {
+  .modal-content {
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(24);
+  }
+
+  .modal-body {
+    @include flex-center-column;
+    gap: size(24);
+    padding-bottom: size(48);
+
+    @include breakpoint(tab992) {
+      flex-direction: row;
+    }
+
+    .templateinfo {
+      @include flex-column;
+      gap: size(24);
+
+      .templatethumb {
+        background: $white;
+        @include border(solid, 1, $headingtext);
+        @include radius(20);
+        @include flex-center;
+        @include w100;
+        height: size(258);
+        overflow: hidden;
+        padding: size(15);
+        
+        img {
+          @include radius(12);
+          @include wh100;
+        }
+      }
+
+      .title {
+        color: $headingtext;
+        font-size: size(20);
+        font-weight: 500;
+      }
+    }
+
+    .divider {
+      @include w100;
+      height: size(1);
+      background: rgba($headingtext, 0.15);
+
+      @include breakpoint(tab992) {
+        width: size(1);
+        @include h100;
+        min-height: size(363);
+      }
+    }
+
+    .description {
+      @include flex-column;
+      gap: size(40);
+
+      .title {
+        color: $headingtext;
+        font-size: size(24);
+        font-weight: 700;
+        
+        @include breakpoint(mobile768) {
+          font-size: size(32);
+        }
+      }
+
+      .information {
+        @include flex-column;
+        gap: size(32);
+
+        .detail {
+          @include flex-column;
+          gap: size(16);
+
+          .detailtitle {
+            color: $headingtext;
+            font-size: size(18);
+            font-weight: 500;
+          }
+        }
+      }
+
+      .start {
+        max-width: size(160);
+        margin-inline: auto;
+  
+        .btn-building {
+          @include radius(131);
+          padding: size(8) size(24);
+        }
+      }
+    }
+  }
+}
+
+.paymentmodal {
+  .modal-content {
+    @include border(solid, 1, $headingtext);
+    @include radius(20);
+    box-shadow: $blogshadow;
+    @include flex-column;
+    gap: size(24);
+    padding-inline: size(15);
+  }
+
+  .modal-header {
+    @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+
+    .modal-title {
+      font-size: size(18);
+      font-weight: 500;
+    }
+  }
+
+  .modal-body {
+    .leftinfo {
+      @include breakpoint(desktop1200) {
+        padding: size(0) size(24) size(24);
+      }
+
+      .inputbox {
+        @include flex-column;
+        gap: size(16);
+
+        .inputlabel {
+          color: $headingtext;
+          font-size: size(16);
+          font-weight: 500;
+
+          span {
+            font: inherit;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .rightinfo {
+      .summary {
+        @include flex-column;
+        gap: size(24);
+        
+        @include breakpoint(desktop1200) {
+          padding: size(0) size(24) size(24);
+        }
+
+        &-header {
+          @include border-single(bottom, solid, 1, $headerborder);
+          padding-bottom: size(20);
+
+          .title {
+            font-size: size(22);
+            font-weight: 500;
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: size(40);
+
+          .orderinfo {
+            @include border-single(bottom, solid, 1, $headerborder);
+            padding-bottom: size(20);
+            @include flex-column;
+            gap: size(20);
+
+            .orderlist {
+              @include list-vertical;
+              gap: size(16);
+
+              &-item {
+                @include flex-center-between;
+
+                .title,
+                .text {
+                  color: $headingtext;
+                  font-size: size(15);
+                }
+
+                .text {
+                  @include flex;
+                }
+
+                .headingmarked {
+                  color: $secondary;
+                }
+              }
+            }
+
+            .divider {
+              @include w100;
+              height: size(1);
+              @include border-single(bottom, dashed, 1, rgba($headingtext, 0.15));
+            }
+
+            .total {
+              @include flex-center-between;
+
+              .title,
+              .totalprice {
+                color: $headingtext;
+                font-size: size(15);
+                font-weight: 500;
+              }
+            }
+          }
+
+          .details {
+            @include flex-column;
+            gap: size(40);
+
+            .info {
+              .text {
+                color: $headingtext;
+                font-size: size(15);
+              }
+            }
+          }
+        }
+      }
+
+      .couponbox {
+        @media screen and (max-width: size(574)) {
+          flex-direction: column;
+
+          .textfield {
+            @include w100;
+          }
+        }
+      }
+    }
+  }
+}

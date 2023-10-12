@@ -25,7 +25,7 @@
     <!-- CUSTOM-CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
-  <body>
+  <body class="p-0">
     <!-- HEADER-SECTION START -->
     <header class="loggedinheader">
       <div class="container">
@@ -174,7 +174,7 @@
       <!-- PRICING-SECTION START -->
       <section class="pricingsection">
         <div class="pricingsection-content">
-          <div class="container" data-aos="fade-up">
+          <div class="container">
             <div class="row">
               <div class="col-lg-5 mx-lg-auto">
                 <div class="d-flex flex-column gap-4 text-center">
@@ -191,7 +191,7 @@
             </div>
           </div>
 
-          <div class="container" data-aos="fade-up">
+          <div class="container">
             <div class="row mb-5">
               <div class="col-lg-5 mx-lg-auto">
                 <h2 class="fw-bold text-center">DIY Website Pricing</h2>
@@ -232,12 +232,14 @@
                         </div>
 
                         <div class="cardprice-body">
-                          <a
-                            href="authentications/register.html"
+                          <button
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#paymentModal"
                             class="btn-build"
                           >
                             Start Building
-                          </a>
+                          </button>
 
                           <ul class="packagelist">
                             <li class="packagelist-item">
@@ -427,12 +429,14 @@
                         </div>
 
                         <div class="cardprice-body">
-                          <a
-                            href="authentications/register.html"
+                          <button
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#paymentModal"
                             class="btn-build"
                           >
                             Start Building
-                          </a>
+                          </button>
 
                           <ul class="packagelist">
                             <li class="packagelist-item">
@@ -754,12 +758,14 @@
                         </div>
 
                         <div class="cardprice-body">
-                          <a
-                            href="authentications/register.html"
+                          <button
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#paymentModal"
                             class="btn-build"
                           >
                             Start Building
-                          </a>
+                          </button>
 
                           <ul class="packagelist">
                             <li class="packagelist-item">
@@ -1932,13 +1938,332 @@
     </footer>
     <!-- FOOTER-SECTION END -->
 
+    <!-- BUILDER-MODAL START -->
+    <div
+      class="modal fade pe-0 paymentmodal"
+      id="paymentModal"
+      tabindex="-1"
+      aria-labelledby="paymentModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content gap-0">
+          <div class="modal-header w-100">
+            <h5 class="modal-title">Payment</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.0005 5L5.00049 19M5.00049 5L19.0005 19"
+                  stroke="#141B34"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-lg-7 col-xxl-8">
+                <div class="leftinfo">
+                  <div class="row g-3">
+                    <div class="col-lg-6">
+                      <div class="inputbox">
+                        <label for="builderplan" class="inputlabel">
+                          Web Builder Plan
+                        </label>
+
+                        <select
+                          class="selectfield"
+                          id="builderplan"
+                          autocomplete="off"
+                          required
+                        >
+                          <option selected>Select builder plan</option>
+                          <option value="Monthly">Monthly</option>
+                          <option value="Yearly">Yearly</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="inputbox">
+                        <label for="builderaddon" class="inputlabel">
+                          E-commerce add-on
+                        </label>
+
+                        <select
+                          class="selectfield"
+                          id="builderaddon"
+                          autocomplete="off"
+                          required
+                        >
+                          <option selected>Select E-commerce add-on</option>
+                          <option value="Monthly">Monthly</option>
+                          <option value="Yearly">Yearly</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="inputbox">
+                        <label for="nameoncard" class="inputlabel">
+                          Name On Card
+                        </label>
+
+                        <input
+                          type="text"
+                          id="nameoncard"
+                          placeholder="John Doe"
+                          class="textfield"
+                          autocomplete="off"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="row g-3">
+                        <div class="col-lg-4">
+                          <div class="inputbox">
+                            <label for="country" class="inputlabel">
+                              Country
+                            </label>
+
+                            <select
+                              class="selectfield"
+                              id="country"
+                              autocomplete="off"
+                            >
+                              <option selected>City</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Mymensingh">Mymensingh</option>
+                              <option value="Sherpur">Sherpur</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <div class="inputbox">
+                            <label for="region" class="inputlabel">
+                              Region
+                            </label>
+
+                            <select
+                              class="selectfield"
+                              id="region"
+                              autocomplete="off"
+                            >
+                              <option selected>Region</option>
+                              <option value="Dhaka">Dhaka</option>
+                              <option value="Mymensingh">Mymensingh</option>
+                              <option value="Chittagong">Chittagong</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <div class="inputbox">
+                            <label for="postalcode" class="inputlabel">
+                              Postal Code
+                            </label>
+
+                            <input
+                              type="text"
+                              id="postalcode"
+                              class="textfield"
+                              placeholder="Zip/Postal Code"
+                              autocomplete="off"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="inputbox">
+                        <label class="inputlabel">Card Details</label>
+
+                        <div class="row g-3">
+                          <div class="col-lg-6">
+                            <div class="inputbox">
+                              <input
+                                type="number"
+                                id="cardnumber"
+                                placeholder="Credit Card Number"
+                                class="textfield"
+                                autocomplete="off"
+                                required
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row g-4">
+                              <div class="col-md-6">
+                                <div class="inputbox">
+                                  <input
+                                    type="text"
+                                    id="expiredate"
+                                    placeholder="EXP"
+                                    class="textfield"
+                                    autocomplete="off"
+                                    required
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="col-md-6">
+                                <div class="inputbox">
+                                  <input
+                                    type="number"
+                                    id="cvvnumber"
+                                    placeholder="CVV"
+                                    class="textfield"
+                                    autocomplete="off"
+                                    required
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-xxl-4">
+                <div class="rightinfo">
+                  <div class="summary">
+                    <div class="summary-header">
+                      <h5 class="title">Your Order Summary</h5>
+                    </div>
+
+                    <div class="summary-body">
+                      <div class="orderinfo">
+                        <ul class="orderlist">
+                          <li class="orderlist-item">
+                            <span class="title">Selected Plan (Basic)</span>
+                            <span class="text">
+                              <span class="me-2">(+)</span>
+                              <span class="fw-medium">$120</span>
+                            </span>
+                          </li>
+
+                          <li class="orderlist-item">
+                            <span class="title">
+                              E-commerce Add-on (Standard)
+                            </span>
+                            <span class="text">
+                              <span class="me-2">(+)</span>
+                              <span class="fw-medium">$168</span>
+                            </span>
+                          </li>
+
+                          <li class="orderlist-item">
+                            <span class="title headingmarked">
+                              First Month Discount
+                            </span>
+                            <span class="text headingmarked">
+                              <span class="me-2">(-)</span>
+                              <span class="fw-medium">$4.05</span>
+                            </span>
+                          </li>
+
+                          <li class="orderlist-item">
+                            <span class="title headingmarked">
+                              Coupon Discount
+                            </span>
+                            <span class="text headingmarked">
+                              <span class="me-2">(-)</span>
+                              <span class="fw-medium">$.0</span>
+                            </span>
+                          </li>
+
+                          <li class="orderlist-item">
+                            <button type="button" class="btn-coupon">
+                              Add Coupon Code
+                            </button>
+                          </li>
+
+                          <!-- ADD-COUPON -->
+                          <div id="collapseCoupon" class="d-none">
+                            <div class="mycoupon">
+                              <div class="couponbox">
+                                <input
+                                  type="text"
+                                  class="textfield"
+                                  placeholder="Enter coupon"
+                                  autocomplete="off"
+                                />
+
+                                <button type="submit" class="btn-apply">
+                                  Apply
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </ul>
+
+                        <div class="divider"></div>
+
+                        <div class="total">
+                          <span class="title">Total</span>
+                          <span class="totalprice">$283.95</span>
+                        </div>
+                      </div>
+
+                      <div class="details">
+                        <div class="info">
+                          <p class="text">
+                            Note: By submitting your payment, you understand
+                            that your credit card will be charged the amount in
+                            the “Total” box. You also understand that your
+                            credit card will be automatically charged on the
+                            anniversary date of your subscription.
+                          </p>
+                        </div>
+
+                        <button
+                          class="btn-submit w-100 px-2"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#summaryModal"
+                        >
+                          Submit Payment
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BUILDER-MODAL END -->
+
     <!-- GSAP -->
     <script src="../assets/js/gsap/gsap.min.js"></script>
     <script src="../assets/js/gsap/ScrollTrigger.min.js"></script>
     <!-- HEADER-JS -->
     <script src="../assets/js/header/header.js"></script>
-    <!-- COPYRIGHT -->
-    <script src="../assets/js/copyright/copyright.js"></script>
     <!-- BACK-TO-TOP -->
     <script src="../assets/js/back-top/back-top.js"></script>
     <script src="../assets/js/back-top/backtoup.js"></script>
@@ -1946,6 +2271,8 @@
     <script src="../assets/js/bootsrap/bootstrap.bundle.min.js"></script>
     <!-- TOOLTIP -->
     <script src="../assets/js/tooltip/tooltip.js"></script>
+    <!-- SHOW-COUPON -->
+    <script src="../assets/js/coupon/showcoupon.js"></script>
     <!-- AOS -->
     <script src="../assets/js/aos/aos.js"></script>
     <!-- ANIMATION -->

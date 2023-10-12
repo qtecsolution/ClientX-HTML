@@ -20,6 +20,8 @@
 }
 
 .startbuild {
+  @include w100;
+
   &-content {
     @include flex-center-column;
     gap: size(32);
@@ -42,17 +44,36 @@
         font-weight: 400;
       }
     }
+  }
 
-    .start {
-      .btn-building {
-        @include radius(131);
-        padding: size(8) size(24);
-      }
+  .progress {
+    background: $headerborder;
+    @include radius(40);
+    @include w100;
+    height: size(8);
+    
+    &-bar {
+      background: $primary;
+      @include radius(40);
+    }
+  }
+
+  .loadingtitle {
+    font-size: size(28);
+    text-align: center;
+  }
+
+  .start {
+    .btn-building {
+      @include radius(131);
+      padding: size(8) size(24);
     }
   }
 }
 
 .templateview {
+  @include w100;
+
   .cardtemplate {
     align-items: flex-start;
 
@@ -86,6 +107,8 @@
 }
 
 .billingdetails {
+  @include w100;
+
   &-content {
     @include flex-column;
     gap: size(40);
@@ -189,6 +212,8 @@
 }
 
 .accountsettings {
+  @include w100;
+
   &-content {
     @include flex-column;
     gap: size(40);

@@ -23,102 +23,6 @@
     @include flex-column;
     gap: size(32);
   }
-
-  .authform {
-    background: $white;
-    @include border(solid, 2, $headingtext);
-    @include radius(20);
-    box-shadow: $blogshadow;
-    @include flex-column;
-    gap: size(48);
-    padding: size(32);
-
-    @include breakpoint(mobile768) {
-      padding: size(48) size(32);
-    }
-
-    &-header {
-      @include flex-column;
-      gap: size(12);
-
-      .titlebox {
-        max-width: size(370);
-        margin-inline: auto;
-        text-align: center;
-      }
-
-      .authtitle {
-        font-size: size(18);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .info {
-        max-width: size(426);
-        
-        .text {
-          color: $headingtext;
-          font-size: size(14);
-          font-style: normal;
-          font-weight: 400;
-        }
-
-        .authtext {
-          color: $headingtext;
-          font-size: size(14);
-          font-style: normal;
-          font-weight: 400;
-          text-align: center;
-        }
-      }
-    }
-
-    &-body {
-      .inputbox {
-        .textfield {
-          @include setBgColor($contactinputbg, $headingtext);
-          @include border(solid, 1, rgba($headingtext, 0.10));
-          @include radius(4);
-          padding: size(12) size(16);
-          @include w100;
-          @include transitionsall;
-
-          &:focus {
-            border-color: $secondary;
-          }
-          
-          &::placeholder {
-            color: $textplaceholder;
-          }
-        }
-      }
-
-      .authlink {
-        color: $headingtext;
-        font-size: size(14);
-        @include transitionscolor;
-
-        @include hover {
-          color: $primary;
-        }
-      }
-    }
-
-    &-footer {
-      text-align: center;
-
-      .authtext {
-        color: $headingtext;
-        font-size: size(14);
-
-        .marked {
-          @include hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
 }
 
 .forgotbox {
@@ -169,74 +73,102 @@
       margin-inline: auto;
     }
   }
+}
 
-  .reg {
-    background: $white;
-    @include border(solid, 1, $headingtext);
-    @include radius(20);
-    box-shadow: $blogshadow;
+.reg {
+  background: $white;
+  @include border(solid, 1, $headingtext);
+  @include radius(20);
+  box-shadow: $blogshadow;
+  @include flex-column;
+  gap: size(20);
+  padding: size(24);
+
+  @include breakpoint(mobile768) {
+    padding: size(32);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(40);
+  }
+
+  &-header {
+    @include flex-center-between;
+    @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+    padding-bottom: size(20);
+    flex-wrap: wrap;
+    gap: size(10);
+  }
+  
+  &-body {
     @include flex-column;
-    gap: size(20);
-    padding: size(24);
+    gap: size(48);
 
-    @include breakpoint(mobile768) {
-      padding: size(32);
-    }
-
-    @include breakpoint(tab992) {
-      padding: size(40);
-    }
-
-    &-header {
-      @include flex-center-between;
-      @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
-      padding-bottom: size(20);
-      flex-wrap: wrap;
-      gap: size(10);
-    }
-    
-    &-body {
+    .regdetail {
       @include flex-column;
-      gap: size(48);
+      gap: size(20);
 
-      .regdetail {
-        @include flex-column;
-        gap: size(20);
+      &-header {
+        @include flex-center-between;
+        @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
+        padding-bottom: size(20);
+        flex-wrap: wrap;
+        gap: size(10);
 
-        &-header {
-          @include flex-center-between;
-          @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));
-          padding-bottom: size(20);
-          flex-wrap: wrap;
-          gap: size(10);
+        .logtext {
+          color: $headingtext;
+          font-size: size(14);
+          font-weight: 500;
 
-          .logtext {
-            color: $headingtext;
+          .loglink {
+            color: $primary;
             font-size: size(14);
-            font-weight: 500;
+            font-weight: 700;
+            text-decoration: underline;
+            @include transitionsall;
 
-            .loglink {
-              color: $primary;
-              font-size: size(14);
-              font-weight: 700;
-              text-decoration: underline;
-              @include transitionsall;
-
-              @include hover {
-                text-decoration: none;
-              }
+            @include hover {
+              text-decoration: none;
             }
           }
         }
+      }
 
-        &-body {
-          .regdetailtext {
-            color: $headingtext;
-            font-size: size(15);
-          }
+      &-body {
+        .regdetailtext {
+          color: $headingtext;
+          font-size: size(15);
         }
       }
     }
+  }
+
+  .title {
+    font-size: size(22);
+    font-weight: 500;
+  }
+}
+
+.ordersummary {
+  background: $white;
+  @include border(solid, 1, $headingtext);
+  @include radius(20);
+  box-shadow: $blogshadow;
+  @include flex-column;
+  gap: size(24);
+  padding: size(24);
+
+  @include breakpoint(mobile768) {
+    padding: size(32);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(40);
+  }
+
+  &-header {
+    @include border-single(bottom, solid, 1, $headerborder);
+    padding-bottom: size(20);
 
     .title {
       font-size: size(22);
@@ -244,93 +176,65 @@
     }
   }
 
-  .ordersummary {
-    background: $white;
-    @include border(solid, 1, $headingtext);
-    @include radius(20);
-    box-shadow: $blogshadow;
+  &-body {
     @include flex-column;
-    gap: size(24);
-    padding: size(24);
+    gap: size(40);
 
-    @include breakpoint(mobile768) {
-      padding: size(32);
-    }
-
-    @include breakpoint(tab992) {
-      padding: size(40);
-    }
-
-    &-header {
+    .orderinfo {
       @include border-single(bottom, solid, 1, $headerborder);
       padding-bottom: size(20);
-
-      .title {
-        font-size: size(22);
-        font-weight: 500;
-      }
-    }
-
-    &-body {
       @include flex-column;
-      gap: size(40);
+      gap: size(20);
 
-      .orderinfo {
-        @include border-single(bottom, solid, 1, $headerborder);
-        padding-bottom: size(20);
-        @include flex-column;
-        gap: size(20);
+      .orderlist {
+        @include list-vertical;
+        gap: size(16);
 
-        .orderlist {
-          @include list-vertical;
-          gap: size(16);
-
-          &-item {
-            @include flex-center-between;
-
-            .title,
-            .text {
-              color: $headingtext;
-              font-size: size(15);
-            }
-
-            .text {
-              @include flex;
-            }
-
-            .headingmarked {
-              color: $secondary;
-            }
-          }
-        }
-
-        .divider {
-          @include w100;
-          height: size(1);
-          @include border-single(bottom, dashed, 1, rgba($headingtext, 0.15));
-        }
-
-        .total {
+        &-item {
           @include flex-center-between;
 
           .title,
-          .totalprice {
-            color: $headingtext;
-            font-size: size(15);
-            font-weight: 500;
-          }
-        }
-      }
-
-      .details {
-        @include flex-column;
-        gap: size(40);
-
-        .info {
           .text {
             color: $headingtext;
             font-size: size(15);
           }
+
+          .text {
+            @include flex;
+          }
+
+          .headingmarked {
+            color: $secondary;
+          }
+        }
+      }
+
+      .divider {
+        @include w100;
+        height: size(1);
+        @include border-single(bottom, dashed, 1, rgba($headingtext, 0.15));
+      }
+
+      .total {
+        @include flex-center-between;
+
+        .title,
+        .totalprice {
+          color: $headingtext;
+          font-size: size(15);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .details {
+      @include flex-column;
+      gap: size(40);
+
+      .info {
+        .text {
+          color: $headingtext;
+          font-size: size(15);
         }
       }
     }
