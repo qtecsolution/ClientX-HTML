@@ -14,12 +14,8 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
+    gap: size(48);
     padding-bottom: size(48);
-  
-    @include breakpoint(desktop1400) {
-      gap: size(80);
-    }
   }
 
   .info {
@@ -66,7 +62,7 @@
 
   &-body {
     @include flex-column;
-    gap: size(32);
+    gap: size(24);
 
     .domainlist {
       @include flex-column;
@@ -140,7 +136,7 @@
 
 .optiontable {
   @include flex-column;
-  gap: size(32);
+  gap: size(24);
 
   .optionrow {
     @include border-single(bottom, solid, 1, rgba($headingtext, 0.15));

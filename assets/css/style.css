@@ -421,6 +421,11 @@ select {
   font-family: inherit;
 }
 
+h1 img, h2 img, h3 img, h4 img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .cardbadge {
   background: hsl(28, 100%, 86%);
   color: hsl(201, 63%, 12%);
@@ -3326,16 +3331,12 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .skillsection-content {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .skillsection-content {
-    gap: 6rem;
-  }
+  gap: 1.5rem;
 }
 .skillsection .info {
   max-width: 26.25rem;
   margin-inline: auto;
+  margin-bottom: 2rem;
 }
 
 .diysection {
@@ -3371,12 +3372,12 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .diysection .leftinfo {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 .diysection .leftinfo .info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 .diysection .leftinfo .actions {
   display: flex;
@@ -3482,7 +3483,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .seoperformance .rightcontent {
   display: flex;
   flex-direction: column;
-  gap: 2.75rem;
+  gap: 2rem;
   height: 100%;
   margin-top: 4rem;
 }
@@ -3497,7 +3498,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .seoperformance .rightcontent .info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 .seoperformance .rightcontent .info .text {
   color: hsl(0, 0%, 34%);
@@ -3537,13 +3538,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .allindustries-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding-bottom: 3rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .allindustries-content {
-    gap: 6rem;
-  }
 }
 
 .servicesection {
@@ -3579,12 +3575,12 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .servicesection .servicedetails {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 .servicesection .servicedetails .info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .servicesection .actions {
   display: flex;
@@ -3616,12 +3612,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .buildingwebsite-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .buildingwebsite-content {
-    gap: 5rem;
-  }
+  gap: 3rem;
 }
 
 .lifecycle {
@@ -3640,7 +3631,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .lifecycle-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   background: url(../images/home/lifecycle-bg.png);
   background-color: hsl(21, 81%, 96%);
   background-repeat: no-repeat;
@@ -3678,13 +3669,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .testimonial-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding-bottom: 3rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .testimonial-content {
-    gap: 5rem;
-  }
 }
 .testimonial-content .info {
   max-width: 38.25rem;
@@ -3758,7 +3744,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .potential .leftinfo {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1rem;
 }
 @media screen and (min-width: 48rem) {
@@ -3807,12 +3793,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .aboutus-content {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .aboutus-content {
-    gap: 6rem;
-  }
+  gap: 3rem;
 }
 .aboutus .info {
   max-width: 34.875rem;
@@ -3884,7 +3865,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .ourmission-details {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 .ourmission-details .info .text {
   color: hsl(201, 63%, 12%);
@@ -3938,7 +3919,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .aboutmyinfo .details {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 .aboutmyinfo .details .info .text {
   color: hsl(201, 63%, 12%);
@@ -3980,12 +3961,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .productvalues-content {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .productvalues-content {
-    gap: 6rem;
-  }
+  gap: 3rem;
 }
 
 .aboutplatform {
@@ -4015,7 +3991,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .aboutplatform .leftinfo {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
   padding: 1rem;
 }
 @media screen and (min-width: 48rem) {
@@ -4063,18 +4039,13 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .pricingsection-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   position: relative;
   z-index: 100;
 }
 @media screen and (min-width: 75rem) {
   .pricingsection-content {
-    gap: 6rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .pricingsection-content {
-    gap: 6.875rem;
+    gap: 4rem;
   }
 }
 .pricingsection-content .pricing-overlay {
@@ -4128,7 +4099,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .ecommercepricing-content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 .ecommercepricing .nav-tabs {
   background: hsl(260, 9%, 94%);
@@ -4233,18 +4204,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .templates-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding-bottom: 5rem;
-}
-@media screen and (min-width: 62rem) {
-  .templates-content {
-    gap: 6rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .templates-content {
-    gap: 7.5rem;
-  }
 }
 .templates .info {
   max-width: 30.125rem;
@@ -4387,16 +4348,6 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   flex-direction: column;
   gap: 3rem;
 }
-@media screen and (min-width: 48rem) {
-  .faqs-content {
-    gap: 4rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .faqs-content {
-    gap: 6rem;
-  }
-}
 .faqs .info {
   max-width: 30.125rem;
   margin-inline: auto;
@@ -4489,18 +4440,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .blogs-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding-bottom: 5rem;
-}
-@media screen and (min-width: 62rem) {
-  .blogs-content {
-    gap: 6rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .blogs-content {
-    gap: 7.5rem;
-  }
 }
 .blogs .info {
   max-width: 30.125rem;
@@ -4526,17 +4467,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .blogdetails-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-}
-@media screen and (min-width: 62rem) {
-  .blogdetails-content {
-    gap: 5rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .blogdetails-content {
-    gap: 6rem;
-  }
+  gap: 3rem;
 }
 .blogdetails .toptext {
   color: hsl(0, 0%, 34%);
@@ -4573,7 +4504,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .blogdetails .detailscontent {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
 }
 .blogdetails .detailscontent .text {
   color: hsl(201, 63%, 12%);
@@ -4593,7 +4524,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .blogdetails .detailscontent .descriptions {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .morearticles {
@@ -4612,18 +4543,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .morearticles-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding-bottom: 5rem;
-}
-@media screen and (min-width: 62rem) {
-  .morearticles-content {
-    gap: 5rem;
-  }
-}
-@media screen and (min-width: 87.5rem) {
-  .morearticles-content {
-    gap: 6rem;
-  }
 }
 
 .tutorials {
@@ -4642,13 +4563,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .tutorials-content {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3rem;
   padding-bottom: 3rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .tutorials-content {
-    gap: 6rem;
-  }
 }
 .tutorials .info {
   max-width: 34.875rem;
@@ -5042,13 +4958,8 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .domainsearch-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   padding-bottom: 3rem;
-}
-@media screen and (min-width: 87.5rem) {
-  .domainsearch-content {
-    gap: 5rem;
-  }
 }
 .domainsearch .info {
   max-width: 29rem;
@@ -5094,7 +5005,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .existingdomain-body {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .existingdomain-body .domainlist {
   display: flex;
@@ -5166,7 +5077,7 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 .optiontable {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .optiontable .optionrow {
   border-bottom: solid 0.0625rem rgba(11, 36, 50, 0.15);

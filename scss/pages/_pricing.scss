@@ -16,16 +16,12 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
+    gap: size(48);
     position: relative;
     z-index: 100;
     
     @include breakpoint(desktop1200) {
-      gap: size(96);
-    }
-
-    @include breakpoint(desktop1400) {
-      gap: size(110);
+      gap: size(64);
     }
 
     .pricing-overlay {
@@ -76,7 +72,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(48);
+    gap: size(24);
   }
 
   .nav-tabs {

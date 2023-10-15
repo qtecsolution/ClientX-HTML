@@ -121,16 +121,13 @@
 
   &-content {
     @include flex-column;
-    gap: size(80);
-
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
+    gap: size(24);
   }
 
   .info {
     max-width: size(420);
     margin-inline: auto;
+    margin-bottom: size(32);
   }
 }
 
@@ -163,11 +160,11 @@
 
   .leftinfo {
     @include flex-column;
-    gap: size(48);
+    gap: size(32);
     
     .info {
       @include flex-column;
-      gap: size(32);
+      gap: size(20);
     }
 
     .actions {
@@ -265,7 +262,7 @@
   
   .rightcontent {
     @include flex-column;
-    gap: size(44);
+    gap: size(32);
     @include h100;
     margin-top: size(64);
 
@@ -279,7 +276,7 @@
 
     .info {
       @include flex-column;
-      gap: size(24);
+      gap: size(20);
 
       .text {
         color: $primarytext;
@@ -318,12 +315,8 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
+    gap: size(48);
     padding-bottom: size(48);
-  
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
   }
 }
 
@@ -356,11 +349,11 @@
 
   .servicedetails {
     @include flex-column;
-    gap: size(48);
+    gap: size(32);
     
     .info {
       @include flex-column;
-      gap: size(32);
+      gap: size(24);
     }
   }
 
@@ -389,11 +382,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
-
-    @include breakpoint(desktop1400) {
-      gap: size(80);
-    }
+    gap: size(48);
   }
 }
 
@@ -410,7 +399,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
+    gap: size(48);
     background: url(../images/home/lifecycle-bg.png);
     background-color: $sectionbg-3;
     background-repeat: no-repeat;
@@ -444,12 +433,8 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
+    gap: size(48);
     padding-bottom: size(48);
-  
-    @include breakpoint(desktop1400) {
-      gap: size(80);
-    }
 
     .info {
       max-width: size(612);
@@ -531,7 +516,7 @@
 
   .leftinfo {
     @include flex-column;
-    gap: size(32);
+    gap: size(24);
     padding: size(16);
 
     @include breakpoint(mobile768) {

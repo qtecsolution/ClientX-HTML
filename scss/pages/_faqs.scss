@@ -15,14 +15,6 @@
   &-content {
     @include flex-column;
     gap: size(48);
-
-    @include breakpoint(mobile768) {
-      gap: size(64);
-    }
-    
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
   }
 
   .info {

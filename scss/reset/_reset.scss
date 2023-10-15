@@ -188,3 +188,9 @@ select {
   color: $headingtext;
   font-family: inherit;
 }
+
+h1, h2, h3, h4 {
+  img {
+    object-fit: contain;
+  }
+}

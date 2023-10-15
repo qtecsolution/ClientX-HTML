@@ -16,11 +16,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(80);
-
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
+    gap: size(48);
   }
 
   .info {
@@ -87,7 +83,7 @@
 
   &-details {
     @include flex-column;
-    gap: size(40);
+    gap: size(24);
 
     .info {
       .text {
@@ -142,7 +138,7 @@
 
   .details {
     @include flex-column;
-    gap: size(40);
+    gap: size(24);
 
     .info {
       .text {
@@ -182,11 +178,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(80);
-
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
+    gap: size(48);
   }
 }
 
@@ -216,7 +208,7 @@
 
   .leftinfo {
     @include flex-column;
-    gap: size(32);
+    gap: size(20);
     padding: size(16);
 
     @include breakpoint(mobile768) {

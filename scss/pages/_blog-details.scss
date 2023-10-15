@@ -14,15 +14,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
-    
-    @include breakpoint(tab992) {
-      gap: size(80);
-    }
-    
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
+    gap: size(48);
   }
 
   .toptext {
@@ -60,7 +52,7 @@
 
   .detailscontent {
     @include flex-column;
-    gap: size(80);
+    gap: size(64);
 
     .text {
       color: $headingtext;
@@ -85,7 +77,7 @@
 
     .descriptions {
       @include flex-column;
-      gap: size(40);
+      gap: size(24);
     }
   }
 }
@@ -103,15 +95,7 @@
 
   &-content {
     @include flex-column;
-    gap: size(64);
+    gap: size(48);
     padding-bottom: size(80);
-    
-    @include breakpoint(tab992) {
-      gap: size(80);
-    }
-    
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
   }
 }

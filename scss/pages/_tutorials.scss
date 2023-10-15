@@ -14,12 +14,8 @@
 
   &-content {
     @include flex-column;
-    gap: size(80);
+    gap: size(48);
     padding-bottom: size(48);
-
-    @include breakpoint(desktop1400) {
-      gap: size(96);
-    }
   }
 
   .info {
