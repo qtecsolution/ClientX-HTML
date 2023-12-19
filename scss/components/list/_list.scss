@@ -206,7 +206,11 @@
 
 .packagelist {
   @include list-vertical;
-  gap: size(24);
+  gap: size(16);
+      
+  @include breakpoint(desktop1400) {
+    gap: size(24);
+  }
 
   &-item {
     @include flex;
@@ -220,8 +224,12 @@
 
     .text {
       color: $packagetext;
-      font-size: size(15);
+      font-size: size(12);
       width: calc(100% - size(32));
+      
+      @include breakpoint(desktop1400) {
+        font-size: size(15);
+      }
     }
   }
 }

@@ -5,9 +5,13 @@
   @include setBgColor($badgebg, $headingtext);
   @include radius(42);
   @include flex-center;
-  font-size: size(14);
+  font-size: size(12);
   font-weight: 500;
   height: size(40);
   padding: size(14);
   text-align: center;
+  
+  @include breakpoint(desktop1400) {
+    font-size: size(14);
+  }
 }

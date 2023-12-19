@@ -664,8 +664,12 @@
   @include flex-column;
   gap: size(24);
   @include h100;
-  padding: size(32);
+  padding: size(24);
   position: relative;
+
+  @include breakpoint(desktop1400) {
+    padding: size(32);
+  }
   
   &-header {
     @include flex-column;
@@ -678,33 +682,53 @@
       .packname {
         .name {
           color: $headingtext;
-          font-size: size(34);
+          font-size: size(24);
           font-weight: 500;
+
+          @include breakpoint(desktop1400) {
+            font-size: size(34);
+          }
         }
       }
 
       .info {
         .text {
           color: $packagetext;
-          font-size: size(14);
+          font-size: size(12);
+
+          @include breakpoint(desktop1400) {
+            font-size: size(14);
+          }
         }
       }
     }
 
     .packageprice {
       @include flex;
-      align-items: flex-end;
+      align-items: center;
       gap: size(4);
+      
+      @include breakpoint(tab992) {
+        align-items: flex-end;
+      }
 
       .price {
         color: $headingtext;
-        font-size: size(44);
+        font-size: size(32);
         font-weight: 700;
+
+        @include breakpoint(desktop1400) {
+          font-size: size(44);
+        }
       }
 
       .text {
         color: $accordiontext;
-        font-size: size(14);
+        font-size: size(12);
+
+        @include breakpoint(desktop1400) {
+          font-size: size(14);
+        }
       }
     }
   }
@@ -754,22 +778,34 @@
 
         .name {
           color: $headingtext;
-          font-size: size(34);
+          font-size: size(24);
           font-weight: 500;
+
+          @include breakpoint(desktop1400) {
+            font-size: size(34);
+          }
         }
 
         .text {
           color: $headingtext;
-          font-size: size(15);
+          font-size: size(12);
           display: inline-block;
           margin-top: size(12);
+
+          @include breakpoint(desktop1400) {
+            font-size: size(15);
+          }
         }
       }
 
       .info {
         .text {
           color: $packagetext;
-          font-size: size(14);
+          font-size: size(12);
+
+          @include breakpoint(desktop1400) {
+            font-size: size(14);
+          }
         }
       }
     }
@@ -784,13 +820,21 @@
 
       .price {
         color: $headingtext;
-        font-size: size(44);
+        font-size: size(32);
         font-weight: 700;
+
+        @include breakpoint(desktop1400) {
+          font-size: size(44);
+        }
       }
 
       .text {
         color: $accordiontext;
-        font-size: size(14);
+        font-size: size(12);
+
+        @include breakpoint(desktop1400) {
+          font-size: size(14);
+        }
       }
     }
   }

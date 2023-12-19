@@ -433,11 +433,16 @@ h1 img, h2 img, h3 img, h4 img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   height: 2.5rem;
   padding: 0.875rem;
   text-align: center;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardbadge {
+    font-size: 0.875rem;
+  }
 }
 
 button,
@@ -1365,8 +1370,13 @@ button:focus,
   flex-direction: column;
   gap: 1.5rem;
   height: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   position: relative;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardprice {
+    padding: 2rem;
+  }
 }
 .cardprice-header {
   display: flex;
@@ -1380,26 +1390,51 @@ button:focus,
 }
 .cardprice-header .details .packname .name {
   color: hsl(201, 63%, 12%);
-  font-size: 2.125rem;
+  font-size: 1.5rem;
   font-weight: 500;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardprice-header .details .packname .name {
+    font-size: 2.125rem;
+  }
 }
 .cardprice-header .details .info .text {
   color: hsl(0, 0%, 35%);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardprice-header .details .info .text {
+    font-size: 0.875rem;
+  }
 }
 .cardprice-header .packageprice {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 0.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .cardprice-header .packageprice {
+    align-items: flex-end;
+  }
 }
 .cardprice-header .packageprice .price {
   color: hsl(201, 63%, 12%);
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 700;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardprice-header .packageprice .price {
+    font-size: 2.75rem;
+  }
 }
 .cardprice-header .packageprice .text {
   color: hsl(0, 0%, 44%);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardprice-header .packageprice .text {
+    font-size: 0.875rem;
+  }
 }
 .cardprice-body {
   display: flex;
@@ -1448,18 +1483,33 @@ button:focus,
 }
 .cardpricing-header .details .packagename .name {
   color: hsl(201, 63%, 12%);
-  font-size: 2.125rem;
+  font-size: 1.5rem;
   font-weight: 500;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardpricing-header .details .packagename .name {
+    font-size: 2.125rem;
+  }
 }
 .cardpricing-header .details .packagename .text {
   color: hsl(201, 63%, 12%);
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   display: inline-block;
   margin-top: 0.75rem;
 }
+@media screen and (min-width: 87.5rem) {
+  .cardpricing-header .details .packagename .text {
+    font-size: 0.9375rem;
+  }
+}
 .cardpricing-header .details .info .text {
   color: hsl(0, 0%, 35%);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardpricing-header .details .info .text {
+    font-size: 0.875rem;
+  }
 }
 .cardpricing-header .packageprice {
   border-bottom: solid 0.0625rem hsl(0, 0%, 85%);
@@ -1471,12 +1521,22 @@ button:focus,
 }
 .cardpricing-header .packageprice .price {
   color: hsl(201, 63%, 12%);
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 700;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardpricing-header .packageprice .price {
+    font-size: 2.75rem;
+  }
 }
 .cardpricing-header .packageprice .text {
   color: hsl(0, 0%, 44%);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .cardpricing-header .packageprice .text {
+    font-size: 0.875rem;
+  }
 }
 .cardpricing-body {
   display: flex;
@@ -3080,7 +3140,12 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .packagelist {
+    gap: 1.5rem;
+  }
 }
 .packagelist-item {
   display: flex;
@@ -3096,8 +3161,13 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
 }
 .packagelist-item .text {
   color: hsl(0, 0%, 35%);
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   width: calc(100% - 2rem);
+}
+@media screen and (min-width: 87.5rem) {
+  .packagelist-item .text {
+    font-size: 0.9375rem;
+  }
 }
 
 .pagination {
