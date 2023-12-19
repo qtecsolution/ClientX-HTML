@@ -692,9 +692,26 @@
       }
 
       .info {
+        overflow: hidden;
+
+        @include breakpoint(tab992) {
+          min-height: size(72);
+          max-height: size(72);
+        }
+
+        @include breakpoint(desktop1400) {
+          min-height: size(84);
+          max-height: size(84);
+        }
+
         .text {
           color: $packagetext;
           font-size: size(12);
+          @include line-clamp;
+
+          @include breakpoint(tab992) {
+            @include line-clamp-4;
+          }
 
           @include breakpoint(desktop1400) {
             font-size: size(14);
@@ -799,9 +816,26 @@
       }
 
       .info {
+        overflow: hidden;
+
+        @include breakpoint(tab992) {
+          min-height: size(72);
+          max-height: size(72);
+        }
+
+        @include breakpoint(desktop1400) {
+          min-height: size(84);
+          max-height: size(84);
+        }
+
         .text {
           color: $packagetext;
           font-size: size(12);
+          @include line-clamp;
+
+          @include breakpoint(tab992) {
+            @include line-clamp-4;
+          }
 
           @include breakpoint(desktop1400) {
             font-size: size(14);
