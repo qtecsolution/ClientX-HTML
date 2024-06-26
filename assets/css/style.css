@@ -3841,6 +3841,67 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   fill: hsl(28, 91%, 54%);
 }
 
+.customSite {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .customSite {
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .customSite {
+    padding-bottom: 6rem;
+  }
+}
+.customSite-content {
+  background: url(../images/home/customSite-bg.png);
+  background-color: hsl(220, 100%, 73%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.customSite-info {
+  border: solid 0.125rem hsl(201, 63%, 12%);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.customSite .leftinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .customSite .leftinfo {
+    padding: 2.5rem 1.25rem;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .customSite .leftinfo {
+    padding: 3.75rem 1.25rem;
+  }
+}
+.customSite .leftinfo .display-6 {
+  color: #0b2330;
+  font-weight: 700;
+}
+.customSite .leftinfo .info .text {
+  color: #0b2330;
+}
+.customSite .leftinfo .started {
+  max-width: 12.5rem;
+}
+.customSite .customSite-thumbnail {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
 .potential {
   padding-bottom: 3rem;
   margin-bottom: 3rem;
@@ -5991,4 +6052,4 @@ table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.s
   .shipcontainer {
     padding-inline: 9.375rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */
